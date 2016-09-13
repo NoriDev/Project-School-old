@@ -128,9 +128,6 @@ public class MainFragment extends Fragment {
 			mAdapter.addItem(R.drawable.notice,
 					getString(R.string.title_activity_notice),
 					getString(R.string.message_activity_notice));
-           /* mAdapter.addItem(R.drawable.notice,
-                    getString(R.string.title_activity_changelog),
-                    getString(R.string.message_activity_changelog));*/
 			mAdapter.addItem(R.drawable.notice,
                     getString(R.string.title_activity_changelog),
 //					getString(R.string.title_activity_changelog_beta),
