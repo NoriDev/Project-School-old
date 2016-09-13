@@ -1,6 +1,6 @@
 <resources>
     <!-- 메인 -->
-    <string name="app_name">중앙고 (베타)</string>
+    <string name="app_name">중앙고</string>
 	
     <string name="activity_main_fragment_simple">간단 보기</string>
     <string name="activity_main_fragment_detailed">교내 정보</string>
