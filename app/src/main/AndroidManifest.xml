@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nori.m1nthing2322.joongang" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- Activity -->
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.main.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.bap.BapActivity"
+            android:label="@string/title_activity_bap"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity"
+            android:label="@string/title_activity_bap_star"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.settings.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.notice.NoticeActivity"
+            android:label="@string/title_activity_notice"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.notice.NoticeSendActivity"
+            android:label="@string/title_activity_notice_send"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity"
+            android:label="@string/title_activity_schedule"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity"
+            android:label="@string/title_activity_exam_range"
+            android:theme="@style/AppTheme" />
+		<activity
+			android:name="nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity"
+			android:theme="@style/AppTheme" />
+		<activity
+			android:name="nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity"
+			android:theme="@style/AppTheme" />
+
+        <!-- AutoUpdate -->
+        <receiver
+            android:name="nori.m1nthing2322.joongang.autoupdate.BroadCast"
+            android:label="@string/title_broadcast_autoupdate"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="nori.m1nthing2322.joongang.autoupdate.updateService"
+            android:label="@string/title_service_autoupdate" />
+
+        <!-- AppWidget -->
+        <receiver
+            android:name="nori.m1nthing2322.joongang.widget.BapWidget"
+            android:label="@string/widget_bap_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bap_widget_info" />
+        </receiver>
+        <receiver
+            android:name="nori.m1nthing2322.joongang.widget.TimeTableWidget"
+            android:label="@string/widget_timetable_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/time_table_widget_info" />
+        </receiver>
+        <receiver
+            android:name="nori.m1nthing2322.joongang.widget.WidgetBroadCast"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.TIME_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
