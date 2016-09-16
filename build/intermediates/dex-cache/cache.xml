@@ -3,6 +3,33 @@
 
     <item
         is-multidex="false"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_3f3bf7c856e99bdfd27c9eced89a24263f876668.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_269d2025cad8d57397e18cc75028628425e9a3dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_fbecac871f35122ff6b111e7fdfa485bf452615e.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.github.flavienlaurent.datetimepicker\library\0.0.2\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,57 +39,48 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.0_b14fa306d05991148a55e71282b1df3665c853b1.jar" />
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_968c333c280c2f145b588518b75f9c6db7de4a0c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_eba98bb4d4eb154cab560b9ebf1c0b37663737d8.jar" />
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-24.2.1_21fc3758d080ef41eda1d42f2975d0b21e27b7c1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_b31f834c6be4ae1253aa23d198f9c522be862477.jar" />
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_da1d6147e26b142e50e77e2bcea7310ded44a087.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_88d43b778c3b1ef5b59e01462e6880606bb164f1.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_76422c3399796771c9b4c121908b34536dd87d16.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.0_2ef93dbbf7d36987d714998a1513fa834ab628a3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.0_ac3230b334cf21d006b79c7631598d28dd022e51.jar" />
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_081d61758861f166af2e7dadf6582e5497ad4a74.jar" />
     </item>
     <item
         is-multidex="false"
@@ -75,57 +93,57 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jar="C:\Users\m1nth\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.0_17e49b62cf0b98277f9a6558448949e2e8bc7bc9.jar" />
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_8b355c71925bcca3f88ff3c937cb6afc1d62015b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_085dff18d1743fa6b09a43a6ca0eddb28c5b09b4.jar" />
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_69fa60668334bc0fc22ab8d4c46f14accc97551d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.0_aa400bf95a9768f5b4d547efdc2022d818f1f449.jar" />
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_1c0cb56b05d634233a850130f07bb230fa617fe5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.0_5e0e23c673d42fd958fdb2c644b36340210be432.jar" />
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_f01ee65686b011216f79d4695587433479f59bf1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.0_19499c0e6dc114515a7c3030624e828052303c17.jar" />
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_e62dc2263a61e9eba581d8ef5f517c3def4563c0.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\m1nth\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.0_9e9f6714a801da7d963b78f6b9ab91c926c7073b.jar" />
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_a7146ea8f13ab2fb3fc88f4e7819c5f7bef89a60.jar" />
     </item>
     <item
         is-multidex="false"
@@ -147,39 +165,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.0_87a84fb0a79b619884be75b05e45cbe085e1d772.jar" />
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_13bc93b649a5a7eebd0161f44e9ac3523c87d91b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.0_a2cb46270817b6c3891351ccea11c7c439c99cf5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.0_faf7c5dc7e7b5b9e52c25de63193e6eedc4d1e57.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.0_3847095753b95e712542bc8b938a99ade2c29736.jar" />
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_1c372c2d03239d148337ecd27d5a6de27bf06019.jar" />
     </item>
     <item
         is-multidex="false"
@@ -201,21 +201,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-24.2.0_8c510eafea4111c4448dbf55ebf9680ded6b78f7.jar" />
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_a0cb79ad7803be69c40d5b93a7d576cd5b6c792f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jar="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.0_cf674790ef0437da744ceeabaf2ed6e8f287824f.jar" />
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="D:\Project School\Jinhae Joongang High School\Sources\Joongang_meal\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_7b397ff41e01b31f4b265570757b2ecf790c86c1.jar" />
     </item>
 
 </items>
