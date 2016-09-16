@@ -144,8 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else {//현재버전보다 서버 버전이 낮을때
 
-                        AlertDialog.Builder builder = new
-                                AlertDialog.Builder(MainActivity.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle(R.string.crack);
                         builder.setMessage(R.string.crack_contents);
                         builder.setCancelable(false);
@@ -165,7 +164,6 @@ public class MainActivity extends AppCompatActivity {
 
             dialog.cancel();
         }
-
     }
 
     private void setupViewPager(ViewPager viewPager) {
