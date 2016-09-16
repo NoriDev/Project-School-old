@@ -127,9 +127,7 @@
 	<string name="developer_title">개발자</string>
 	<string name="developer_msg">
         지성민
-        \n
-        \n
-        Thanks to Mir</string>
+        \n\nThanks to Mir</string>
     <!-- 업데이트 안내 -->
     <string name="check_version">버전을 확인하고 있습니다.</string>
     <string name="latest_version">최신버전을 사용하고 있습니다.</string>
@@ -139,19 +137,13 @@
     <string name="low_version">새 업데이트가 있습니다.</string>
     <string name="plz_update">
         Play 스토어에서 업데이트 할 것을 권장합니다.
-        \n
-        \n
-        [ ! ] 업데이트를 하지 않을 경우, 버그 수정 및 핫픽스, 새로운 기능 등을 사용하실 수 없습니다.</string>
+        \n\n[ ! ] 업데이트를 하지 않을 경우, 버그 수정 및 핫픽스, 새로운 기능 등을 사용하실 수 없습니다.</string>
     <string name="access">작업을 승인합니다.</string>
     <string name="crack">정식버전이 아닙니다!</string>
     <string name="crack_contents">
         테스터 전용 앱이거나 Play 스토어에서 다운로드 되지 않은 앱입니다.
-        \n
-        \n
-        계속 하시겠습니까?
-        \n
-        \n
-        테스터가 아닌경우 상단의 [연필모양] 아이콘을 클릭하여 개발자에게 문의하여주시기 바랍니다.</string>
+        \n\n계속 하시겠습니까?
+        \n\n테스터가 아닌경우 상단의 [연필모양] 아이콘을 클릭하여 개발자에게 문의하여주시기 바랍니다.</string>
     <string name="later">나중에</string>
     <string name="update_now">지금 업데이트</string>
     <string name="update_notification_title">앱이 업데이트됨</string>
@@ -199,56 +191,39 @@
         \n- 데이터베이스 주소 일부 수정
         \n- Rebuild 및 코드 최적화
         \n- 버그 수정
-        \n
-        \n
-        1.0a-Stable
+        \n\n1.0a-Stable
         \n- 초기 릴리즈
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
-        \n
-        \n
+        \n\n
         =========================
-        \n
-        \n
-        1.0-beta7
+        \n\n1.0-beta7
         \n- 데이터베이스 주소 변경
         \n- 액션바에 피드백 버튼 추가
         \n- 1학년 전반 시간표 지원
         \n- 전학년 10반에서 7반으로 수정
         \n- 최신버전 자동확인 기능 추가
         \n- 버그 수정 및 Rebuild
-        \n
-        \n
-        1.0-beta6
+        \n\n1.0-beta6
         \n- 데이터베이스를 불러올 시 강제종료 되던 문제 수정
         \n- Rebuild 및 코드 안정화
-        \n
-        \n
-        1.0-beta5 / hotfix 업데이트
+        \n\n1.0-beta5 / hotfix 업데이트
         \n- 롤리팝 (5.0) 이전 기기에서 실행되지 않던 문제 수정
-        \n
-        \n
-        1.0-beta4
+        \n\n1.0-beta4
         \n- 라이브러리 업데이트
         \n- 빌드 툴 업데이트
         \n- 버그 수정 및 코드 최적화
-        \n
-        \n
-        1.0-beta3
+        \n\n1.0-beta3
         \n- 메일 관련 오류 수정
         \n- 베타 변경사항 항목 추가
         \n- 급식평점 기능 임시제거
         \n- 변경사항 항목에 [최근 업데이트] 텍스트 추가
         \n- 버전 코드 변경
         \n- 코드 최적화
-        \n
-        \n
-        1.0-beta2
+        \n\n1.0-beta2
         \n- 오류 수정 및 코드 안정화
-        \n
-        \n
-        1.0-beta1
+        \n\n1.0-beta1
         \n- 초기 릴리즈</string>
 
 </resources>
