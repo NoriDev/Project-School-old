@@ -21,7 +21,7 @@ import com.fourmob.datetimepicker.date.DatePickerDialog;
 import java.util.Calendar;
 
 import nori.m1nthing2322.joongang.R;
-import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
+//import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.ProcessTask;
@@ -251,11 +251,11 @@ public class BapActivity extends AppCompatActivity {
             getBapList(true);
 
             return true;
-
-        } else if (id == R.id.action_show_star) {
+        }
+/*        else if (id == R.id.action_show_star) {
             startActivity(new Intent(this, BapStarActivity.class).putExtra("starType", 2));
         }
-
+*/
         return super.onOptionsItemSelected(item);
     }
 
