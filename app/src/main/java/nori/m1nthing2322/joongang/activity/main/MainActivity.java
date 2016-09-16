@@ -36,7 +36,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 10110;
+    private int ver= 11110;
 
     private ProgressDialog dialog;
     String xml;
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
-            String urlAddr = "http://devhost.iptime.org:1479/html/joonganghs.xml";
+            String urlAddr = "http://devhost.iptime.org:1479/html/project_school.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 
