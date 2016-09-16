@@ -151,7 +151,7 @@
         계속 하시겠습니까?
         \n
         \n
-        테스터가 아닌경우 액션바의 [연필모양]아이콘을 클릭하여 개발자에게 문의하여주시기 바랍니다.</string>
+        테스터가 아닌경우 상단의 [연필모양] 아이콘을 클릭하여 개발자에게 문의하여주시기 바랍니다.</string>
     <string name="later">나중에</string>
     <string name="update_now">지금 업데이트</string>
     <string name="update_notification_title">앱이 업데이트됨</string>
