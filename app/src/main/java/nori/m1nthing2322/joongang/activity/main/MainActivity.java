@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
                                 DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-
                                         Intent myIntent = new Intent
                                                 (Intent.ACTION_VIEW, Uri.parse
                                                         ("https://play.google.com/store/apps/details?id=nori.m1nthing2322.joongang"));
