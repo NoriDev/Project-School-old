@@ -23,7 +23,6 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.Vector;
 
 import nori.m1nthing2322.joongang.R;
-import nori.m1nthing2322.joongang.tool.HiddenCode;
 
 public class NoticeSendActivity extends AppCompatActivity {
     EditText mTitle, mMessage;
@@ -102,8 +101,6 @@ public class NoticeSendActivity extends AppCompatActivity {
                 nameValue.add(new BasicNameValuePair("title", params[0]));
                 nameValue.add(new BasicNameValuePair("message", params[1]));
                 nameValue.add(new BasicNameValuePair("deviceId", Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID)));
-
-                nameValue.add(new BasicNameValuePair("code", HiddenCode.getHiddenCode()));
 
                 //웹 접속 - UTF-8으로
                 HttpEntity Entity = new UrlEncodedFormEntity(nameValue, "UTF-8");

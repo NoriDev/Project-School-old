@@ -15,7 +15,6 @@ import nori.m1nthing2322.joongang.activity.bap.BapActivity;
 import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
-import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.RecyclerItemClickListener;

@@ -1,6 +1,5 @@
 package nori.m1nthing2322.joongang.activity.settings;
 
-
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;

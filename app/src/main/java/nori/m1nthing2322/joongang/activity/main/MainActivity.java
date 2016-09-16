@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
-
         showUpdateNotification();
     }
 
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.update_notification_title);
                 builder.setMessage(R.string.update_notification_message);
@@ -93,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             String urlAddr = "http://devhost.iptime.org:1479/html/project_school.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-
             if(conn != null){//Start if
                 conn.setConnectTimeout(20000);
                 //conn.setUseCaches(false);
@@ -119,11 +116,9 @@ public class MainActivity extends AppCompatActivity {
                     dialog.dismiss();
                     if(Integer.parseInt(xml)==ver){//new version
                         Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
-
                     }
                     else if(Integer.parseInt(xml)>ver){//현재버전보다 서버버전이 높을때
-                        AlertDialog.Builder builder = new
-                                AlertDialog.Builder(MainActivity.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle(R.string.low_version);
                         builder.setMessage(R.string.plz_update);
                         builder.setCancelable(false);
@@ -143,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
                         builder.show();
                     }
                     else {//현재버전보다 서버 버전이 낮을때
-
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle(R.string.crack);
                         builder.setMessage(R.string.crack_contents);
@@ -161,17 +155,14 @@ public class MainActivity extends AppCompatActivity {
         }//end try
         catch (Exception e) {//네트워크가 올바르지 않을때
             Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
-
             dialog.cancel();
         }
     }
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter mAdapter = new Adapter(getSupportFragmentManager());
-
         mAdapter.addFragment(getString(R.string.activity_main_fragment_simple), MainFragment.getInstance(1));
         mAdapter.addFragment(getString(R.string.activity_main_fragment_detailed), MainFragment.getInstance(2));
-
         viewPager.setAdapter(mAdapter);
     }
 

@@ -1,6 +1,5 @@
 package nori.m1nthing2322.joongang.tool;
 
-
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;

@@ -7,8 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-import toast.library.meal.MealLibrary;
 import nori.m1nthing2322.joongang.R;
+import toast.library.meal.MealLibrary;
 
 /**
  * Created by whdghks913 on 2015-02-17.

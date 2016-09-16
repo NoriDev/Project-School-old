@@ -135,8 +135,7 @@
     <string name="latest_version">최신버전을 사용하고 있습니다.</string>
     <string name="offline">
         네트워크가 연결되지 않았습니다.
-        \n
-        버전 확인을 위해 네트워크를 연결하여 주십시오.</string>
+        \n버전 확인을 위해 네트워크를 연결하여 주십시오.</string>
     <string name="low_version">새 업데이트가 있습니다.</string>
     <string name="plz_update">
         Play 스토어에서 업데이트 할 것을 권장합니다.
@@ -198,7 +197,7 @@
         1.1a-Stable
         \n- 라이브러리 업데이트
         \n- 데이터베이스 주소 일부 수정
-        \n- 코드 최적화
+        \n- Rebuild 및 코드 최적화
         \n
         \n
         1.0a-Stable

@@ -1,6 +1,5 @@
 package toast.library.meal;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,7 +8,6 @@ import java.util.Calendar;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
 
 /**
  * Created by whdghks913 on 2016-08-03.

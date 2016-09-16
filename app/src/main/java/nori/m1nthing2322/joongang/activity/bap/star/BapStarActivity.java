@@ -37,7 +37,6 @@ import itmir.tistory.com.spreadsheets.GoogleSheetTask;
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Database;
-import nori.m1nthing2322.joongang.tool.HiddenCode;
 import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.TimeTableTool;
 import nori.m1nthing2322.joongang.tool.Tools;
@@ -161,8 +160,6 @@ public class BapStarActivity extends AppCompatActivity {
                 nameValue.add(new BasicNameValuePair("rate", params[1]));
 //                nameValue.add(new BasicNameValuePair("memo", params[2]));
                 nameValue.add(new BasicNameValuePair("deviceId", Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID)));
-
-                nameValue.add(new BasicNameValuePair("code", HiddenCode.getHiddenCode()));
 
                 Preference mPref = new Preference(getApplicationContext());
                 nameValue.add(new BasicNameValuePair("grade", Integer.toString(mPref.getInt("myGrade", -1))));
