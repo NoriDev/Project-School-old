@@ -79,8 +79,8 @@ public class MainFragment extends Fragment {
 //                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
                         case 4:
-//							Toast.makeText(getActivity(), "시험기간이 아닙니다.\n시험기간에만 사용가능합니다.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
+							Toast.makeText(getActivity(), "기능 준비중입니다.", Toast.LENGTH_SHORT).show();
+//                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
                             break;
                         case 5:
                             break;

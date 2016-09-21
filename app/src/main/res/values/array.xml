@@ -18,9 +18,7 @@
     </string-array>
 
     <string-array name="myType">
-        <item>인문</item>
-        <item>공학</item>
-        <item>자연</item>
+        <item>중간고사</item>
     </string-array>
 
     <string-array name="myWeek">

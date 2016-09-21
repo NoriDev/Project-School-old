@@ -18,7 +18,7 @@ public class TimeTableTool {
 
     //    public final static String mFilePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/WondangHS/";
     public final static String mFilePath = "/data/data/nori.m1nthing2322.joongang/databases/";
-    public final static String mGoogleSpreadSheetUrl = "https://docs.google.com/spreadsheets/d/1bGC0XLXTmaaFMvXS8ICgcAUw7A0LiAxxWzPc022ARP4/pubhtml?gid=522206744&single=true";
+    public final static String mGoogleSpreadSheetUrl = "https://docs.google.com/spreadsheets/d/1WxGiSUUqTQcVjyLbu4biev6dNhlU4MIbOx-pP9TFnRU/pubhtml?gid=439649014&single=true";
 //    public final static int dbVersion = 6;
 
     public final static String[] mDisplayName = {"월요일", "화요일", "수요일", "목요일", "금요일"};

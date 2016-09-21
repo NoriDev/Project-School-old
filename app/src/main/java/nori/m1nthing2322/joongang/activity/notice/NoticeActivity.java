@@ -95,7 +95,7 @@ public class NoticeActivity extends AppCompatActivity {
         if (Tools.isOnline(getApplicationContext())) {
             if (Tools.isWifi(getApplicationContext()) || forceUpdate) {
                 getNoticeDownloadTask mTask = new getNoticeDownloadTask();
-                mTask.execute("https://docs.google.com/spreadsheets/d/1bGC0XLXTmaaFMvXS8ICgcAUw7A0LiAxxWzPc022ARP4/pubhtml?gid=86386074&single=true");
+                mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1973119105&single=true");
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.no_wifi_title);
@@ -110,7 +110,7 @@ public class NoticeActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         getNoticeDownloadTask mTask = new getNoticeDownloadTask();
-                        mTask.execute("https://docs.google.com/spreadsheets/d/1bGC0XLXTmaaFMvXS8ICgcAUw7A0LiAxxWzPc022ARP4/pubhtml?gid=86386074&single=true");
+                        mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1973119105&single=true");
                     }
                 });
                 builder.setCancelable(false);

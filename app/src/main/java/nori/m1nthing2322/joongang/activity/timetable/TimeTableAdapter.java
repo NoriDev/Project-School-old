@@ -29,7 +29,7 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
 
         addInfo.time = time;
         addInfo.name = name;
-        addInfo.room = room;
+//        addInfo.room = room;
 
         mValues.add(addInfo);
     }
@@ -48,7 +48,7 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
 
         holder.mTimeText.setText(String.valueOf(mInfo.time));
         holder.mTimeName.setText(mInfo.name);
-        holder.mRoom.setText(mInfo.room);
+//        holder.mRoom.setText(mInfo.room);
     }
 
     @Override
@@ -62,7 +62,8 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
 
     public class TimeTableViewHolder extends RecyclerView.ViewHolder {
         //        public final View mView;
-        public final TextView mTimeText, mTimeName, mRoom;
+//        public final TextView mTimeText, mTimeName, mRoom;
+        public final TextView mTimeText, mTimeName;
 
         public TimeTableViewHolder(View mView) {
             super(mView);
@@ -70,13 +71,13 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
 
             mTimeText = (TextView) mView.findViewById(R.id.mTimeText);
             mTimeName = (TextView) mView.findViewById(R.id.mTimeName);
-            mRoom = (TextView) mView.findViewById(R.id.mRoom);
+//            mRoom = (TextView) mView.findViewById(R.id.mRoom);
         }
     }
 
     public class TimeTableInfo {
         public int time;
         public String name;
-        public String room;
+//        public String room;
     }
 }

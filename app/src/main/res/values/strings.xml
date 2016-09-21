@@ -5,7 +5,7 @@
     <string name="activity_main_fragment_simple">간단 보기</string>
     <string name="activity_main_fragment_detailed">교내 정보</string>
     <!-- 기본 -->
-    <string name="loading_title">로딩중</string>
+    <string name="loading_title">로딩 중...</string>
     <string name="I_do_not_know_the_error_title">알 수 없는 오류 발생</string>
     <string name="I_do_not_know_the_error_message">오류가 발생하였습니다.</string>
     <!-- 메뉴 -->
@@ -107,7 +107,7 @@
 \n (https://github.com/flavienlaurent/datetimepicker)
 \n
 \n- Glide
-\n com.github.bumptech.glide:glide:3.6.1
+\n com.github.bumptech.glide:glide:3.7.0
 \n
 \n- CircleImageView
 \n de.hdodenhof:circleimageview:2.0.0

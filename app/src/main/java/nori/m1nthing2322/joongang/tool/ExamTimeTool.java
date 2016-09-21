@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class ExamTimeTool {
     public static final String ExamDBName = "ExamInfo.db";
     public static final String ExamTableName = "ExamInfo";
-    public final static String mGoogleSpreadSheetUrl = "https://docs.google.com/spreadsheets/d/1s-_F2vNNQ0yTBuqu_NORbeCJGBoaEHvsA4i84IBKWfA/pubhtml?gid=1155107873&single=true";
+    public final static String mGoogleSpreadSheetUrl = "https://docs.google.com/spreadsheets/d/1b-0C78gwHjRSW6AtxdzTDZrazcO8Lus4Ph2n9gpRZik/pubhtml?gid=118310004&single=true";
 
     public static boolean fileExists() {
         return new File(TimeTableTool.mFilePath + ExamDBName).exists();
@@ -45,7 +45,7 @@ public class ExamTimeTool {
         Database mDatabase = new Database();
         mDatabase.openDatabase(TimeTableTool.mFilePath, ExamDBName);
 
-        Cursor mCursor = mDatabase.getData(ExamTableName, "position, date, " + (type == 0 ? "science_" : "culture_") + grade);
+        Cursor mCursor = mDatabase.getData(ExamTableName, "position, date, " + "grade_" + grade);
         ArrayList<examTimeTableData> mValues = new ArrayList<>();
 
         for (int i = 0; i < mCursor.getCount(); i++) {
