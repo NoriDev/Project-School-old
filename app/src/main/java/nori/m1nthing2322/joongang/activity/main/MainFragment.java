@@ -13,6 +13,7 @@ import android.widget.Toast;
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
 import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
+import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
@@ -78,8 +79,8 @@ public class MainFragment extends Fragment {
 //                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
                         case 4:
-							Toast.makeText(getActivity(), "시험기간이 아닙니다.\n시험기간에만 사용가능합니다.", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
+//							Toast.makeText(getActivity(), "시험기간이 아닙니다.\n시험기간에만 사용가능합니다.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
                             break;
                         case 5:
                             break;

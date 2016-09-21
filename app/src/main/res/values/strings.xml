@@ -186,7 +186,9 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        1.1a-Stable
+        1.2a-Stable
+        \n- 라이브러리 업데이트
+        \n\n1.1a-Stable
         \n- 라이브러리 업데이트
         \n- 데이터베이스 주소 일부 수정
         \n- Rebuild 및 코드 최적화
