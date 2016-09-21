@@ -186,7 +186,7 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        1.2a-Stable
+        2.0a-Stable
         \n- 라이브러리 업데이트
         \n\n1.1a-Stable
         \n- 라이브러리 업데이트
@@ -198,6 +198,13 @@
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
+        2.0-beta1
+        \n- 라이브러리 업데이트
+        \n- 데이터베이스 주소 변경
+        \n- String 개선
+        \n- 시간표 UI 개선
+        \n- sdk 17 -> 15로 변경
+        \n- Rebuild 및 버그 수정
         \n\n
         =========================
         \n\n1.0-beta7
