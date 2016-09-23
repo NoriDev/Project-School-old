@@ -136,18 +136,8 @@ public class MainActivity extends AppCompatActivity {
                                         startActivity(myIntent);
                                     }});
                         builder.show();
-                    }
-                    else {//현재버전보다 서버 버전이 낮을때
-                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                        builder.setTitle(R.string.crack);
-                        builder.setMessage(R.string.crack_contents);
-                        builder.setCancelable(false);
-                        builder.setPositiveButton(R.string.access, new
-                                DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }});
-                        builder.show();
+                    }else {//현재버전보다 서버 버전이 낮을때
+                        Toast.makeText(getApplicationContext(), R.string.crack_contents, Toast.LENGTH_SHORT).show();
                     }
                 }
             };
