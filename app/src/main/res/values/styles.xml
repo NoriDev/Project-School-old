@@ -13,13 +13,13 @@
 
     <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:textColorPrimary">#828282</item>
-        <item name="android:background">#fafafa</item>
+        <item name="android:background">#FAFAFA</item>
         <item name="colorAccent">#009180</item>
     </style>
 
     <style name="AppCompatErrorAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:textColorPrimary">#FF5722</item>
-        <item name="android:background">#fafafa</item>
+        <item name="android:background">#FAFAFA</item>
         <item name="colorAccent">#E64A19</item>
     </style>
 
