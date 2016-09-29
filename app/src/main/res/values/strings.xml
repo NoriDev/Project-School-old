@@ -1,6 +1,7 @@
 <resources>
     <!-- 메인 -->
-    <string name="app_name">중앙고 (베타)</string>
+    <string name="app_name">중앙고</string>
+    <string name="beta">베타</string>
 	
     <string name="activity_main_fragment_simple">간단 보기</string>
     <string name="activity_main_fragment_detailed">교내 정보</string>
@@ -155,6 +156,7 @@
     <string name="user_info_class_up_title">관리자 인증 암호를 입력하세요</string>
 	<string name="title_activity_notice">개발자 공지사항</string>
     <string name="message_activity_notice">개발자 공지사항을 확인합니다.</string>
+    <string name="title_notice">공지사항</string>
     <string name="title_activity_changelog">변경사항</string>
     <string name="message_activity_changelog">이 앱의 변경사항을 확인합니다.</string>
 	<string name="title_activity_changelog_beta">변경사항 (베타)</string>
@@ -202,7 +204,12 @@
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
-        2.0-beta3
+        2.0-beta4
+        \n- 라이브러리 업데이트
+        \n- 변경사항 및 알림 액티비티 디자인 변경
+        \n- 액션바 개선
+        \n- String.xml 개선
+        \n\n2.0-beta3
         \n- 라이브러리 업데이트
         \n- 메인 디자인 변경
         \n\n2.0-beta2
