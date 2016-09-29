@@ -212,6 +212,7 @@ public class SettingsActivity extends AppCompatActivity {
         private void showNotification() {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
             builder.setTitle(R.string.info_autoUpdate_title);
+            builder.setCancelable(false);
             builder.setMessage(R.string.info_autoUpdate_msg);
             builder.setPositiveButton(android.R.string.ok, null);
             builder.show();

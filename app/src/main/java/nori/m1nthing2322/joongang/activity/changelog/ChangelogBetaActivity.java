@@ -47,6 +47,7 @@ public class ChangelogBetaActivity extends AppCompatActivity {
         if (mActionBar != null) {
             mActionBar.setHomeButtonEnabled(true);
             mActionBar.setDisplayHomeAsUpEnabled(true);
+            mActionBar.setSubtitle(R.string.beta);
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override

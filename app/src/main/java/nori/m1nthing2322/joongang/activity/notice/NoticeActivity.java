@@ -47,6 +47,7 @@ public class NoticeActivity extends AppCompatActivity {
         if (mActionBar != null) {
             mActionBar.setHomeButtonEnabled(true);
             mActionBar.setDisplayHomeAsUpEnabled(true);
+            mActionBar.setSubtitle(R.string.developer_title);
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
