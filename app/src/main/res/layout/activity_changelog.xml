@@ -14,7 +14,13 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context=".activity.notice.NoticeActivity"
         android:background="#F5F5F5"
+        android:orientation="vertical"
         tools:showIn="@layout/activity_notice">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n"/>
 
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/mSwipeRefreshLayout"
@@ -26,8 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:divider="@null"
-                android:dividerHeight="30dp"
-                android:padding="10dp" />
+                android:dividerHeight="30dp" />
 
         </android.support.v4.widget.SwipeRefreshLayout>
 
