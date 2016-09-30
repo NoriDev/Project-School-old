@@ -8,9 +8,9 @@ android {
         applicationId "nori.m1nthing2322.joongang"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 20105
+        versionCode 20110
 // 1(메이저) 0(마이너) 1(버그 수정) 0(0=베타, 1=정식) 1(베타버전. 없을시 0)
-        versionName "2.0-beta5"
+        versionName "2.0a"
     }
     buildTypes {
         release {
