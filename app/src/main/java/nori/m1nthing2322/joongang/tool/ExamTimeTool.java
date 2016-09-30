@@ -37,15 +37,15 @@ public class ExamTimeTool {
     }
 
     /**
-     * type 0 : 과중
-     * type 1 : 인문
+     * type 0 : 인문
+     * type 1 : 자연
      * position : 시험날짜
      */
     public static ArrayList<examTimeTableData> getExamTimeTable(int grade, int type, int position) {
         Database mDatabase = new Database();
         mDatabase.openDatabase(TimeTableTool.mFilePath, ExamDBName);
 
-        Cursor mCursor = mDatabase.getData(ExamTableName, "position, date, " + "grade_" + grade);
+        Cursor mCursor = mDatabase.getData(ExamTableName, "position, date, " + (type == 0 ? "culture_" : "science_") + grade);
         ArrayList<examTimeTableData> mValues = new ArrayList<>();
 
         for (int i = 0; i < mCursor.getCount(); i++) {

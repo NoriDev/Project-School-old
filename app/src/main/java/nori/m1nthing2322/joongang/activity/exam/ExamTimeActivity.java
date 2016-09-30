@@ -51,7 +51,7 @@ public class ExamTimeActivity extends AppCompatActivity {
         if ((mGrade != -1) && (mType != -1)) {
             if (fileExists) {
                 ExamTimeTool.examData mData = ExamTimeTool.getExamInfoData();
- //               mToolbar.setTitle(String.format(getString(R.string.exam_time_title), mGrade, (mType == 0 ? "과중" : "인문"), mData.date, mData.type));
+                mToolbar.setTitle(String.format(getString(R.string.exam_time_title), mGrade, (mType == 0 ? "인문" : "자연"), mData.date, mData.type));
             }
         }
         setSupportActionBar(mToolbar);
