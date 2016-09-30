@@ -16,7 +16,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_margin="16dp"
-        android:background="@drawable/circle_textview"
+        android:background="@drawable/circle_textview2"
         android:fadingEdge="horizontal"
         android:gravity="center"
         android:text="1"
