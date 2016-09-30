@@ -66,20 +66,19 @@ public class MainFragment extends Fragment {
 *                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
 *                           break;
 */                        case 0:
+//                            Toast.makeText(getActivity(), "기능 준비중입니다.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
+                            break;
+                        case 1:
                             startActivity(new Intent(getActivity(), NoticeActivity.class));
                             break;
-						case 1:
-//                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
-                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
-                            break;
-
-						case 2:
+                        case 2:
                             Toast.makeText(getActivity(), "2016년 일정 기능은 아직 준비중입니디:)", Toast.LENGTH_SHORT).show();
 //                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
-                        case 3:
-							Toast.makeText(getActivity(), "기능 준비중입니다.", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
+						case 3:
+//                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
+                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
                             break;
                         case 4:
                             break;
@@ -124,19 +123,19 @@ public class MainFragment extends Fragment {
 /*			mAdapter.addItem(R.drawable.notice,
 *					getString(R.string.title_activity_scnoti),
 *					getString(R.string.message_activity_scnoti));
-*/			mAdapter.addItem(R.drawable.notice,
+*/			mAdapter.addItem(R.drawable.ic_launcher_big,
+                    getString(R.string.title_activity_exam_range),
+                    getString(R.string.message_activity_exam_range));
+            mAdapter.addItem(R.drawable.notice,
 					getString(R.string.title_activity_notice),
 					getString(R.string.message_activity_notice));
+            mAdapter.addItem(R.drawable.calendar,
+                    getString(R.string.title_activity_schedule),
+                    getString(R.string.message_activity_schedule));
 			mAdapter.addItem(R.drawable.notice,
                     getString(R.string.title_activity_changelog),
 //					getString(R.string.title_activity_changelog_beta),
 					getString(R.string.message_activity_changelog));
-            mAdapter.addItem(R.drawable.calendar,
-                    getString(R.string.title_activity_schedule),
-                    getString(R.string.message_activity_schedule));
-            mAdapter.addItem(R.drawable.ic_launcher_big,
-                    getString(R.string.title_activity_exam_range),
-                    getString(R.string.message_activity_exam_range));
         }
 
         return recyclerView;
