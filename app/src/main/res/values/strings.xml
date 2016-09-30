@@ -187,7 +187,20 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        1.1c-Stable
+        2.0a
+        \n- 전학년 [시험 시간표] 기능 활성화
+        \n- 디자인 대폭 변경
+        \n- 라이브러리 업데이트
+        \n- 리스트뷰 배열 변경
+        \n- [학교 공지사항] 항목 임시제거
+        \n- String.xml 개선
+        \n- 변경사항 액티비티 툴바에 이름 추가
+        \n- 액션바 개선
+        \n- 버전 코드 개선
+        \n- 버그 수정
+        \n\n
+        =========================
+        \n\n1.1c-Stable
         \n- 버그 수정
         \n- Rebuild
         \n\n1.1b-Stable

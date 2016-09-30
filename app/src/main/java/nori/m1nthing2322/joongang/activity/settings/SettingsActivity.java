@@ -102,11 +102,11 @@ public class SettingsActivity extends AppCompatActivity {
                 } else if ("ChangeLog".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
 // Stable Version
-//                    builder.setTitle(R.string.changeLog_title);
-//                    builder.setMessage(R.string.changeLog_msg);
+                    builder.setTitle(R.string.changeLog_title);
+                    builder.setMessage(R.string.changeLog_msg);
 // Beta Version
-                    builder.setTitle(R.string.changeLog_title_beta);
-                    builder.setMessage(R.string.changeLog_msg_beta);
+//                    builder.setTitle(R.string.changeLog_title_beta);
+//                    builder.setMessage(R.string.changeLog_msg_beta);
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.show();
                 } else if ("Developer".equals(getKey)) {
@@ -138,7 +138,6 @@ public class SettingsActivity extends AppCompatActivity {
                     builder.setNegativeButton(android.R.string.cancel, null);
                     builder.show();
                 }
-
                 return true;
             }
         };
