@@ -22,7 +22,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -38,7 +37,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 20105;
+    private int ver= 20110;
 
     private ProgressDialog dialog;
     String xml;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
-           mActionBar.setSubtitle(R.string.beta);
+//           mActionBar.setSubtitle(R.string.beta);
         }
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.mViewpager);
