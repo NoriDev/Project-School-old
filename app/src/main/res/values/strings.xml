@@ -187,7 +187,9 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        2.0a
+        2.0b
+        \n- 버그 수정
+        \n\n2.0a
         \n- 전학년 [시험 시간표] 기능 활성화
         \n- 디자인 대폭 변경
         \n- 라이브러리 업데이트
