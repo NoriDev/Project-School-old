@@ -65,15 +65,15 @@
     <string name="info_autoUpdate_msg">급식 자동 업데이트는 매주 사용자분께서 급식을 업데이트 해야하는 불편을 덜기위해 만들어졌습니다
 \n 학교에 나오는 목적중 하나인 급식을 누구보다 빨리 확인해 보세요
 \n
-\n- 업데이트 주기 : 자동, 토요일, 일요일을 선택할 수 있습니다 선택한 날짜의 AM 1:00에 업데이트가 이루어집니다
-\n- 업데이트 알림 : 급식 업데이트 중에는 설정과 관계없이 진행중 알림이 나타나며 업데이트 완료후 성공/실패여부를 알림으로 나타내줍니다
-\n- Wi-Fi로만 업데이트 : 말그대로 Wi-Fi에서만 업데이트 합니다 데이터가 부족한 학생을 위한 기능입니다 (그런데 급식 가져오는거 데이터 얼마 안들어요)
+\n- 업데이트 주기: 자동, 토요일, 일요일을 선택할 수 있습니다 선택한 날짜의 AM 1:00에 업데이트가 이루어집니다
+\n- 업데이트 알림: 급식 업데이트 중에는 설정과 관계없이 진행중 알림이 나타나며 업데이트 완료후 성공/실패여부를 알림으로 나타내줍니다
+\n- Wi-Fi로만 업데이트: Wi-Fi에서만 업데이트 합니다 데이터가 부족한 학생을 위한 기능입니다 (그런데 급식 가져오는거 데이터 얼마 안들어요)
 \n
 \n
 \n 어플을 사용하시다 강제종료가 발생하면 꼭 "보고(신고)" 버튼을 눌러 신고해 주세요!</string>
     <!-- 급식 자동 업데이트 알림 -->
-    <string name="bapUpdateNotification_title">급식 업데이트중</string>
-    <string name="bapUpdateNotification_ticker">진해 중앙 고등학교 급식 업데이트중</string>
+    <string name="bapUpdateNotification_title">급식 업데이트 중</string>
+    <string name="bapUpdateNotification_ticker">진해중앙고등학교 급식 업데이트 중</string>
     <string name="bapUpdateNotification_notification">급식 업데이트 알림</string>
     <string name="bapUpdateNotification_msg">급식을 업데이트 하고 있습니다. 잠시만 기다려 주세요</string>
     <string name="bapUpdate_Error_Net_title">네트워크 연결 안됨</string>
