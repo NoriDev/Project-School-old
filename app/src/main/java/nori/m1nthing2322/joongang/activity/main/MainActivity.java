@@ -37,7 +37,9 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 20210;
+    private int ver= 21110;
+
+    private BackPressCloseHandler backPressCloseHandler;
 
     private ProgressDialog dialog;
     String xml;
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        backPressCloseHandler = new BackPressCloseHandler(this);
+
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
@@ -223,5 +228,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        backPressCloseHandler.onBackPressed();
     }
 }
