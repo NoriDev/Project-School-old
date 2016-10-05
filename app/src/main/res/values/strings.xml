@@ -2,6 +2,8 @@
     <!-- 메인 -->
     <string name="app_name">중앙고</string>
     <string name="beta">베타</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-9306456092791599/1952536661</string>
 	
     <string name="activity_main_fragment_simple">간단 보기</string>
     <string name="activity_main_fragment_detailed">교내 정보</string>
@@ -9,6 +11,7 @@
     <string name="loading_title">로딩 중...</string>
     <string name="I_do_not_know_the_error_title">알 수 없는 오류 발생</string>
     <string name="I_do_not_know_the_error_message">오류가 발생하였습니다.</string>
+    <string name="title_activity_exit">종료</string>
     <!-- 메뉴 -->
     <string name="action_settings">설정</string>
     <string name="action_feedback">피드백/의견</string>
@@ -102,6 +105,9 @@
 \n com.android.support:cardview-v7:24.2.1
 \n com.android.support:recyclerview-v7:24.2.1
 \n com.android.support:support-v4:24.2.1
+\n com.android.support:support-annotations:24.2.1
+\n com.google.android.gms:play-services:9.6.1
+\n com.android.support:multidex:1.0.1
 \n
 \n- DateTimePicker
 \n com.github.flavienlaurent.datetimepicker:library:0.0.2
@@ -187,7 +193,11 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        2.0b
+        2.1a
+        \n- 라이브러리 추가(GMS)
+        \n- 광고 추가
+        \n- 종료 액티비티 추가
+        \n\n2.0b
         \n- 버그 수정
         \n\n2.0a
         \n- 전학년 [시험 시간표] 기능 활성화
