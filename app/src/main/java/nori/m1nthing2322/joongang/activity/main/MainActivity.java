@@ -37,7 +37,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 21110;
+    private int ver= 21101;
 
     private BackPressCloseHandler backPressCloseHandler;
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
-//           mActionBar.setSubtitle(R.string.beta);
+           mActionBar.setSubtitle(R.string.beta);
         }
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.mViewpager);

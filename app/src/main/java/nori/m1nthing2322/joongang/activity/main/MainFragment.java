@@ -13,6 +13,7 @@ import android.widget.Toast;
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
 import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
+import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
 import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
@@ -76,8 +77,8 @@ public class MainFragment extends Fragment {
 //                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
 						case 3:
-                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
-//                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
+//                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
+                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
                             break;
                         case 4:
                             break;
