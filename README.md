@@ -1,6 +1,6 @@
 Project School
 =====================================
-Copyright (C) 2014~2016 Seongmin Ji <noridevdroid@gmail.com>
+Copyright (C) 2013~2016 Seongmin Ji <noridevdroid@gmail.com>
 ----------------------------------------------------------------------------------------------
 
 
