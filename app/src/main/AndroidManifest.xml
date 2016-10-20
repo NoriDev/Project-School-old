@@ -15,7 +15,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-
         <!-- Activity -->
         <activity
             android:name="nori.m1nthing2322.joongang.activity.main.MainActivity"
