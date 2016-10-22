@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int ver= 21101;
 
-    private BackPressCloseHandler backPressCloseHandler;
+//    private BackPressCloseHandler backPressCloseHandler;
 
     private ProgressDialog dialog;
     String xml;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        backPressCloseHandler = new BackPressCloseHandler(this);
+//        backPressCloseHandler = new BackPressCloseHandler(this);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
@@ -230,9 +230,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
+/*    @Override
     public void onBackPressed() {
         //super.onBackPressed();
         backPressCloseHandler.onBackPressed();
     }
+*/
 }
