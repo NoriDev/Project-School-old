@@ -226,7 +226,9 @@
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
-        2.1-beta1
+        2.1-beta2
+        \n- OpenGL ES 3.1 지원
+        \n\n2.1-beta1
         \n- sdk 업데이트
         \n- 라이브러리 추가 및 업데이트
         \n\n
