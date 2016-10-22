@@ -37,7 +37,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 21101;
+    private int ver= 21102;
 
 //    private BackPressCloseHandler backPressCloseHandler;
 
