@@ -37,12 +37,12 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 21102;
+//    private int ver= 21102;
 
 //    private BackPressCloseHandler backPressCloseHandler;
 
-    private ProgressDialog dialog;
-    String xml;
+//    private ProgressDialog dialog;
+//    String xml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.update_notification_title);
-                builder.setMessage(R.string.update_notification_message);
+                builder.setTitle(R.string.changeLog_title_beta);
+                builder.setMessage(R.string.changeLog_msg_beta);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.show();
             }
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        dialog = new ProgressDialog(this);
+/*        dialog = new ProgressDialog(this);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setCancelable(false);
         dialog.setMessage(getString((R.string.check_version)));
@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
             dialog.cancel();
         }
+*/
     }
 
     private void setupViewPager(ViewPager viewPager) {

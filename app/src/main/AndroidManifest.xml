@@ -3,6 +3,7 @@
     package="nori.m1nthing2322.joongang" >
 
     <uses-feature android:glEsVersion="0x00030001" android:required="true" />
+    // OpenGL ES 3.1 사용 시 지원기기가 줄어드는 것을 확인. 구문 삭제 후 재검토 요망.
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
