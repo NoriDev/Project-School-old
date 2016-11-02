@@ -38,11 +38,10 @@ import nori.m1nthing2322.joongang.tool.Preference;
 public class MainActivity extends AppCompatActivity {
 
 //    private int ver= 21110;
-
-//    private BackPressCloseHandler backPressCloseHandler;
-
 //    private ProgressDialog dialog;
 //    String xml;
+
+//    private BackPressCloseHandler backPressCloseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
