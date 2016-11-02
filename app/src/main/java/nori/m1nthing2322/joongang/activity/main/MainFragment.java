@@ -77,8 +77,8 @@ public class MainFragment extends Fragment {
 //                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
 						case 3:
-//                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
-                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
+                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
+//                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
                             break;
                         case 4:
                             break;

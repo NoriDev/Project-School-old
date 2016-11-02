@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
-           mActionBar.setSubtitle(R.string.beta);
+//           mActionBar.setSubtitle(R.string.beta);
         }
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.mViewpager);
@@ -81,8 +81,10 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.changeLog_title_beta);
-                builder.setMessage(R.string.changeLog_msg_beta);
+                builder.setTitle(R.string.changeLog_title);
+//                builder.setTitle(R.string.changeLog_title_beta);
+                builder.setMessage(R.string.changeLog_msg);
+//                builder.setMessage(R.string.changeLog_msg_beta);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.show();
             }
