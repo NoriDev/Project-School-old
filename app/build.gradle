@@ -2,15 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25'
+    buildToolsVersion '25.0.1'
 
     defaultConfig {
         applicationId "nori.m1nthing2322.joongang"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 21110
+        versionCode 22110
         // 1(메이저) 0(마이너) 1(버그 수정. 베타일시 0) 0(0=베타, 1=정식) 1(베타버전. 없을시 0)
-        versionName "2.1a"
+        versionName "2.2a"
         // Enabling multidex support.
                 multiDexEnabled true
     }
@@ -39,17 +39,17 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/jericho-html-3.4.jar')
-    compile 'com.android.support:cardview-v7:25.0.0'
-	compile 'com.android.support:design:25.0.0'
-	compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support:recyclerview-v7:25.0.0'
-    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.android.support:cardview-v7:25.0.1'
+	compile 'com.android.support:design:25.0.1'
+	compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
     compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
-    compile 'com.android.support:support-annotations:25.0.0'
-    compile 'com.google.android.gms:play-services:9.8.0'
+    compile 'com.android.support:support-annotations:25.0.1'
+    compile 'com.google.android.gms:play-services:10.0.0'
     compile 'com.android.support:multidex:1.0.1'
 
     testCompile 'junit:junit:4.12'
