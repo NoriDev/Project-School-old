@@ -8,19 +8,19 @@
     <string name="activity_main_fragment_simple">간단 보기</string>
     <string name="activity_main_fragment_detailed">교내 정보</string>
     <!-- 기본 -->
-    <string name="loading_title">로딩 중...</string>
+    <string name="loading_title">불러오는중</string>
     <string name="I_do_not_know_the_error_title">알 수 없는 오류 발생</string>
-    <string name="I_do_not_know_the_error_message">오류가 발생하였습니다.</string>
+    <string name="I_do_not_know_the_error_message">오류가 발생하였습니다</string>
     <string name="title_activity_exit">종료</string>
     <!-- 메뉴 -->
     <string name="action_settings">설정</string>
     <string name="action_feedback">피드백/의견</string>
-    <string name="action_refresh">새로 고침</string>
+    <string name="action_refresh">새로고침</string>
     <string name="action_calender">날짜 설정</string>
     <string name="action_today">오늘 날짜</string>
     <string name="action_show_star">별점 확인</string>
     <string name="action_reset_mygrade">학급 정보 재설정</string>
-    <string name="action_share_timetable">시간표 공유</string>
+    <string name="action_share_timetable">시간표 공유하기</string>
     <string name="action_share_timetable_msg">%1$s 시간표
 \n%2$s</string>
     <string name="action_setting_mygrade">학년 설정</string>
@@ -29,14 +29,14 @@
     <string name="action_download_db">DB 업데이트</string>
     <!-- 급식 -->
     <string name="title_activity_bap">급식</string>
-    <string name="message_activity_bap">급식을 확인합니다.</string>
+    <string name="message_activity_bap">급식을 확인합니다</string>
     <string name="today_lunch">오늘의 점심</string>
     <string name="today_dinner">오늘의 저녁</string>
     <string name="no_data_lunch">점심이 없습니다</string>
     <string name="no_data_dinner">저녁이 없습니다</string>
     <string name="no_data_title">정보 없음</string>
-    <string name="no_data_message">정보가 없습니다.</string>
-    <string name="no_network_title">인터넷 연결 안됨</string>
+    <string name="no_data_message">정보가 없습니다</string>
+    <string name="no_network_title">인터넷 연결 불가</string>
     <string name="no_network_msg">인터넷 연결이 안돼서 데이터를 다운로드 할 수 없습니다</string>
     <string name="no_wifi_title">데이터 네트워크 사용 안내</string>
     <string name="no_wifi_msg">데이터 네트워크를 사용하시겠습니까?</string>
@@ -46,12 +46,12 @@
 \n\n저녁 : %3$s</string>
     <!-- 시간표 -->
     <string name="title_activity_time_table">시간표</string>
-    <string name="message_activity_time_table">시간표를 확인합니다.</string>
+    <string name="message_activity_time_table">시간표를 확인합니다</string>
     <string name="today_timetable">%1$s 시간표</string>
     <string name="no_setting_my_grade">학급 정보가 없습니다</string>
     <string name="not_go_to_school_title">시간표 없음</string>
-    <string name="not_go_to_school_message">오늘은 시간표가 없습니다.</string>
-    <string name="not_exists_data">데이터가 없습니다.</string>
+    <string name="not_go_to_school_message">오늘은 시간표가 없습니다</string>
+    <string name="not_exists_data">데이터가 없습니다</string>
     <string name="timetable_title">%1$d학년 %2$d반 시간표</string>
     <string name="no_time_table_db_title">시간표 DB 없음</string>
     <string name="no_time_table_db_message">시간표 DB가 없습니다, 다운로드 하시겠습니까?</string>
@@ -59,7 +59,7 @@
     <string name="title_activity_settings">설정</string>
     <!-- 일정 -->
     <string name="title_activity_schedule">일정</string>
-    <string name="message_activity_schedule">일정을 확인합니다.</string>
+    <string name="message_activity_schedule">일정을 확인합니다</string>
     <!-- 급식 자동 업데이트 -->
     <string name="title_service_autoupdate">자동 업데이트 서비스</string>
     <string name="title_broadcast_autoupdate">자동 업데이트 리시버</string>
@@ -78,9 +78,9 @@
     <string name="bapUpdateNotification_title">급식 업데이트 중</string>
     <string name="bapUpdateNotification_ticker">진해중앙고등학교 급식 업데이트 중</string>
     <string name="bapUpdateNotification_notification">급식 업데이트 알림</string>
-    <string name="bapUpdateNotification_msg">급식을 업데이트 하고 있습니다. 잠시만 기다려 주세요</string>
+    <string name="bapUpdateNotification_msg">급식을 업데이트하고 있습니다. 잠시만 기다려주세요</string>
     <string name="bapUpdate_Error_Net_title">네트워크 연결 안됨</string>
-    <string name="bapUpdate_Error_Net_msg">인터넷에 접속할수 없습니다</string>
+    <string name="bapUpdate_Error_Net_msg">인터넷에 접속할 수 없습니다</string>
     <string name="bapUpdate_Error_get_title">급식 가져오기 실패</string>
     <string name="bapUpdate_Error_get_msg">급식을 가져오는데 실패했습니다</string>
     <string name="bapUpdate_Success_title">급식 업데이트 성공</string>
@@ -121,6 +121,9 @@
 \n- org.apache.http
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
 \n
+\n- jsoup
+\n org.jsoup:jsoup:1.10.1
+\n
 \n- Icons
 \n calendar.png : http://www.tutsmag.com/wp-content/uploads/2013/06/final-result-calendar.png
 \n rice.png : http://keworganics.com.au/product-category/legumes/
@@ -130,44 +133,59 @@
 \n
 \n- App Sources
 \n Mir : https://bitbucket.org/whdghks913/wondanghighschool</string>
+    <!-- 프로젝트 안내 -->
+    <string name="project_title">Project School이 무엇인가요?</string>
+    <string name="project_msg">Project School은 주변의 학교를 자발적으로 나서서 학교앱을 지원하겠다는 생각으로 시작한 프로젝트입니다.
+\n
+\n
+\n
+\n만약 이 프로젝트를 지원하시려면, 다음의 정보를 제공해주셔야 합니다.
+\n
+\n자신이 재학중인 학교의 이름, 모든 학년 및 반의 시간표, 지속적인 정보 제공을 위한 연락수단(예: 카카오톡 아이디 등)이 필요합니다.
+\n연락수단의 경우 선택사항이니 굳이 기입하지 않으셔도 됩니다.
+\n
+\n제공해주신 정보는 철저히 보호받으며, 연락수단 역시 시험 시간표 제공 및 기타 변동사항을 제공받기 위한 것임을 밝힙니다.
+\n
+\n제공에 동의하신다면, noridevdroid@gmail.com으로 위 사항을 기재하여 보내주십시오.
+\n2일 이내로 개발자가 회신 할 것입니다.</string>
     <!-- 개발자 안내 -->
 	<string name="developer_title">개발자</string>
 	<string name="developer_msg">
         지성민
         \n\nThanks to Mir</string>
     <!-- 업데이트 안내 -->
-    <string name="check_version">버전을 확인하고 있습니다.</string>
-    <string name="latest_version">최신버전을 사용하고 있습니다.</string>
+    <string name="check_version">버전을 확인하고 있습니다</string>
+    <string name="latest_version">최신버전을 사용하고 있습니다</string>
     <string name="offline">
         네트워크가 연결되지 않았습니다.
         \n버전 확인을 위해 네트워크를 연결하여 주십시오.</string>
-    <string name="low_version">새 업데이트가 있습니다.</string>
+    <string name="low_version">새 업데이트가 있습니다</string>
     <string name="plz_update">
         Play 스토어에서 앱을 업데이트 할 것을 권장합니다.
         \n\n[ ! ] 업데이트를 하지 않을 경우, 버그 수정 및 핫픽스, 새로운 기능 등을 사용하실 수 없으며,
         \n앱이 정상적으로 구동되지 않을 수 있습니다.</string>
-    <string name="access">작업을 승인합니다.</string>
+    <string name="access">작업을 승인합니다</string>
     <string name="crack">정식버전이 아닙니다!</string>
     <string name="crack_contents">
-        테스트 버전을 사용해주셔서 감사합니다.</string>
+        테스트 버전을 사용해주셔서 감사합니다</string>
     <string name="later">나중에</string>
     <string name="update_now">지금 업데이트</string>
     <string name="update_notification_title">앱이 업데이트됨</string>
     <string name="update_notification_message">
         앱이 업데이트 되었습니다.
         \n변경사항은 설정에서 확인할 수 있습니다.</string>
-    <string name="user_info_licensed">관리자 등급이 활성화되었습니다.</string>
-    <string name="user_info_require_message">게시글 작성을 위해서 관리자 권한이 필요합니다.</string>
+    <string name="user_info_licensed">관리자 등급이 활성화되었습니다</string>
+    <string name="user_info_require_message">게시글 작성을 위해서 관리자 권한이 필요합니다</string>
     <string name="user_info_class_up_title">관리자 인증 암호를 입력하세요</string>
 	<string name="title_activity_notice">개발자 공지사항</string>
-    <string name="message_activity_notice">개발자 공지사항을 확인합니다.</string>
+    <string name="message_activity_notice">개발자 공지사항을 확인합니다</string>
     <string name="title_notice">공지사항</string>
     <string name="title_activity_changelog">변경사항</string>
-    <string name="message_activity_changelog">이 앱의 변경사항을 확인합니다.</string>
+    <string name="message_activity_changelog">이 앱의 변경사항을 확인합니다</string>
 	<string name="title_activity_changelog_beta">변경사항 (베타)</string>
 
 	<string name="title_activity_scnoti">학교 공지사항</string>
-    <string name="message_activity_scnoti">학교 공지사항을 확인합니다.</string>
+    <string name="message_activity_scnoti">학교 공지사항을 확인합니다</string>
     <string name="title_activity_bap_star">급식 별점</string>
     <string name="bap_star_people_count">%1$d명 참여</string>
     <string name="bap_star_once_title">별점 전송 제한</string>
@@ -179,13 +197,13 @@
     <string name="post_bap_star_failed">급식 별점 전송에 실패했습니다!</string>
     <string name="title_activity_notice_send">공지사항 게시</string>
     <string name="post_notice_title">공지사항 전송</string>
-    <string name="post_notice_alert">한번 게시된 공지사항은 앱 개발자만 삭제할 수 있습니다. 다시 한번 확인하시고 전송하십시오.
+    <string name="post_notice_alert">한번 게시된 공지사항은 앱 개발자만 삭제할 수 있습니다. 다시 한 번 확인하시고 전송하십시오.
 \n반영까지 약 5분정도 소요될 수 있습니다.</string>
     <string name="post_notice_posting">공지사항을 전송중입니다.</string>
     <string name="post_notice_success">공지사항 전송을 성공했습니다!</string>
     <string name="post_notice_failed">공지사항 전송에 실패했습니다!</string>
     <string name="title_activity_exam_range">시험 시간표</string>
-    <string name="message_activity_exam_range">시험 시간표를 확인합니다.</string>
+    <string name="message_activity_exam_range">시험 시간표를 확인합니다</string>
     <string name="exam_time_title">%1$d학년 %2$s %3$s %4$s</string><!-- 1학년 과중 2학기 기말 시간표 -->
     <string name="no_exam_db_title">시험 시간표 DB 없음</string>
     <string name="no_exam_db_message">시험 시간표 DB가 없습니다, 다운로드 하시겠습니까?</string>
@@ -194,11 +212,13 @@
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
         2.2a
-        \n- 라이브러리 업데이트
+        \n- 라이브러리 추가 및 업데이트
         \n- 플러그인 업데이트
         \n- 시험 시간표 타이틀 수정
         \n- 2학기 2차고사 시간표 지원
         \n- 카드 디자인 개선
+        \n- 일부 String 개선
+        \n- 설정에 프로젝트 설명 추가
         \n\n2.1a
         \n- OpenGL ES 2.0 지원
         \n- 라이브러리 추가 및 업데이트
@@ -296,5 +316,4 @@
         \n- 오류 수정 및 코드 안정화
         \n\n1.0-beta1
         \n- 초기 릴리즈</string>
-
 </resources>

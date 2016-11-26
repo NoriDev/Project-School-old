@@ -61,12 +61,14 @@ public class MainFragment extends Fragment {
                     }
                 } else {
                     switch (position) {
-/*						case 0:
-*                            Toast.makeText(getActivity(), "학교 공지 기능 개발을 위해 준비중입니다:)", Toast.LENGTH_SHORT).show();
+/*
+*                        case 0:
+*                            Toast.makeText(getActivity(), "학교 공지 기능 개발중입니다:)", Toast.LENGTH_SHORT).show();
 *                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
 *                           break;
-*/                        case 0:
-//                            Toast.makeText(getActivity(), "기능 준비중입니다.", Toast.LENGTH_SHORT).show();
+*/
+                        case 0:
+//                            Toast.makeText(getActivity(), "기능 준비중입니다", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getActivity(), ExamTimeActivity.class));
                             break;
                         case 1:
