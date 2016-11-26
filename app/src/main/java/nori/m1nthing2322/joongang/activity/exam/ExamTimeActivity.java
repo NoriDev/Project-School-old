@@ -60,6 +60,7 @@ public class ExamTimeActivity extends AppCompatActivity {
         if (mActionBar != null) {
             mActionBar.setHomeButtonEnabled(true);
             mActionBar.setDisplayHomeAsUpEnabled(true);
+            mActionBar.setSubtitle(R.string.title_activity_exam_range);
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
