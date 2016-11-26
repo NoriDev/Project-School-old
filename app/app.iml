@@ -124,6 +124,7 @@
     <orderEntry type="library" exported="" name="play-services-plus-10.0.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-analytics-impl-10.0.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-database-10.0.0" level="project" />
+    <orderEntry type="library" exported="" name="circleimageview-2.1.0" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.0.1" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-10.0.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.0.1" level="project" />
@@ -161,7 +162,6 @@
     <orderEntry type="library" exported="" name="play-services-iid-10.0.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-ads-10.0.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-analytics-impl-10.0.0" level="project" />
-    <orderEntry type="library" exported="" name="circleimageview-2.0.0" level="project" />
     <orderEntry type="library" exported="" name="firebase-messaging-10.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-compat-25.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.0.1" level="project" />
