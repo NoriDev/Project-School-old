@@ -91,9 +91,8 @@
     <string name="widget_no_data">데이터가 없습니다. 날짜를 눌러 새로고침 하세요</string>
     <!-- 시간표 위젯 -->
     <!-- 오픈소스 라이센스 -->
-    <string name="license_title">라이센스 정보</string>
-    <string name="license_msg">오픈소스 라이센스 정보
-\n- Jericho HTML Parser
+    <string name="license_title">오픈소스 라이센스</string>
+    <string name="license_msg">- Jericho HTML Parser
 \n (http://jericho.htmlparser.net/docs/index.html)
 \n
 \n- Android Meal Library
@@ -106,7 +105,7 @@
 \n com.android.support:recyclerview-v7:25.0.1
 \n com.android.support:support-v4:25.0.1
 \n com.android.support:support-annotations:25.0.1
-\n com.google.android.gms:play-services:9.6.1
+\n com.google.android.gms:play-services:10.0.0
 \n com.android.support:multidex:1.0.1
 \n
 \n- DateTimePicker
@@ -117,7 +116,7 @@
 \n com.github.bumptech.glide:glide:3.7.0
 \n
 \n- CircleImageView
-\n de.hdodenhof:circleimageview:2.0.0
+\n de.hdodenhof:circleimageview:2.1.0
 \n
 \n- org.apache.http
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
@@ -199,6 +198,7 @@
         \n- 플러그인 업데이트
         \n- 시험 시간표 타이틀 수정
         \n- 2학기 2차고사 시간표 지원
+        \n- 카드 디자인 개선
         \n\n2.1a
         \n- OpenGL ES 2.0 지원
         \n- 라이브러리 추가 및 업데이트
