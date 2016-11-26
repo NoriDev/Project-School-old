@@ -121,9 +121,6 @@
 \n- org.apache.http
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
 \n
-\n- jsoup
-\n org.jsoup:jsoup:1.10.1
-\n
 \n- Icons
 \n calendar.png : http://www.tutsmag.com/wp-content/uploads/2013/06/final-result-calendar.png
 \n rice.png : http://keworganics.com.au/product-category/legumes/
@@ -219,6 +216,7 @@
         \n- 카드 디자인 개선
         \n- 일부 String 개선
         \n- 설정에 프로젝트 설명 추가
+        \n- 코드 최적화
         \n\n2.1a
         \n- OpenGL ES 2.0 지원
         \n- 라이브러리 추가 및 업데이트
