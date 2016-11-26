@@ -121,7 +121,6 @@ public class SettingsActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
                     builder.setTitle(R.string.user_info_class_up_title);
 //                    builder.setMessage(R.string.no_network_msg);
-
                     // Set an EditText view to get user input
                     final EditText input = new EditText(getActivity());
                     builder.setView(input);

@@ -100,12 +100,12 @@
 \n (https://bitbucket.org/whdghks913/wondanghighschool) (http://itmir.tistory.com/486) (http://blog.naver.com/rimal/140186322365)
 \n
 \n- Android Support Library
-\n com.android.support:appcompat-v7:24.2.1
-\n com.android.support:design:24.2.1
-\n com.android.support:cardview-v7:24.2.1
-\n com.android.support:recyclerview-v7:24.2.1
-\n com.android.support:support-v4:24.2.1
-\n com.android.support:support-annotations:24.2.1
+\n com.android.support:appcompat-v7:25.0.1
+\n com.android.support:design:25.0.1
+\n com.android.support:cardview-v7:25.0.1
+\n com.android.support:recyclerview-v7:25.0.1
+\n com.android.support:support-v4:25.0.1
+\n com.android.support:support-annotations:25.0.1
 \n com.google.android.gms:play-services:9.6.1
 \n com.android.support:multidex:1.0.1
 \n
@@ -187,14 +187,19 @@
     <string name="post_notice_failed">공지사항 전송에 실패했습니다!</string>
     <string name="title_activity_exam_range">시험 시간표</string>
     <string name="message_activity_exam_range">시험 시간표를 확인합니다.</string>
-    <string name="exam_time_title">%1$d학년 %2$s %3$s %4$s 시간표</string><!-- 1학년 과중 2학기 기말 시간표 -->
+    <string name="exam_time_title">%1$d학년 %2$s %3$s %4$s</string><!-- 1학년 과중 2학기 기말 시간표 -->
     <string name="no_exam_db_title">시험 시간표 DB 없음</string>
     <string name="no_exam_db_message">시험 시간표 DB가 없습니다, 다운로드 하시겠습니까?</string>
     <!-- 수정 내역 -->
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        2.1a
+        2.2a
+        \n- 라이브러리 업데이트
+        \n- 플러그인 업데이트
+        \n- 시험 시간표 타이틀 수정
+        \n- 2학기 2차고사 시간표 지원
+        \n\n2.1a
         \n- OpenGL ES 2.0 지원
         \n- 라이브러리 추가 및 업데이트
         \n- 버전확인 기능 임시 제거
