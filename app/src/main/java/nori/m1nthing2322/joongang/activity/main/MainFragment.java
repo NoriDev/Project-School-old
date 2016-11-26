@@ -62,7 +62,7 @@ public class MainFragment extends Fragment {
                     switch (position) {
 /*
 *                        case 0:
-*                            Toast.makeText(getActivity(), "학교 공지 기능 개발중입니다:)", Toast.LENGTH_SHORT).show();
+*                            Toast.makeText(getActivity(), "학교 공지 기능 개발중입니다 :)", Toast.LENGTH_SHORT).show();
 *                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
 *                           break;
 */
@@ -74,7 +74,7 @@ public class MainFragment extends Fragment {
                             startActivity(new Intent(getActivity(), NoticeActivity.class));
                             break;
                         case 2:
-                            Toast.makeText(getActivity(), "2016년 일정 기능은 아직 준비중 입니다:)", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "2016년 일정 기능은 아직 준비중 입니다 :)", Toast.LENGTH_SHORT).show();
 //                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
 						case 3:
