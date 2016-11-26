@@ -68,6 +68,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             setOnPreferenceClick(findPreference("infoAutoUpdate"));
             setOnPreferenceClick(findPreference("openSource"));
+            setOnPreferenceClick(findPreference("project"));
             setOnPreferenceClick(findPreference("ChangeLog"));
 			setOnPreferenceClick(findPreference("Developer"));
             //setOnPreferenceClick(findPreference("proUpgrade"));
@@ -97,6 +98,12 @@ public class SettingsActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
                     builder.setTitle(R.string.license_title);
                     builder.setMessage(R.string.license_msg);
+                    builder.setPositiveButton(android.R.string.ok, null);
+                    builder.show();
+                } else if ("project".equals(getKey)) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
+                    builder.setTitle(R.string.project_title);
+                    builder.setMessage(R.string.project_msg);
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.show();
                 } else if ("ChangeLog".equals(getKey)) {

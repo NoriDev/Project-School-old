@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
     <PreferenceCategory android:title="간편 보기">
         <CheckBoxPreference
             android:defaultValue="true"
@@ -58,6 +57,9 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/NoriDev/Project-School" />
         </Preference>
+        <Preference
+            android:key="project"
+            android:title="Project School이 무엇인가요?" />
         <!--<Preference
             android:key="appInfo"
             android:summary="개발자 정보를 확인합니다"
