@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="10dp"
     card_view:cardElevation="0dp" >
 
     <LinearLayout
@@ -18,6 +18,12 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
+		<TextView
+			android:id="@+id/mDate"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end"
+			android:textAppearance="?android:attr/textAppearanceSmall" />
 <!--
         <View
             android:layout_width="match_parent"
@@ -25,25 +31,15 @@
             android:layout_margin="7dp"
             android:background="@color/colorDivider" />
 -->
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="　"/>
 
         <TextView
             android:id="@+id/mMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-		
-		<TextView
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"
-			android:layout_gravity="bottom|end"
-			android:text="@string/last_update"
-			android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
-            android:id="@+id/mDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>
 
