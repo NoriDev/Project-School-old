@@ -5,10 +5,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import nori.m1nthing2322.joongang.R;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import nori.m1nthing2322.joongang.R;
 
 /**
  * Created by m1nth on 2016-10-05.
