@@ -208,9 +208,13 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        2.2a
+        3.0a
+        \n- 라이브러리 / SDK / 플러그인 업데이트
+        \n- 공지사항 / 변경사항 디자인 개선
+        \n- 업데이트 확인기능 복구
+        \n\n2.2a
         \n- 라이브러리 추가 및 업데이트
-        \n- sdk 업데이트
+        \n- SDK 업데이트
         \n- 플러그인 업데이트
         \n- 시험 시간표 타이틀 수정
         \n- 2학기 2차고사 시간표 지원
@@ -223,7 +227,7 @@
         \n- OpenGL ES 2.0 지원
         \n- 라이브러리 추가 및 업데이트
         \n- 버전확인 기능 임시 제거
-        \n- sdk 업데이트
+        \n- SDK 업데이트
         \n\n2.0b
         \n- 버그 수정
         \n\n2.0a
@@ -256,7 +260,14 @@
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
-        2.1-beta2
+        3.0-beta1
+        \n- 라이브러리 / SDK / 플러그인 업데이트
+        \n- 공지사항 / 변경사항 디자인 개선
+        \n- 업데이트 확인기능 복구
+        \n- 푸시알림 기능 추가
+        \n\n
+        =========================
+        \n\n2.1-beta2
         \n- OpenGL ES 3.1 지원
         \n- 라이브러리 업데이트
         \n- 버전확인 기능 임시 제거
