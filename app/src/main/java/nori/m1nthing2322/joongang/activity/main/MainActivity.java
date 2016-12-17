@@ -1,5 +1,7 @@
 package nori.m1nthing2322.joongang.activity.main;
 
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -7,6 +9,8 @@ import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.StrictMode;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,7 +22,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +37,9 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-//    private int ver= 22110;
-//    private ProgressDialog dialog;
-//    String xml;
+    private int ver= 22210;
+    private ProgressDialog dialog;
+    String xml;
 
     //    private BackPressCloseHandler backPressCloseHandler;
 
@@ -83,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-/*        dialog = new ProgressDialog(this);
+        dialog = new ProgressDialog(this);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setCancelable(false);
         dialog.setMessage(getString((R.string.check_version)));
@@ -91,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
-            String urlAddr = "http://devhost.iptime.org:1479/html/project_school.xml";
+            String urlAddr = "http://noridev.iptime.org/html/project_school.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
@@ -150,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
             dialog.cancel();
         }
-*/
     }
 
     private void setupViewPager(ViewPager viewPager) {
