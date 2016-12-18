@@ -35,7 +35,6 @@
                 android:dividerHeight="10dp" />
 
         </android.support.v4.widget.SwipeRefreshLayout>
-
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
