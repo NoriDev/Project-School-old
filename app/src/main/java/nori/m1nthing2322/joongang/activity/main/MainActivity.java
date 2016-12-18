@@ -40,7 +40,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 23110;
+    private int ver= 30002;
     private ProgressDialog dialog;
     String xml;
 
@@ -49,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseMessaging.getInstance().subscribeToTopic("news");
+        // beta 테스트 앱일 경우에만 활성화
+        FirebaseMessaging.getInstance().subscribeToTopic("beta");
+
         FirebaseInstanceId.getInstance().getToken();
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
@@ -226,6 +228,19 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_feedback) {
             Uri uri = Uri.parse("mailto:noridevdroid@gmail.com");
             Intent it = new Intent(Intent.ACTION_SENDTO, uri);
+            startActivity(it);
+            return true;
+        }
+        if (id == R.id.action_chat) {
+            Uri uri = Uri.parse("https://open.kakao.com/o/g6KQyFq");
+            Intent it = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(it);
+            return true;
+        }
+        // beta 테스트 앱일 경우에만 활성화
+        if (id == R.id.action_chat_beta) {
+            Uri uri = Uri.parse("https://open.kakao.com/o/gahCyFq");
+            Intent it = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(it);
             return true;
         }
