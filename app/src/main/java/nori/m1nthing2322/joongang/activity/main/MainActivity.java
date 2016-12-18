@@ -44,14 +44,10 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog dialog;
     String xml;
 
-    //    private BackPressCloseHandler backPressCloseHandler;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        backPressCloseHandler = new BackPressCloseHandler(this);
 
         FirebaseMessaging.getInstance().subscribeToTopic("news");
         FirebaseInstanceId.getInstance().getToken();
@@ -235,11 +231,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-/*    @Override
-    public void onBackPressed() {
-        //super.onBackPressed();
-        backPressCloseHandler.onBackPressed();
-    }
-*/
 }
