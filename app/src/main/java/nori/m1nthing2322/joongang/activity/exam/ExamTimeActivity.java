@@ -42,9 +42,8 @@ public class ExamTimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_time);
 
-        AlertDialog.Builder end_Exam = new AlertDialog.Builder(this, R.style.AppCompatErrorAlertDialogStyle);
-        end_Exam.setTitle("시험이 끝났습니다 (짝짝짝)");
-        end_Exam.setMessage("드디어 마지막 시험이 끝났습니다!\n시험 치시느라 고생하셨고, 이제 얼마 남지 않은 담임선생님과의 시간을 소중히 간직하는 시간을 가져봅시다 :)");
+        AlertDialog.Builder end_Exam = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
+        end_Exam.setMessage("드디어 마지막 시험이 끝났습니다! (짝짝짝)\n시험 치시느라 고생많으셨고, 이제 얼마 남지 않은 담임선생님과의 시간을 소중히 간직하는 시간을 가져봅시다 :)");
         end_Exam.setPositiveButton(android.R.string.ok, null);
         end_Exam.show();
 
