@@ -102,12 +102,20 @@
 \n com.android.support:design:25.1.0
 \n com.android.support:cardview-v7:25.1.0
 \n com.android.support:recyclerview-v7:25.1.0
-\n com.android.support:support-v4:25.1.0
+\n com.android.support:support-v13:25.1.0
 \n com.android.support:support-annotations:25.1.0
 \n com.android.support:multidex:1.0.1
 \n
 \n- Google Play Services Library
-\n com.google.android.gms:play-services:10.0.1
+\n com.google.android.gms:play-services-gcm:10.0.1
+\n com.google.android.gms:play-services-ads:10.0.1
+\n
+\n- Google Firebase
+\n com.google.firebase:firebase-core:10.0.1
+\n com.google.firebase:firebase-messaging:10.0.1
+\n com.google.firebase:firebase-ads:10.0.1
+\n com.google.firebase:firebase-crash:10.0.1
+\n com.google.firebase:firebase-appindexing:10.0.1
 \n
 \n- DateTimePicker
 \n com.github.flavienlaurent.datetimepicker:library:0.0.2
@@ -123,7 +131,7 @@
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
 \n
 \n- com.squareup.okhttp
-\n com.squareup.okhttp3:okhttp:3.2.0
+\n com.squareup.okhttp3:okhttp:3.5.0
 \n
 \n- Icons
 \n calendar.png : http://www.tutsmag.com/wp-content/uploads/2013/06/final-result-calendar.png
@@ -136,7 +144,8 @@
 \n Mir : https://bitbucket.org/whdghks913/wondanghighschool</string>
     <!-- 프로젝트 안내 -->
     <string name="project_title">Project School이 무엇인가요?</string>
-    <string name="project_msg">Project School은 내 주변의 학교부터 시작해서 대부분의 학교를 자발적으로 학교앱을 제작 / 제공하겠다는 아이디어로 시작된 프로젝트입니다.
+    <string name="project_msg">
+\nProject School은 내 주변의 학교부터 시작해서 대부분의 학교를 자발적으로 학교앱을 제작/제공하겠다는 아이디어로 시작된 프로젝트입니다.
 \n
 \n
 \n
@@ -145,7 +154,7 @@
 \n
 \n자신이 재학중인 학교의 이름, 자신이 재학중인 학교의 시간표가 필요합니다.
 \n
-\n지속적인 정보 제공을 위한 연락수단(예: 카카오톡이나 페이스북 메신저 등) 의 경우 선택사항이니 굳이 기입하지 않으셔도 됩니다.
+\n지속적인 정보 제공을 위한 연락수단(예: 카카오톡이나 페이스북 메신저 등)의 경우 선택사항이니 굳이 기입하지 않으셔도 됩니다.
 \n
 \n제공해주신 모든 정보는 개인정보보호법에 의해 철저히 보호받으며, 연락수단 역시 시험 시간표와 변경된 시간표 제공 및 기타 변동사항을 제공받기 위한 것임을 밝힙니다.
 \n
@@ -160,23 +169,19 @@
     <!-- 업데이트 -->
     <string name="check_version">버전을 확인하고 있습니다</string>
     <string name="latest_version">최신버전을 사용하고 있습니다</string>
-    <string name="offline">
-        네트워크가 연결되지 않았습니다.
+    <string name="offline">네트워크가 연결되지 않았습니다.
         \n버전 확인을 위해 네트워크를 연결하여 주십시오.</string>
     <string name="low_version">새 업데이트가 있습니다</string>
-    <string name="plz_update">
-        Play 스토어에서 앱을 업데이트 할 것을 권장합니다.
+    <string name="plz_update">Play 스토어에서 앱을 업데이트 할 것을 권장합니다.
         \n\n[ ! ] 업데이트를 하지 않을 경우, 버그 수정 및 핫픽스, 새로운 기능 등을 사용하실 수 없으며,
-        \n앱이 정상적으로 구동되지 않을 수 있습니다.</string>
+        \n앱이 정상적으로 구동되지 않을수도 있습니다.</string>
     <string name="access">작업을 승인합니다</string>
     <string name="crack">정식버전이 아닙니다!</string>
-    <string name="crack_contents">
-        테스트 버전을 사용해주셔서 감사합니다</string>
+    <string name="crack_contents">테스트 버전을 사용해주셔서 감사합니다</string>
     <string name="later">나중에</string>
     <string name="update_now">지금 업데이트</string>
     <string name="update_notification_title">앱이 업데이트됨</string>
-    <string name="update_notification_message">
-        앱이 업데이트 되었습니다.
+    <string name="update_notification_message">앱이 새로운 버전으로 업데이트 되었습니다.
         \n변경사항은 설정에서 확인할 수 있습니다.</string>
 	<string name="title_activity_notice">개발자 공지사항</string>
     <string name="message_activity_notice">개발자 공지사항을 확인합니다</string>
@@ -184,7 +189,6 @@
     <string name="title_activity_changelog">변경사항</string>
     <string name="message_activity_changelog">이 앱의 변경사항을 확인합니다</string>
 	<string name="title_activity_changelog_beta">변경사항 (베타)</string>
-
     <!-- 관리자 (미사용) -->
     <string name="user_info_licensed">관리자 등급이 활성화되었습니다</string>
     <string name="user_info_require_message">게시글 작성을 위해서 관리자 권한이 필요합니다</string>
@@ -219,11 +223,7 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        3.0a
-        \n- 라이브러리 / SDK / 플러그인 업데이트
-        \n- 공지사항 / 변경사항 디자인 개선
-        \n- 업데이트 확인기능 복구
-        \n\n2.2a
+        \n2.2a
         \n- 라이브러리 추가 및 업데이트
         \n- SDK 업데이트
         \n- 플러그인 업데이트
@@ -271,12 +271,18 @@
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
-        3.0-beta1
+        \n3.0-beta1
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 공지사항 / 변경사항 디자인 개선
         \n- 업데이트 확인기능 복구
         \n- 푸시알림 기능 추가
-        \n- 이스터에그 추가
+        \n- 시험 끝 축하메시지 추가
+        \n- 최소 sdk 버전을 15에서 19로 조정
+        \n- 버그 수정
+        \n- 라이브러리 경량화
+        \n- Java 8 사용
+        \n- OpenGL ES 3.0으로 업데이트
+        \n- 하드웨어 가속 사용
         \n\n
         =========================
         \n\n2.1-beta2
