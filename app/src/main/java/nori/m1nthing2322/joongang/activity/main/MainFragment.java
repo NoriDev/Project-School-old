@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
-import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
+// import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
 import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
 import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
