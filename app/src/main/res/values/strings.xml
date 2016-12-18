@@ -158,7 +158,7 @@
 \n
 \n제공해주신 모든 정보는 개인정보보호법에 의해 철저히 보호받으며, 연락수단 역시 시험 시간표와 변경된 시간표 제공 및 기타 변동사항을 제공받기 위한 것임을 밝힙니다.
 \n
-\n제공에 동의하신다면, noridevdroid@gmail.com 으로 위 사항을 기재하여 보내주십시오.
+\n제공에 동의하신다면, https://goo.gl/hVEzp3 또는 noridevdroid@gmail.com 으로 위 사항을 기재하여 보내주십시오.
 \n
 \n2일 이내로 개발자가 답변할 것입니다.</string>
     <!-- 개발자 -->
@@ -271,7 +271,9 @@
     </string>
     <string name="changeLog_title_beta">변경사항 (베타)</string>
     <string name="changeLog_msg_beta">
-        \n3.0-beta1
+        \n3.0-beta2
+        \n- 오픈 채팅방 바로가기 지원
+        \n\n3.0-beta1
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 공지사항 / 변경사항 디자인 개선
         \n- 업데이트 확인기능 복구
