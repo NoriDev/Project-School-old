@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nori.m1nthing2322.joongang" >
 
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    // OpenGL ES 3.1 사용 시 지원기기가 줄어드는 것을 확인.
+    <uses-feature android:glEsVersion="0x00030000" android:required="true" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,7 +16,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name="android.support.multidex.MultiDexApplication"
+        android:hardwareAccelerated="true">
         <!-- Activity -->
         <activity
             android:name="nori.m1nthing2322.joongang.activity.main.MainActivity"
