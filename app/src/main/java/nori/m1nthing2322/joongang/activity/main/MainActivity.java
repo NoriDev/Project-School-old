@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onFinish(){
                     dialog.dismiss();
                     if(Integer.parseInt(xml)==ver){//new version
-                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     }
                     else if(Integer.parseInt(xml)>ver){//현재버전보다 서버버전이 높을때
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
