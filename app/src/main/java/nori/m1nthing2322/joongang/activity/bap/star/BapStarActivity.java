@@ -130,7 +130,11 @@ public class BapStarActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatErrorAlertDialogStyle);
             builder.setTitle(R.string.bap_star_once_title);
             builder.setMessage(R.string.bap_star_once_message);
-            builder.setPositiveButton(android.R.string.ok, null);
+            builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }});
             builder.show();
         }
     }
@@ -151,7 +155,7 @@ public class BapStarActivity extends AppCompatActivity {
         @Override
         protected Integer doInBackground(String... params) {
             try {
-                HttpPost postRequest = new HttpPost("https://script.google.com/macros/s/AKfycbzWytq6dbJXp5jz98MTKHaHO3aiST1nAh2ADY1UmEuSx1v5mU5C/exec");
+                HttpPost postRequest = new HttpPost("https://script.google.com/macros/s/AKfycbwR755X_mEWKZ8LKQuQf81t5rVerzOLCg1ztZyHisNr7rB8rIo/exec");
 
                 //전달할 값들
                 Vector<NameValuePair> nameValue = new Vector<>();
@@ -218,7 +222,11 @@ public class BapStarActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(BapStarActivity.this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.post_bap_star_title);
                 builder.setMessage(R.string.post_bap_star_success);
-                builder.setPositiveButton(android.R.string.ok, null);
+                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }});
                 builder.show();
 
                 BapTool.todayPostStar(getApplicationContext(), value);
@@ -230,7 +238,7 @@ public class BapStarActivity extends AppCompatActivity {
         if (Tools.isOnline(getApplicationContext())) {
             if (Tools.isWifi(getApplicationContext())) {
                 getStarRateDownloadTask mTask = new getStarRateDownloadTask();
-                mTask.execute("https://docs.google.com/spreadsheets/d/1e8g-i_-k1AT14L1mvcUlLmYJKUOGX6tu1r_nTuJfoAY/pubhtml?gid=174015765&single=true");
+                mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1289049135&single=true");
             } else {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle(R.string.no_wifi_title);
@@ -245,7 +253,7 @@ public class BapStarActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         getStarRateDownloadTask mTask = new getStarRateDownloadTask();
-                        mTask.execute("https://docs.google.com/spreadsheets/d/1e8g-i_-k1AT14L1mvcUlLmYJKUOGX6tu1r_nTuJfoAY/pubhtml?gid=174015765&single=true");
+                        mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1289049135&single=true");
                     }
                 });
                 builder.show();

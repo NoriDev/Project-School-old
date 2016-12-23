@@ -26,7 +26,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.ProcessTask;
 import nori.m1nthing2322.joongang.tool.Tools;
 
-//import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
+import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
 
 public class BapActivity extends AppCompatActivity {
 
@@ -253,10 +253,10 @@ public class BapActivity extends AppCompatActivity {
 
             return true;
         }
-/*        else if (id == R.id.action_show_star) {
+        else if (id == R.id.action_show_star) {
             startActivity(new Intent(this, BapStarActivity.class).putExtra("starType", 2));
         }
-*/
+
         return super.onOptionsItemSelected(item);
     }
 

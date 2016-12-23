@@ -1,15 +1,18 @@
 package nori.m1nthing2322.joongang.activity.bap;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import nori.m1nthing2322.joongang.R;
+import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 
 /**
@@ -20,7 +23,7 @@ class BapViewHolder {
     public TextView mDayOfTheWeek;
     public TextView mLunch;
     public TextView mDinner;
-//    public LinearLayout starLayout;
+    public LinearLayout starLayout;
 }
 
 class BapListData {
@@ -35,7 +38,7 @@ public class BapAdapter extends BaseAdapter {
     private Context mContext = null;
     private ArrayList<BapListData> mListData = new ArrayList<BapListData>();
 
-/*    final View.OnClickListener mStarListener = new View.OnClickListener() {
+    final View.OnClickListener mStarListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent mIntent = new Intent(mContext, BapStarActivity.class);
@@ -49,7 +52,6 @@ public class BapAdapter extends BaseAdapter {
             mContext.startActivity(mIntent);
         }
     };
-*/
 	
     public BapAdapter(Context mContext) {
         super();
@@ -101,7 +103,7 @@ public class BapAdapter extends BaseAdapter {
             mHolder.mDayOfTheWeek = (TextView) convertView.findViewById(R.id.mDayOfTheWeek);
             mHolder.mLunch = (TextView) convertView.findViewById(R.id.mLunch);
             mHolder.mDinner = (TextView) convertView.findViewById(R.id.mDinner);
-//            mHolder.starLayout = (LinearLayout) convertView.findViewById(R.id.starLayout);
+            mHolder.starLayout = (LinearLayout) convertView.findViewById(R.id.starLayout);
 
             convertView.setTag(mHolder);
         } else {
@@ -126,11 +128,11 @@ public class BapAdapter extends BaseAdapter {
         mHolder.mDinner.setText(mDinner);
 
         if (mData.isToday) {
-//            mHolder.starLayout.setVisibility(View.VISIBLE);
-//            convertView.findViewById(R.id.giveStar).setOnClickListener(mStarListener);
-//            convertView.findViewById(R.id.showStar).setOnClickListener(mStarListener);
+            mHolder.starLayout.setVisibility(View.VISIBLE);
+            convertView.findViewById(R.id.giveStar).setOnClickListener(mStarListener);
+            convertView.findViewById(R.id.showStar).setOnClickListener(mStarListener);
         } else {
-//            mHolder.starLayout.setVisibility(View.GONE);
+            mHolder.starLayout.setVisibility(View.GONE);
         }
 
         return convertView;
