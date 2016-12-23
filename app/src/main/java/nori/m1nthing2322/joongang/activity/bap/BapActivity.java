@@ -253,10 +253,10 @@ public class BapActivity extends AppCompatActivity {
 
             return true;
         }
-        else if (id == R.id.action_show_star) {
+/*        else if (id == R.id.action_show_star) {
             startActivity(new Intent(this, BapStarActivity.class).putExtra("starType", 2));
         }
-
+*/
         return super.onOptionsItemSelected(item);
     }
 
