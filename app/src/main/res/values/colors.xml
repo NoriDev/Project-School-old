@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<!--<resources>
     <color name="colorPrimary">#8CD5ED</color>
     <color name="colorPrimaryDark">#71BFDC</color>
     <color name="colorPrimaryLight">#DCEDC8</color>
@@ -10,3 +10,17 @@
     <color name="colorDivider">#B6B6B6</color>
     <color name="colorCircle">#FFBB00</color>
 </resources>
+-->
+<resources>
+// X-mas Edition
+    <color name="colorPrimary">#e23d3d</color>
+    <color name="colorPrimaryDark">#cf2a2a</color>
+    <color name="colorPrimaryLight">#DCEDC8</color>
+    <color name="colorAccent">#e23d3d</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorIcons">#212121</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="colorCircle">#FFBB00</color>
+</resources>
+

@@ -40,7 +40,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 30002;
+    private int ver= 30110;
     private ProgressDialog dialog;
     String xml;
 
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // beta 테스트 앱일 경우에만 활성화
-        FirebaseMessaging.getInstance().subscribeToTopic("beta");
+//        FirebaseMessaging.getInstance().subscribeToTopic("beta");
 
         FirebaseInstanceId.getInstance().getToken();
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
-           mActionBar.setSubtitle(R.string.beta);
+//           mActionBar.setSubtitle(R.string.beta);
         }
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.mViewpager);
@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-//                builder.setTitle(R.string.changeLog_title);
-                builder.setTitle(R.string.changeLog_title_beta);
-//                builder.setMessage(R.string.changeLog_msg);
-                builder.setMessage(R.string.changeLog_msg_beta);
+                builder.setTitle(R.string.changeLog_title);
+//                builder.setTitle(R.string.changeLog_title_beta);
+                builder.setMessage(R.string.changeLog_msg);
+//                builder.setMessage(R.string.changeLog_msg_beta);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.show();
             }
@@ -238,12 +238,13 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         // beta 테스트 앱일 경우에만 활성화
-        if (id == R.id.action_chat_beta) {
+/*        if (id == R.id.action_chat_beta) {
             Uri uri = Uri.parse("https://open.kakao.com/o/gahCyFq");
             Intent it = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(it);
             return true;
         }
+*/
         return super.onOptionsItemSelected(item);
     }
 }

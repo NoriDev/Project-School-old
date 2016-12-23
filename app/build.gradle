@@ -6,23 +6,23 @@ android {
 
     defaultConfig {
         applicationId "nori.m1nthing2322.joongang"
-        minSdkVersion 19
+        // multidex 기능을 건너뛰어 컴파일 속도를 향상시킴
+        minSdkVersion 21
         targetSdkVersion 25
         // Enabling multidex support.
         multiDexEnabled true
     }
     productFlavors {
         beta {
-            // multidex 옵션을 건너뛰어 컴파일 속도를 향상시킴.
-            minSdkVersion 21
             // 1(major) 0(minor) 1(0: beta, =<1: prod) 0(0: beta, 1: prod) 1(=<1: beta, 0: prod)
             versionCode 30002
             versionName "3.0-beta2"
         }
         prod {
+            minSdkVersion 19
             // 1(major) 0(minor) 1(0: beta, =<1: prod) 0(0: beta, 1: prod) 1(=<1: beta, 0: prod)
             versionCode 30110
-            versionName "3.0a"
+            versionName "3.0a-SE"
         }
     }
     buildTypes {
