@@ -219,6 +219,13 @@
     <string name="exam_time_title">%1$d학년 %2$s %3$s %4$s</string><!-- 1학년 과중 2학기 기말 시간표 -->
     <string name="no_exam_db_title">시험 시간표 DB 없음</string>
     <string name="no_exam_db_message">시험 시간표 DB가 없습니다, 다운로드 하시겠습니까?</string>
+    <!-- App Shortcut -->
+    <string name="rice_shortcut_long_label">오늘의 급식</string>
+    <string name="rice_shortcut_short_label">오늘의 급식</string>
+    <string name="rice_disabled_message">오늘의 급식 비활성화</string>
+    <string name="timetable_shortcut_long_label">오늘의 시간표</string>
+    <string name="timetable_shortcut_short_label">오늘의 시간표</string>
+    <string name="timetable_disabled_message">오늘의 시간표 비활성화</string>
     <!-- 변경사항 -->
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
@@ -238,6 +245,7 @@
         \n- 최신버전일때 나오는 알림 삭제
         \n- String 개선
         \n- 크리스마스 기념 X-mas Edition
+        \n- 안드로이드 7.1 이상 기기에 대해 Shortcut 지원
         \n\n
         =========================
         \n\n2.2a

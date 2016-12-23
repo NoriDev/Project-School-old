@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="rice"
+        android:enabled="true"
+        android:icon="@drawable/rice"
+        android:shortcutShortLabel="@string/rice_shortcut_short_label"
+        android:shortcutLongLabel="@string/rice_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/rice_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="nori.m1nthing2322.joongang"
+            android:targetClass="nori.m1nthing2322.joongang.activity.bap.BapActivity" />
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="timetable"
+        android:enabled="true"
+        android:icon="@drawable/timetable"
+        android:shortcutShortLabel="@string/timetable_shortcut_short_label"
+        android:shortcutLongLabel="@string/timetable_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/timetable_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="nori.m1nthing2322.joongang"
+            android:targetClass="nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity" />
+    </shortcut>
+
+</shortcuts>
