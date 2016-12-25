@@ -125,7 +125,7 @@ public class MainFragment extends Fragment {
 /*			mAdapter.addItem(R.drawable.notice,
 *					getString(R.string.title_activity_scnoti),
 *					getString(R.string.message_activity_scnoti));
-*/			mAdapter.addItem(R.drawable.ic_launcher_big,
+*/			mAdapter.addItem(R.drawable.ic_launcher_big_new,
                     getString(R.string.title_activity_exam_range),
                     getString(R.string.message_activity_exam_range));
             mAdapter.addItem(R.drawable.notice,
