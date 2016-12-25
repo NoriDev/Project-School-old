@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
-            String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/project_school_JoongangHS.xml";
+            String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
