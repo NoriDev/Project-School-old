@@ -230,7 +230,9 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        \n3.0a-SE
+        \n3.0b-SE
+        \n- 업데이트 정보수신 서버주소 변경
+        \n\n3.0a-SE
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 공지사항 / 변경사항 디자인 개선
         \n- 업데이트 확인기능 복구
