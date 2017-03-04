@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
+        android:shortcutId="schedule"
+        android:enabled="true"
+        android:icon="@drawable/calendar"
+        android:shortcutShortLabel="@string/schedule_shortcut_short_label"
+        android:shortcutLongLabel="@string/schedule_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/schedule_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="nori.m1nthing2322.joongang"
+            android:targetClass="nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity" />
+    </shortcut>
+
+    <shortcut
         android:shortcutId="rice"
         android:enabled="true"
         android:icon="@drawable/rice"
