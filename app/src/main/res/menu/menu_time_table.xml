@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_share"
         android:orderInCategory="1"
         android:title="@string/action_share_timetable"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_download_db"
         android:icon="@drawable/ic_update"
