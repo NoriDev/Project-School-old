@@ -57,7 +57,7 @@ public class updateService extends Service {
                 stopSelf();
             }
 
-            // 토요일일경우 하루를 추가해줌
+            // 토요일인 경우 하루를 추가해줌
             if (mCalendar.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY)
                 mCalendar.add(Calendar.DATE, 1);
 
@@ -103,7 +103,6 @@ public class updateService extends Service {
 
         @Override
         public void onUpdate(int progress) {
-
         }
 
         @Override
