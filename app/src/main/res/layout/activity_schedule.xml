@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.schedule.ScheduleActivity">
 
-    <include layout="@layout/toolbar_tab" />
+    <include layout="@layout/toolbar_tab_many" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/mViewpager"
