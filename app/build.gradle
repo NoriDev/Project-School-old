@@ -64,24 +64,32 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile files('libs/jericho-html-3.4.jar')
-    compile 'com.android.support:cardview-v7:25.2.0'
-    compile 'com.android.support:design:25.2.0'
+// Android Support Library
     compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
     compile 'com.android.support:recyclerview-v7:25.2.0'
     compile 'com.android.support:support-v13:25.2.0'
-    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     compile 'com.android.support:support-annotations:25.2.0'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+// Google Play Services Library
     compile 'com.google.android.gms:play-services-gcm:10.2.0'
     compile 'com.google.android.gms:play-services-ads:10.2.0'
+// Google Firebase
     compile 'com.google.firebase:firebase-core:10.0.1'
     compile 'com.google.firebase:firebase-messaging:10.0.1'
     compile 'com.google.firebase:firebase-ads:10.0.1'
     compile 'com.google.firebase:firebase-crash:10.0.1'
     compile 'com.google.firebase:firebase-appindexing:10.0.1'
+// DateTimePicker
+    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
+// Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+// CircleImageView
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+// org.apache.http
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+// com.squareup.okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
 }
 apply plugin: 'com.google.gms.google-services'

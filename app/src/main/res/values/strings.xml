@@ -98,17 +98,17 @@
 \n (https://bitbucket.org/whdghks913/wondanghighschool) (http://itmir.tistory.com/486) (http://blog.naver.com/rimal/140186322365)
 \n
 \n- Android Support Library
-\n com.android.support:appcompat-v7:25.1.0
-\n com.android.support:design:25.1.0
-\n com.android.support:cardview-v7:25.1.0
-\n com.android.support:recyclerview-v7:25.1.0
-\n com.android.support:support-v13:25.1.0
-\n com.android.support:support-annotations:25.1.0
+\n com.android.support:appcompat-v7:25.2.0
+\n com.android.support:design:25.2.0
+\n com.android.support:cardview-v7:25.2.0
+\n com.android.support:recyclerview-v7:25.2.0
+\n com.android.support:support-v13:25.2.0
+\n com.android.support:support-annotations:25.2.0
 \n com.android.support:multidex:1.0.1
 \n
 \n- Google Play Services Library
-\n com.google.android.gms:play-services-gcm:10.0.1
-\n com.google.android.gms:play-services-ads:10.0.1
+\n com.google.android.gms:play-services-gcm:10.2.0
+\n com.google.android.gms:play-services-ads:10.2.0
 \n
 \n- Google Firebase
 \n com.google.firebase:firebase-core:10.0.1
@@ -131,7 +131,7 @@
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
 \n
 \n- com.squareup.okhttp
-\n com.squareup.okhttp3:okhttp:3.5.0
+\n com.squareup.okhttp3:okhttp:3.6.0
 \n
 \n- Icons
 \n calendar.png : http://www.tutsmag.com/wp-content/uploads/2013/06/final-result-calendar.png
