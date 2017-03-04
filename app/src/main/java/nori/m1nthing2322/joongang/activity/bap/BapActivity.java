@@ -152,7 +152,6 @@ public class BapActivity extends AppCompatActivity {
                     builder.setCancelable(false);
                     builder.show();
                 }
-
                 return;
             }
 
