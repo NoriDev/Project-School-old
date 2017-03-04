@@ -39,9 +39,12 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 30210;
+    private int ver= 31110;
     private ProgressDialog dialog;
     String xml;
+
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setMessage(R.string.changeLog_msg);
 //                builder.setMessage(R.string.changeLog_msg_beta);
                 builder.setPositiveButton(android.R.string.ok, null);
+                builder.setCancelable(false);
                 builder.show();
             }
 
@@ -150,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                                                         ("https://play.google.com/store/apps/details?id=nori.m1nthing2322.joongang"));
                                         startActivity(myIntent);
                                     }});
+                        builder.setCancelable(false);
                         builder.show();
                     }else {//현재버전보다 서버 버전이 낮을때
                         Toast.makeText(getApplicationContext(), R.string.crack_contents, Toast.LENGTH_SHORT).show();
@@ -245,5 +250,20 @@ public class MainActivity extends AppCompatActivity {
         }
 */
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
+        {
+            super.onBackPressed();
+        }
+        else
+        {
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
