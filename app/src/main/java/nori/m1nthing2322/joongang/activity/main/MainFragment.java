@@ -8,19 +8,20 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
 import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
-// import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
 import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
+import nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.RecyclerItemClickListener;
 import nori.m1nthing2322.joongang.tool.TimeTableTool;
+
+// import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
 
 /**
  * Created by whdghks913 on 2015-11-30.
@@ -75,8 +76,8 @@ public class MainFragment extends Fragment {
                             startActivity(new Intent(getActivity(), NoticeActivity.class));
                             break;
                         case 2:
-                            Toast.makeText(getActivity(), "2016년 일정 기능은 아직 준비중 입니다 :)", Toast.LENGTH_SHORT).show();
-//                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
+//                            Toast.makeText(getActivity(), "2016년 일정 기능은 아직 준비중 입니다 :)", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
 						case 3:
                             startActivity(new Intent(getActivity(), ChangelogActivity.class));
@@ -125,7 +126,7 @@ public class MainFragment extends Fragment {
 /*			mAdapter.addItem(R.drawable.notice,
 *					getString(R.string.title_activity_scnoti),
 *					getString(R.string.message_activity_scnoti));
-*/			mAdapter.addItem(R.drawable.ic_launcher_big,
+*/			mAdapter.addItem(R.drawable.ic_launcher_big_new,
                     getString(R.string.title_activity_exam_range),
                     getString(R.string.message_activity_exam_range));
             mAdapter.addItem(R.drawable.notice,
