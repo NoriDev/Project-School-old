@@ -26,8 +26,6 @@ import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.ProcessTask;
 import nori.m1nthing2322.joongang.tool.Tools;
 
-import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
-
 public class BapActivity extends AppCompatActivity {
 
     ListView mListView;
