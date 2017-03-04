@@ -161,7 +161,6 @@ public class BapActivity extends AppCompatActivity {
             } else {
                 mAdapter.addItem(mData.Calender, mData.DayOfTheWeek, mData.Lunch, mData.Dinner, false);
             }
-
             mCalendar.add(Calendar.DATE, 1);
         }
 
@@ -266,7 +265,6 @@ public class BapActivity extends AppCompatActivity {
 
         @Override
         public void onPreDownload() {
-
         }
 
         @Override
@@ -305,5 +303,4 @@ public class BapActivity extends AppCompatActivity {
         msg.setType("text/plain");
         startActivity(Intent.createChooser(msg, getString(R.string.shareBap_title)));
     }
-
 }
