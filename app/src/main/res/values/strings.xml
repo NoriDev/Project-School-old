@@ -226,11 +226,21 @@
     <string name="timetable_shortcut_long_label">오늘의 시간표</string>
     <string name="timetable_shortcut_short_label">오늘의 시간표</string>
     <string name="timetable_disabled_message">오늘의 시간표 비활성화</string>
+    <string name="schedule_shortcut_long_label">이달의 일정</string>
+    <string name="schedule_shortcut_short_label">이달의 일정</string>
+    <string name="schedule_disabled_message">이달의 일정 비활성화</string>
     <!-- 변경사항 -->
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        \n3.0a-SE
+        \n3.0b
+        \n- 라이브러리 / SDK / 플러그인 업데이트
+        \n- 17학년도 시간표 업데이트
+        \n- 일정 기능 활성화
+        \n- Shortcut에 일정 기능 추가
+        \n- 색상 및 앱 아이콘 기존으로 되돌림
+        \n- 버그 수정 및 안정화
+        \n\n3.0a-SE
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 공지사항 / 변경사항 디자인 개선
         \n- 업데이트 확인기능 복구
@@ -246,6 +256,7 @@
         \n- String 개선
         \n- 크리스마스 기념 X-mas Edition
         \n- 안드로이드 7.1 이상 기기에 대해 Shortcut 지원
+        \n- 앱 아이콘 변경
         \n\n
         =========================
         \n\n2.2a
