@@ -99,12 +99,14 @@ public class SettingsActivity extends AppCompatActivity {
                     builder.setTitle(R.string.license_title);
                     builder.setMessage(R.string.license_msg);
                     builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setCancelable(false);
                     builder.show();
                 } else if ("project".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
                     builder.setTitle(R.string.project_title);
                     builder.setMessage(R.string.project_msg);
                     builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setCancelable(false);
                     builder.show();
                 } else if ("ChangeLog".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
@@ -115,12 +117,14 @@ public class SettingsActivity extends AppCompatActivity {
 //                    builder.setTitle(R.string.changeLog_title_beta);
 //                    builder.setMessage(R.string.changeLog_msg_beta);
                     builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setCancelable(false);
                     builder.show();
                 } else if ("Developer".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
                     builder.setTitle(R.string.developer_title);
                     builder.setMessage(R.string.developer_msg);
                     builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setCancelable(false);
                     builder.show();
                 } else if ("infoAutoUpdate".equals(getKey)) {
                     showNotification();

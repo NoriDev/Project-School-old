@@ -149,6 +149,7 @@ public class BapActivity extends AppCompatActivity {
                     builder.setTitle(R.string.no_network_title);
                     builder.setMessage(R.string.no_network_msg);
                     builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setCancelable(false);
                     builder.show();
                 }
 
@@ -241,6 +242,7 @@ public class BapActivity extends AppCompatActivity {
                 builder.setTitle(R.string.no_network_title);
                 builder.setMessage(R.string.no_network_msg);
                 builder.setPositiveButton(android.R.string.ok, null);
+                builder.setCancelable(false);
                 builder.show();
             }
 
@@ -283,6 +285,7 @@ public class BapActivity extends AppCompatActivity {
                 builder.setTitle(R.string.I_do_not_know_the_error_title);
                 builder.setMessage(R.string.I_do_not_know_the_error_message);
                 builder.setPositiveButton(android.R.string.ok, null);
+                builder.setCancelable(false);
                 builder.show();
 
                 return;

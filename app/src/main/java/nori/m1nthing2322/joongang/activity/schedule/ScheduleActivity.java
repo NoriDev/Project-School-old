@@ -59,19 +59,19 @@ public class ScheduleActivity extends AppCompatActivity {
 
         setCurrentItem();
 
-        showUpdateNotification();
+        showScheduleNotification();
     }
 
-    private void showUpdateNotification() {
+    private void showScheduleNotification() {
         try {
             Preference mPref = new Preference(getApplicationContext());
             PackageManager packageManager = getPackageManager();
             PackageInfo info = packageManager.getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
 
-            int versionCode = 1;
+            int scheduleCode = 1;
 
-            if (mPref.getInt("versionCode", 0) != versionCode) {
-                mPref.putInt("versionCode", versionCode);
+            if (mPref.getInt("scheduleCode", 0) != scheduleCode) {
+                mPref.putInt("scheduleCode", scheduleCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
                 builder.setTitle("일정 관련 안내");
                 builder.setMessage("9월 이후 일정은 학교에서 발표하는대로 추가할 예정이며, 9월 이후 일정은 [대한민국 공휴일]만 표시됩니다.");
