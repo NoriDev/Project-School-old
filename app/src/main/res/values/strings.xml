@@ -98,12 +98,12 @@
 \n (https://bitbucket.org/whdghks913/wondanghighschool) (http://itmir.tistory.com/486) (http://blog.naver.com/rimal/140186322365)
 \n
 \n- Android Support Library
-\n com.android.support:appcompat-v7:25.2.0
-\n com.android.support:design:25.2.0
-\n com.android.support:cardview-v7:25.2.0
-\n com.android.support:recyclerview-v7:25.2.0
-\n com.android.support:support-v13:25.2.0
-\n com.android.support:support-annotations:25.2.0
+\n com.android.support:appcompat-v7:25.3.0
+\n com.android.support:design:25.3.0
+\n com.android.support:cardview-v7:25.3.0
+\n com.android.support:recyclerview-v7:25.3.0
+\n com.android.support:support-v13:25.3.0
+\n com.android.support:support-annotations:25.3.0
 \n com.android.support:multidex:1.0.1
 \n
 \n- Google Firebase
@@ -236,6 +236,7 @@
         \n- 색상 및 앱 아이콘 기존으로 되돌림
         \n- 일부 라이브러리 제거
         \n- 다이얼로그 창 외의 영역을 터치할 시, 창이 사라지는 문제 수정
+        \n- FCM 프로젝트 재구성
         \n- 코드 일부 경량화
         \n- 버그 수정 및 안정화
         \n\n3.0a-SE
