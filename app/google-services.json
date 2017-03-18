@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "930615791514",
+    "firebase_url": "https://jinhae-joongang-hs.firebaseio.com",
+    "project_id": "jinhae-joongang-hs",
+    "storage_bucket": "jinhae-joongang-hs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930615791514:android:7656e9ad15c4286a",
+        "android_client_info": {
+          "package_name": "nori.m1nthing2322.joongang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930615791514-n0l0qsn5hfuvto32fb15dlqa3jcue2jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs7DDwdh3HIvGIhnpbgOPOkYhknboznVc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
