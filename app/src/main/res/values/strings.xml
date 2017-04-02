@@ -228,7 +228,7 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changeLog_title">변경사항</string>
 	<string name="changeLog_msg">
-        \n3.1a
+        \n3.1d
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 17학년도 시간표 업데이트
         \n- 일정 기능 활성화
@@ -236,7 +236,8 @@
         \n- 색상 및 앱 아이콘 기존으로 되돌림
         \n- 일부 라이브러리 제거
         \n- 다이얼로그 창 외의 영역을 터치할 시, 창이 사라지는 문제 수정
-        \n- FCM 프로젝트 재구성
+        \n- FCM 알림 재구성
+        \n- 최소 sdk 버전을 19에서 16으로 변경 (지원기기 증가)
         \n- 코드 일부 경량화
         \n- 버그 수정 및 안정화
         \n\n3.0a-SE
