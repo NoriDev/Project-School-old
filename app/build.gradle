@@ -8,7 +8,7 @@ android {
         applicationId "nori.m1nthing2322.joongang"
         // multidex 기능을 건너뛰어 컴파일 속도를 향상시킴
         minSdkVersion 21
-        targetSdkVersion 'O'
+        targetSdkVersion 25
         // Enabling multidex support.
         multiDexEnabled true
     }
@@ -21,8 +21,8 @@ android {
         prod {
             minSdkVersion 16
             // 1(major) 0(minor) 1(0: beta, =<1: prod) 0(0: beta, 1: prod) 1(=<1: beta, 0: prod)
-            versionCode 31510
-            versionName "3.1e"
+            versionCode 31610
+            versionName "3.1f"
         }
     }
     buildTypes {
