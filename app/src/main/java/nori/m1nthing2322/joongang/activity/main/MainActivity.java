@@ -39,7 +39,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 31610;
+    private int ver= 31710;
     private ProgressDialog dialog;
     String xml;
 

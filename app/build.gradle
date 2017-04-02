@@ -21,8 +21,8 @@ android {
         prod {
             minSdkVersion 16
             // 1(major) 0(minor) 1(0: beta, =<1: prod) 0(0: beta, 1: prod) 1(=<1: beta, 0: prod)
-            versionCode 31610
-            versionName "3.1f"
+            versionCode 31710
+            versionName "3.1g-SE"
         }
     }
     buildTypes {
