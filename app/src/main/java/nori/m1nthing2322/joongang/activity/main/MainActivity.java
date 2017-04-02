@@ -39,7 +39,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 31410;
+    private int ver= 31510;
     private ProgressDialog dialog;
     String xml;
 
@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.changeLog_title);
-//                builder.setTitle(R.string.changeLog_title_beta);
-                builder.setMessage(R.string.changeLog_msg);
-//                builder.setMessage(R.string.changeLog_msg_beta);
+                builder.setTitle(R.string.changelog_title);
+//                builder.setTitle(R.string.changelog_title_beta);
+                builder.setMessage(R.string.changelog_msg_lite);
+//                builder.setMessage(R.string.changelog_msg_beta_lite);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
                 builder.show();

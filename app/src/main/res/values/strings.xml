@@ -226,8 +226,8 @@
     <string name="schedule_disabled_message">이달의 일정 비활성화</string>
     <!-- 변경사항 -->
     <string name="last_update">최근 업데이트</string>
-    <string name="changeLog_title">변경사항</string>
-	<string name="changeLog_msg">
+    <string name="changelog_title">변경사항</string>
+    <string name="changelog_msg_lite">
         \n3.1d
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 17학년도 시간표 업데이트
@@ -238,6 +238,22 @@
         \n- 다이얼로그 창 외의 영역을 터치할 시, 창이 사라지는 문제 수정
         \n- FCM 알림 재구성
         \n- 최소 sdk 버전을 19에서 16으로 변경 (지원기기 증가)
+        \n- 안드로이드 O 기반 빌드
+        \n- 코드 일부 경량화
+        \n- 버그 수정 및 안정화
+    </string>
+	<string name="changelog_msg">
+        \n3.1e
+        \n- 라이브러리 / SDK / 플러그인 업데이트
+        \n- 17학년도 시간표 업데이트
+        \n- 일정 기능 활성화
+        \n- Shortcut에 일정 기능 추가
+        \n- 색상 및 앱 아이콘 기존으로 되돌림
+        \n- 일부 라이브러리 제거
+        \n- 다이얼로그 창 외의 영역을 터치할 시, 창이 사라지는 문제 수정
+        \n- FCM 알림 재구성
+        \n- 최소 sdk 버전을 19에서 16으로 변경 (지원기기 증가)
+        \n- 안드로이드 O 기반 빌드
         \n- 코드 일부 경량화
         \n- 버그 수정 및 안정화
         \n\n3.0a-SE
@@ -305,8 +321,14 @@
         \n\n1.0a-Stable
         \n- 초기 릴리즈
     </string>
-    <string name="changeLog_title_beta">변경사항 (베타)</string>
-    <string name="changeLog_msg_beta">
+    <string name="changelog_title_beta">변경사항 (베타)</string>
+    <string name="changelog_msg_beta_lite">
+        \n3.0-beta2
+        \n- 카카오톡 오픈채팅방 지원
+        \n- 최신버전일때 나오는 알림 삭제
+        \n- String 개선
+    </string>
+    <string name="changelog_msg_beta">
         \n3.0-beta2
         \n- 카카오톡 오픈채팅방 지원
         \n- 최신버전일때 나오는 알림 삭제
