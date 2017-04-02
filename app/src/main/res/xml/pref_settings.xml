@@ -77,8 +77,8 @@
         </Preference>
         <Preference
             android:key="ChangeLog"
-            android:summary="수정 내역을 확인합니다"
-            android:title="수정 내역" />
+            android:summary="앱 업데이트 내역을 확인합니다"
+            android:title="업데이트 내역" />
         <Preference
             android:key="appVersion"
             android:summary="v0.0"

@@ -111,11 +111,11 @@ public class SettingsActivity extends AppCompatActivity {
                 } else if ("ChangeLog".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
 // Stable Version
-                    builder.setTitle(R.string.changeLog_title);
-                    builder.setMessage(R.string.changeLog_msg);
+                    builder.setTitle(R.string.changelog_title);
+                    builder.setMessage(R.string.changelog_msg);
 // Beta Version
-//                    builder.setTitle(R.string.changeLog_title_beta);
-//                    builder.setMessage(R.string.changeLog_msg_beta);
+//                    builder.setTitle(R.string.changelog_title_beta);
+//                    builder.setMessage(R.string.changelog_msg_beta);
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.setCancelable(false);
                     builder.show();
@@ -177,7 +177,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                 } else if (preference instanceof ListPreference) {
 
-                    /**
+                    /*
                      * ListPreference의 경우 stringValue가 entryValues이기 때문에 바로 Summary를
                      * 적용하지 못한다 따라서 설정한 entries에서 String을 로딩하여 적용한다
                      */
