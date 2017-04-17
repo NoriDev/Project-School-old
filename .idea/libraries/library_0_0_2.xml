@@ -1,12 +1,10 @@
 <component name="libraryTable">
   <library name="library-0.0.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/aa0abe87eb75279930814b69d0f80563dfbd1440/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/aa0abe87eb75279930814b69d0f80563dfbd1440/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/9a918b8ce7efaac7a8d3a9917c4e602d50b586dd/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/9a918b8ce7efaac7a8d3a9917c4e602d50b586dd/output/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.flavienlaurent.datetimepicker/library/0.0.2/f8b456ad73005c274b1509b5065e1fe6700dffda/library-0.0.2-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
