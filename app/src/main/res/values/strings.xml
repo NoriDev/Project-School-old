@@ -30,10 +30,10 @@
     <!-- 급식 -->
     <string name="title_activity_bap">급식</string>
     <string name="message_activity_bap">급식을 확인합니다</string>
-    <string name="today_lunch">오늘의 점심</string>
-    <string name="today_dinner">오늘의 저녁</string>
-    <string name="no_data_lunch">점심이 없습니다</string>
-    <string name="no_data_dinner">저녁이 없습니다</string>
+    <string name="today_lunch">오늘의 중식</string>
+    <string name="today_dinner">오늘의 석식</string>
+    <string name="no_data_lunch">중식이 없습니다</string>
+    <string name="no_data_dinner">석식이 없습니다</string>
     <string name="no_data_title">정보 없음</string>
     <string name="no_data_message">정보가 없습니다</string>
     <string name="no_network_title">인터넷 연결 불가</string>
@@ -42,8 +42,8 @@
     <string name="no_wifi_msg">데이터 네트워크를 사용하시겠습니까?</string>
     <string name="shareBap_title">급식 공유하기</string>
     <string name="shareBap_message_msg">%1$s의 급식 목록
-\n\n점심 : %2$s
-\n\n저녁 : %3$s</string>
+\n\n중식 : %2$s
+\n\n석식 : %3$s</string>
     <!-- 시간표 -->
     <string name="title_activity_time_table">시간표</string>
     <string name="message_activity_time_table">시간표를 확인합니다</string>
@@ -59,7 +59,7 @@
     <string name="title_activity_settings">설정</string>
     <!-- 일정 -->
     <string name="title_activity_schedule">일정</string>
-    <string name="message_activity_schedule">일정을 확인합니다</string>
+    <string name="message_activity_schedule">학사일정을 확인합니다</string>
     <!-- 급식 자동 업데이트 -->
     <string name="title_service_autoupdate">자동 업데이트 서비스</string>
     <string name="title_broadcast_autoupdate">자동 업데이트 리시버</string>
@@ -169,7 +169,8 @@
     <string name="low_version">새 업데이트가 있습니다</string>
     <string name="plz_update">Play 스토어에서 앱을 업데이트 할 것을 권장합니다.
         \n\n[ ! ] 업데이트를 하지 않을 경우, 버그 수정 및 핫픽스, 새로운 기능 등을 사용하실 수 없으며,
-        \n앱이 정상적으로 구동되지 않을수도 있습니다.</string>
+        \n앱이 정상적으로 구동되지 않을수도 있습니다.
+        \n\n[ Tip ] 업데이트를 요구하는 창이 뜨나, 최신버전인 경우 1시간 후 다시 시도해 주십시오.</string>
     <string name="access">작업을 승인합니다</string>
     <string name="crack">정식버전이 아닙니다 :(</string>
     <string name="crack_contents">테스트 버전을 사용해주셔서 감사합니다. :)</string>
@@ -179,10 +180,10 @@
     <string name="update_notification_message">앱이 새로운 버전으로 업데이트 되었습니다.
         \n변경사항은 설정에서 확인할 수 있습니다.</string>
 	<string name="title_activity_notice">공지사항</string>
-    <string name="message_activity_notice">앱 공지사항을 확인합니다</string>
+    <string name="message_activity_notice">앱 개발자의 공지사항을 확인합니다</string>
     <string name="title_notice">공지사항</string>
     <string name="title_activity_changelog">변경사항</string>
-    <string name="message_activity_changelog">이 앱의 변경사항을 확인합니다</string>
+    <string name="message_activity_changelog">앱 변경사항을 확인합니다</string>
 	<string name="title_activity_changelog_beta">변경사항 (베타)</string>
     <!-- 관리자 (미사용) -->
     <string name="user_info_licensed">관리자 등급이 활성화되었습니다</string>
@@ -228,25 +229,47 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changelog_title">변경사항</string>
     <string name="changelog_msg_lite">
-        \n3.1g
-        \n- 라이브러리 / SDK / 플러그인 업데이트
-        \n- 17학년도 시간표 업데이트
-        \n- 일정 기능 활성화
-        \n- Shortcut에 일정 기능 추가
-        \n- 색상 및 앱 아이콘 기존으로 되돌림
-        \n- 일부 라이브러리 제거
-        \n- 다이얼로그 창 외의 영역을 터치할 시, 창이 사라지는 문제 수정
-        \n- FCM 알림 재구성
-        \n- 최소 sdk 버전을 19에서 16으로 변경 (지원기기 증가)
-        \n- 안드로이드 O 기반 빌드 툴
-        \n- 벚꽃 아이콘으로 변경
+        \n3.1i-SE
+        \n- 라이브러리 / 플러그인 업데이트
+        \n- 2017학년도 1학기 1차고사 시간표 업데이트
+        \n- 카카오톡 오픈채팅방 잠정 중단 (참여율 저조)
+        \n- 앱 아이콘 기본으로 변경
+        \n- 일정 일부 수정
+        \n- 9월 이후 일정 추가
+        \n- 설정에서 앱 코드를 볼 수 있도록 추가
+        \n- 설정 일부 수정
+        \n- 설정에서 버전만 따로 분류
+        \n- 급식 자동 업데이트를 기본으로 활성화
+        \n- "점심, 저녁"을 "중식, 석식"으로 변경
+        \n- "자연" 영역을 "공학(자연)"으로 변경
+        \n- 시간표가 수정되면, 필수적으로 업데이트 하도록 변경
+        \n- 변경사항 탭 오류 수정
         \n- 코드 일부 경량화
+        \n- 일부 문구 수정
         \n- 버그 수정 및 안정화
     </string>
 	<string name="changelog_msg">
-        \n3.1g
+        \n3.1i-SE
+        \n- 라이브러리 / 플러그인 업데이트
+        \n- 2017학년도 1학기 1차고사 시간표 업데이트
+        \n- 카카오톡 오픈채팅방 잠정 중단 (참여율 저조)
+        \n- 앱 아이콘 기본으로 변경
+        \n- 일정 일부 수정
+        \n- 9월 이후 일정 추가
+        \n- 설정에서 버전 코드를 볼 수 있도록 추가
+        \n- 설정 일부 수정
+        \n- 설정에서 버전만 따로 분류
+        \n- 급식 자동 업데이트를 기본으로 활성화
+        \n- "점심, 저녁"을 "중식, 석식"으로 변경
+        \n- "자연" 영역을 "공학(자연)"으로 변경
+        \n- 시간표가 수정되면, 필수적으로 업데이트 하도록 변경
+        \n- 변경사항 탭 오류 수정
+        \n- 코드 일부 경량화
+        \n- 일부 문구 수정
+        \n- 버그 수정 및 안정화
+        \n\n3.1g-SE
         \n- 라이브러리 / SDK / 플러그인 업데이트
-        \n- 17학년도 시간표 업데이트
+        \n- 2017학년도 시간표 업데이트
         \n- 일정 기능 활성화
         \n- Shortcut에 일정 기능 추가
         \n- 색상 및 앱 아이콘 기존으로 되돌림

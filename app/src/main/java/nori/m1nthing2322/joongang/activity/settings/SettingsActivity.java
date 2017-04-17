@@ -52,7 +52,6 @@ public class SettingsActivity extends AppCompatActivity {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-
             // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.pref_settings);
 
@@ -69,7 +68,7 @@ public class SettingsActivity extends AppCompatActivity {
             setOnPreferenceClick(findPreference("infoAutoUpdate"));
             setOnPreferenceClick(findPreference("openSource"));
             setOnPreferenceClick(findPreference("project"));
-            setOnPreferenceClick(findPreference("ChangeLog"));
+            setOnPreferenceClick(findPreference("Changelog"));
 			setOnPreferenceClick(findPreference("Developer"));
             //setOnPreferenceClick(findPreference("proUpgrade"));
             setOnPreferenceChange(findPreference("autoBapUpdate"));
@@ -78,7 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
             try {
                 PackageManager packageManager = getActivity().getPackageManager();
                 PackageInfo info = packageManager.getPackageInfo(getActivity().getPackageName(), PackageManager.GET_META_DATA);
-                findPreference("appVersion").setSummary(info.versionName);
+                findPreference("appVersionName").setSummary(info.versionName);
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
@@ -108,7 +107,7 @@ public class SettingsActivity extends AppCompatActivity {
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.setCancelable(false);
                     builder.show();
-                } else if ("ChangeLog".equals(getKey)) {
+                } else if ("Changelog".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
 // Stable Version
                     builder.setTitle(R.string.changelog_title);

@@ -19,7 +19,7 @@
 
     <string-array name="myType">
         <item>인문</item>
-        <item>자연</item>
+        <item>공학(자연)</item>
     </string-array>
 
     <string-array name="myWeek">
@@ -42,8 +42,8 @@
     </string-array>
 
     <string-array name="item_bap_type">
-        <item>점심</item>
-        <item>저녁</item>
+        <item>중식</item>
+        <item>석식</item>
     </string-array>
 
 </resources>

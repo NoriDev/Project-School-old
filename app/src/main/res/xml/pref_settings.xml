@@ -4,18 +4,18 @@
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="simpleShowBap"
-            android:summary="간편 보기의 급식을 활성화 합니다."
+            android:summary="간편 보기의 급식을 활성화 합니다"
             android:title="급식 간편 보기 활성화" />
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="simpleShowTimeTable"
-            android:summary="간편 보기의 시간표를 활성화 합니다."
+            android:summary="간편 보기의 시간표를 활성화 합니다"
             android:title="시간표 간편 보기 활성화" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="급식 업데이트">
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="autoBapUpdate"
             android:summary="급식을 자동으로 업데이트 합니다"
             android:title="급식 자동 업데이트" />
@@ -27,11 +27,11 @@
             android:key="updateLife"
             android:title="업데이트 주기" />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:dependency="autoBapUpdate"
             android:key="updateNotifi"
             android:summary="급식 업데이트후 상단바에 알림을 띄웁니다"
-            android:title="업데이트 알림" />
+            android:title="자동 업데이트 알림" />
         <CheckBoxPreference
             android:defaultValue="true"
             android:dependency="autoBapUpdate"
@@ -41,17 +41,17 @@
         <Preference
             android:dependency="autoBapUpdate"
             android:key="infoAutoUpdate"
-            android:summary="토, 일 업데이트시 전원이 꺼져있으면 자동 업데이트가 이루어지지 않을 수 있습니다\n업데이트는 오전 1시에 이루어 집니다"
-            android:title="업데이트 안내" />
+            android:summary="토, 일요일에 업데이트시 전원이 꺼져있으면 자동 업데이트가 이루어지지 않을 수 있습니다\n업데이트는 오전 1시에 진행됩니다"
+            android:title="자동 업데이트 안내" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="어플 정보">
+    <PreferenceCategory android:title="앱 정보">
         <Preference
             android:key="openSource"
             android:summary="오픈소스 라이센스를 확인합니다"
             android:title="오픈소스 라이센스" />
         <Preference
-            android:summary="이 어플의 모든 소스와, 작업 현황을 확인할 수 있습니다"
+            android:summary="이 어플의 모든 소스와 작업 현황을 확인할 수 있습니다"
             android:title="어플 오픈소스">
             <intent
                 android:action="android.intent.action.VIEW"
@@ -76,17 +76,24 @@
                 android:data="mailto:noridevdroid@gmail.com" />
         </Preference>
         <Preference
-            android:key="ChangeLog"
+            android:key="Changelog"
             android:summary="앱 업데이트 내역을 확인합니다"
             android:title="업데이트 내역" />
-        <Preference
-            android:key="appVersion"
-            android:summary="v0.0"
-            android:title="어플 버전" />
 		<Preference
             android:key="Developer"
             android:summary=""
             android:title="개발자" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="앱 버전">
+        <Preference
+            android:key="appVersionName"
+            android:summary="v0.0"
+            android:title="앱 버전" />
+        <Preference
+            android:key="appVersionCode"
+            android:summary="31910"
+            android:title="앱 코드" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="접근 권한">

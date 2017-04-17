@@ -107,20 +107,20 @@ public class TimeTableActivity extends AppCompatActivity {
 
         timeTableUpdate();
     }
-// 다음 업데이트 시점부터 비활성화 (시간표가 업데이트 되면 1회 재활성화)
+// 다음 업데이트 시점까지 1회 활성화 (시간표가 업데이트 되면 1회 재활성화)
     private void timeTableUpdate() {
         try {
             Preference mPref = new Preference(getApplicationContext());
             PackageManager packageManager = getPackageManager();
             PackageInfo info = packageManager.getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
 
-            int updateCode = 1;
+            int timeTableUpdateCode = 201701; // 2017(학년도) 01(학기)
 
-            if (mPref.getInt("updateCode", 0) != updateCode) {
-                mPref.putInt("updateCode", updateCode);
+            if (mPref.getInt("timeTableUpdateCode", 0) != timeTableUpdateCode) {
+                mPref.putInt("timeTableUpdateCode", timeTableUpdateCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle("앱이 업데이트됨");
-                builder.setMessage("애플리케이션이 업데이트 됨에 따라, 기존 시간표에서 업데이트 하셔야 합니다.\n17학년도 시간표를 설치하시려면 \'확인\'을 눌러주십시오.\n만약 이 경고를 무시하실경우, 상단의 ...을 누른 뒤, \'DB 업데이트\' 버튼을 누르셔야 합니다.");
+                builder.setTitle("시간표가 업데이트됨");
+                builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n2017학년도 시간표를 설치하시려면 \'확인\'을 눌러주십시오.");
                 builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

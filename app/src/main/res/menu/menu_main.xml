@@ -8,12 +8,13 @@
         android:title="베타테스터"
         app:showAsAction="always" />
 -->
-    <item
+<!--    <item
         android:id="@+id/action_chat"
         android:icon="@drawable/ic_chat"
         android:orderInCategory="2"
         android:title="채팅"
         app:showAsAction="always" />
+-->
     <item
         android:id="@+id/action_feedback"
         android:icon="@drawable/ic_create"
