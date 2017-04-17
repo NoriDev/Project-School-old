@@ -10,7 +10,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -39,6 +38,7 @@ public class ScheduleActivity extends AppCompatActivity {
         if (mActionBar != null) {
             mActionBar.setHomeButtonEnabled(true);
             mActionBar.setDisplayHomeAsUpEnabled(true);
+            mActionBar.setSubtitle("학사일정");
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
@@ -70,6 +70,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
             int scheduleCode = 1;
 
+            /*
             if (mPref.getInt("scheduleCode", 0) != scheduleCode) {
                 mPref.putInt("scheduleCode", scheduleCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
@@ -78,6 +79,7 @@ public class ScheduleActivity extends AppCompatActivity {
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.show();
             }
+            */
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
