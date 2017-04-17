@@ -3,6 +3,8 @@ package nori.m1nthing2322.joongang.activity.exam;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -42,11 +44,13 @@ public class ExamTimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_time);
 
+// 2학기 2차 고사가 끝난 경우 활성화
+/*
         AlertDialog.Builder end_Exam = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
         end_Exam.setMessage("드디어 마지막 시험이 끝났습니다! (짝짝짝)\n시험 치시느라 고생많으셨고, 이제 얼마 남지 않은 담임선생님과의 시간을 소중히 간직하는 시간을 가져봅시다 :)");
         end_Exam.setPositiveButton(android.R.string.ok, null);
         end_Exam.show();
-
+*/
         mPref = new Preference(getApplicationContext());
         mGrade = mPref.getInt("myGrade", -1);
         mType = mPref.getInt("myType", -1);
@@ -56,7 +60,7 @@ public class ExamTimeActivity extends AppCompatActivity {
         if ((mGrade != -1) && (mType != -1)) {
             if (fileExists) {
                 ExamTimeTool.examData mData = ExamTimeTool.getExamInfoData();
-                mToolbar.setTitle(String.format(getString(R.string.exam_time_title), mGrade, (mType == 0 ? "인문" : "자연"), mData.date, mData.type));
+                mToolbar.setTitle(String.format(getString(R.string.exam_time_title), mGrade, (mType == 0 ? "인문" : "공학"), mData.date, mData.type));
             }
         }
         setSupportActionBar(mToolbar);
@@ -117,6 +121,36 @@ public class ExamTimeActivity extends AppCompatActivity {
                 downloadingDB();
             }
         });
+
+        examTimeTableUpdate();
+    }
+
+    // 다음 시험기간까지 1회 활성화 (시간표가 업데이트 되면 1회 재활성화)
+    private void examTimeTableUpdate() {
+        try {
+            Preference mPref = new Preference(getApplicationContext());
+            PackageManager packageManager = getPackageManager();
+            PackageInfo info = packageManager.getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
+
+            int examTimeTableUpdateCode = 20170101; // 2017(학년도)01(학기)01(차고사)
+
+            if (mPref.getInt("examTimeTableUpdateCode", 0) != examTimeTableUpdateCode) {
+                mPref.putInt("examTimeTableUpdateCode", examTimeTableUpdateCode);
+                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
+                builder.setTitle("시간표가 업데이트됨");
+                builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시험 시간표를 업데이트 하셔야 합니다.\n2017학년도 1학기 1차 시험 시간표를 설치하시려면 \'확인\'을 눌러주십시오.");
+                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        downloadingDB();
+                    }
+                });
+                builder.setCancelable(false);
+                builder.show();
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     public void downloadingDB() {
