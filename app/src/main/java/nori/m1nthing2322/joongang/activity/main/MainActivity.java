@@ -39,7 +39,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 31710;
+    private int ver= 31910;
     private ProgressDialog dialog;
     String xml;
 
@@ -235,13 +235,16 @@ public class MainActivity extends AppCompatActivity {
             startActivity(it);
             return true;
         }
+// 채팅 기능 잠정 중단
+/*
         if (id == R.id.action_chat) {
             Uri uri = Uri.parse("https://open.kakao.com/o/g6KQyFq");
             Intent it = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(it);
             return true;
         }
-        // beta 테스트 앱일 경우에만 활성화
+*/
+// beta 테스트 앱일 경우에만 활성화
 /*        if (id == R.id.action_chat_beta) {
             Uri uri = Uri.parse("https://open.kakao.com/o/gahCyFq");
             Intent it = new Intent(Intent.ACTION_VIEW, uri);
