@@ -9,7 +9,9 @@
         android:id="@+id/mToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="10dp"
         android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 </android.support.design.widget.AppBarLayout>
