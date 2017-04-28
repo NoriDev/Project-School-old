@@ -38,7 +38,7 @@ public class ExamTimeTool {
 
     /**
      * type 0 : 인문
-     * type 1 : 자연
+     * type 1 : 공학(자연)
      * position : 시험날짜
      */
     public static ArrayList<examTimeTableData> getExamTimeTable(int grade, int type, int position) {
