@@ -3,10 +3,10 @@ package nori.m1nthing2322.joongang.activity.timetable;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.StrictMode;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -22,7 +22,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -38,6 +42,9 @@ public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
+    private int timetablever= 201701;
+    String xml;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +56,8 @@ public class TimeTableActivity extends AppCompatActivity {
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         if ((mGrade != -1) && (mClass != -1)) {
-            mToolbar.setTitle(String.format(getString(R.string.timetable_title), mGrade, mClass));
+            mToolbar.setTitle(String.format(getString(R.string.title_activity_time_table), mGrade, mClass));
+            mToolbar.setSubtitle(String.format(getString(R.string.timetable_subtitle), mGrade, mClass));
         }
         setSupportActionBar(mToolbar);
 
@@ -108,32 +116,67 @@ public class TimeTableActivity extends AppCompatActivity {
         timeTableUpdate();
     }
 // 다음 업데이트 시점까지 1회 활성화 (시간표가 업데이트 되면 1회 재활성화)
-    private void timeTableUpdate() {
-        try {
-            Preference mPref = new Preference(getApplicationContext());
-            PackageManager packageManager = getPackageManager();
-            PackageInfo info = packageManager.getPackageInfo(getPackageName(), PackageManager.GET_META_DATA);
-
-            int timeTableUpdateCode = 201701; // 2017(학년도) 01(학기)
-
-            if (mPref.getInt("timeTableUpdateCode", 0) != timeTableUpdateCode) {
-                mPref.putInt("timeTableUpdateCode", timeTableUpdateCode);
-                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle("시간표가 업데이트됨");
-                builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n2017학년도 시간표를 설치하시려면 \'확인\'을 눌러주십시오.");
-                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        downloadingDB();
-                    }
-                });
-                builder.setCancelable(false);
-                builder.show();
+private void timeTableUpdate() {
+    StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
+    StringBuilder sBuffer = new StringBuilder();
+    try{//Start Try
+        String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS_TimeTable.xml";
+        URL url = new URL(urlAddr);
+        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+        if(conn != null){//Start if
+            conn.setConnectTimeout(20000);
+            //conn.setUseCaches(false);
+            if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
+                InputStreamReader isr = new InputStreamReader(conn.getInputStream());
+                BufferedReader br = new BufferedReader(isr);
+                while(true){//Start While
+                    String line = br.readLine();
+                    if(line==null){//Start if
+                        break;
+                    }//end if
+                    sBuffer.append(line);
+                }//end while
+                br.close();
+                conn.disconnect();
+            }//end if
+        }//end if
+        xml = sBuffer.toString();
+        CountDownTimer _timer = new CountDownTimer(1000, 1000){
+            public void onTick(long millisUntilFinished)
+            {}
+            public void onFinish(){
+                if(Integer.parseInt(xml)==timetablever){//new version
+//                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
+                }
+                else if(Integer.parseInt(xml)>timetablever){
+                    //현재 버전보다 서버 버전이 높을때
+                    AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
+                    builder.setTitle("시간표가 업데이트됨");
+                    builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.");
+                    builder.setCancelable(false);
+                    builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }});
+                    builder.setPositiveButton(R.string.update_now, new
+                            DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    downloadingDB();
+                                }});
+                    builder.setCancelable(false);
+                    builder.show();
+                }else {
+                    //현재 버전보다 서버 버전이 낮을때
+                }
             }
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+        };
+        _timer.start();
+    }//end try
+    catch (Exception e) {
+        //네트워크가 올바르지 않을때
     }
+}
 
     private void setCurrentItem() {
         Calendar calendar = Calendar.getInstance();
