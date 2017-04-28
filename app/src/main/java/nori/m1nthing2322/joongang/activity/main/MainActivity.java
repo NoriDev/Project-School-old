@@ -101,11 +101,12 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        dialog = new ProgressDialog(this);
+/*        dialog = new ProgressDialog(this);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setCancelable(false);
         dialog.setMessage(getString((R.string.check_version)));
         dialog.show();
+*/
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
@@ -134,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onTick(long millisUntilFinished)
                 {}
                 public void onFinish(){
-                    dialog.dismiss();
+//                    dialog.dismiss();
                     if(Integer.parseInt(xml)==ver){//new version
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>ver){
@@ -169,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e) {
             //네트워크가 올바르지 않을때
             Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
-            dialog.cancel();
+//            dialog.cancel();
         }
     }
 
