@@ -1,6 +1,0 @@
-COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
-FILE_PATH=D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\incremental-classes\beta\debug\instant-run-bootstrap.jar
-FILE_HASH=a6c95caca88bbe8c999370af9fd62218dbb6fb93
-DX_VERSION=1.13
-JUMBO_MODE=true
-OPTIMIZE=true
