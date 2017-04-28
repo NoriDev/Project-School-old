@@ -60,7 +60,8 @@ public class ScheduleFragment extends Fragment {
                         isPast = true;
                     }
 
-                    int diffDays = (int) (diff /= 24 * 60 * 60 * 1000);
+                    int diffDays = (int) (diff / (24 * 60 * 60 * 1000));
+                    int diffDaysFix = (int) (diff / (24 * 60 * 60 * 1000) + 1);
                     String mText = "";
 
                     if (diffDays == 0)
@@ -68,7 +69,7 @@ public class ScheduleFragment extends Fragment {
                     else if (isPast)
                         mText = "선택하신 날짜는 " + diffDays + "일 전 날짜입니다";
                     else
-                        mText = "선택하신 날짜까지 " + diffDays + "일 남았습니다";
+                        mText = "선택하신 날짜까지 " + diffDaysFix + "일 남았습니다";
 
                     Snackbar.make(mView, mText, Snackbar.LENGTH_SHORT).show();
                 } catch (Exception ex) {
@@ -98,12 +99,12 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("가정의 날", "2017.03.29 (수)");
                 break;
             case 4:
-                mAdapter.addItem("식목일, 장애인 & 인권교육", "2017.04.05 (수)");
+                mAdapter.addItem("식목일, 장애인 인권 교육", "2017.04.05 (수)");
                 mAdapter.addItem("전국 연합 학력 평가 (3학년)", "2017.04.12 (수)");
                 mAdapter.addItem("진로 적성 검사 (1학년)", "2017.04.13 (목)");
                 mAdapter.addItem("건강 체력평가", "2017.04.14 (금)");
                 mAdapter.addItem("영어 듣기평가 (1학년)", "2017.04.18 (화)");
-                mAdapter.addItem("영어 듣기평가 (2학년), 가정폭력, 아동학대 예방교육", "2017.04.19 (수)");
+                mAdapter.addItem("영어 듣기평가 (2학년), 가정폭력 & 아동학대 예방교육", "2017.04.19 (수)");
                 mAdapter.addItem("영어 듣기평가 (3학년)", "2017.04.20 (목)");
                 mAdapter.addItem("과학의 날 행사", "2017.04.21 (금)");
                 mAdapter.addItem("1학기 1차 지필평가", "2017.04.25 (화)");
@@ -146,7 +147,8 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("전국 연합 학력 평가 (3학년)", "2017.07.12 (수)");
                 mAdapter.addItem("수학 페스티벌", "2017.07.14 (금)");
                 mAdapter.addItem("제헌절", "2017.07.17 (월)");
-                mAdapter.addItem("통합 토론 대회, 여릅 방학식", "2017.07.18 (화)");
+                mAdapter.addItem("통합 토론 대회", "2017.07.18 (화)");
+                mAdapter.addItem("여름 방학식", "2017.07.19 (수)");
                 break;
             case 8:
                 mAdapter.addItem("여름 방학, 3학년 개학", "2017.08.01 (화)");
@@ -185,11 +187,10 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("수학여행 (2학년), 가정의 날", "2017.10.25 (수)");
                 mAdapter.addItem("수학여행 (2학년)", "2017.10.25 (목)");
                 mAdapter.addItem("수학여행 (2학년)", "2017.10.27 (금)");
-
                 break;
             case 11:
                 mAdapter.addItem("생명존중, 양성평등교육", "2017.11.01 (수)");
-                mAdapter.addItem("장애인 & 인권 교육", "2017.11.08 (수)");
+                mAdapter.addItem("장애인 인권 교육", "2017.11.08 (수)");
                 mAdapter.addItem("대학수학능력시험", "2017.11.16 (목)", true);
                 mAdapter.addItem("전국 연합 학력평가 (1, 2학년)", "2017.11.22 (수)");
                 mAdapter.addItem("가정의 날", "2017.11.29 (수)");
@@ -215,7 +216,6 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("봄 방학, 설 연휴 (대체공휴일)", "2018.02.19 (월)", true);
                 break;
         }
-
         return recyclerView;
     }
 }
