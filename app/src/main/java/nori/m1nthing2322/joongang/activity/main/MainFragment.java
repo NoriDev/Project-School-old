@@ -69,14 +69,12 @@ public class MainFragment extends Fragment {
 *                           break;
 */
                         case 0:
-//                            Toast.makeText(getActivity(), "기능 준비중입니다", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getActivity(), ExamTimeActivity.class));
                             break;
                         case 1:
                             startActivity(new Intent(getActivity(), NoticeActivity.class));
                             break;
                         case 2:
-//                            Toast.makeText(getActivity(), "2016년 일정 기능은 아직 준비중 입니다 :)", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getActivity(), ScheduleActivity.class));
                             break;
 						case 3:
