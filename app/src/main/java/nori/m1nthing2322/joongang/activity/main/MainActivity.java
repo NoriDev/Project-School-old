@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.StrictMode;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -39,7 +40,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 31910;
+    private int ver= 32110;
     private ProgressDialog dialog;
     String xml;
 
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
+
         showUpdateNotification();
     }
 
@@ -135,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
                     dialog.dismiss();
                     if(Integer.parseInt(xml)==ver){//new version
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
-                    }
-                    else if(Integer.parseInt(xml)>ver){//현재버전보다 서버버전이 높을때
+                    } else if(Integer.parseInt(xml)>ver){
+                        //현재 버전보다 서버 버전이 높을때
                         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                         builder.setTitle(R.string.low_version);
                         builder.setMessage(R.string.plz_update);
@@ -156,14 +158,16 @@ public class MainActivity extends AppCompatActivity {
                                     }});
                         builder.setCancelable(false);
                         builder.show();
-                    }else {//현재버전보다 서버 버전이 낮을때
+                    } else {
+                        //현재 버전보다 서버 버전이 낮을때
                         Toast.makeText(getApplicationContext(), R.string.crack_contents, Toast.LENGTH_SHORT).show();
                     }
                 }
             };
             _timer.start();
         }//end try
-        catch (Exception e) {//네트워크가 올바르지 않을때
+        catch (Exception e) {
+            //네트워크가 올바르지 않을때
             Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
             dialog.cancel();
         }
@@ -171,8 +175,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter mAdapter = new Adapter(getSupportFragmentManager());
-        mAdapter.addFragment(getString(R.string.activity_main_fragment_simple), MainFragment.getInstance(1));
-        mAdapter.addFragment(getString(R.string.activity_main_fragment_detailed), MainFragment.getInstance(2));
+        mAdapter.addFragment(getString(R.string.activity_main_fragment_simpleview), MainFragment.getInstance(1));
+//        mAdapter.addFragment(getString(R.string.activity_main_fragment_notice), MainFragment.getInstance(2));
+        mAdapter.addFragment(getString(R.string.activity_main_fragment_schoolinfo), MainFragment.getInstance(2));
         viewPager.setAdapter(mAdapter);
     }
 
@@ -262,11 +267,9 @@ public class MainActivity extends AppCompatActivity {
         if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
         {
             super.onBackPressed();
-        }
-        else
-        {
+        } else {
             backPressedTime = tempTime;
-            Toast.makeText(getApplicationContext(), "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show();
+            Snackbar.make(getWindow().getDecorView().getRootView(), "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Snackbar.LENGTH_SHORT).show();
         }
     }
 }
