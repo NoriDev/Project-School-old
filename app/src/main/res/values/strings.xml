@@ -63,6 +63,9 @@
     <!-- 일정 -->
     <string name="title_activity_schedule">일정</string>
     <string name="message_activity_schedule">학사일정을 확인합니다</string>
+    <!-- 행사 -->
+    <string name="title_activity_festival">행사</string>
+    <string name="message_activity_festival">교내대회 및 체육대회, 행사일정을 확인합니다</string>
     <!-- 급식 자동 업데이트 -->
     <string name="title_service_autoupdate">자동 업데이트 서비스</string>
     <string name="title_broadcast_autoupdate">자동 업데이트 리시버</string>
@@ -110,11 +113,11 @@
 \n com.android.support:multidex:1.0.1
 \n
 \n- Google Firebase
-\n com.google.firebase:firebase-core:10.0.1
-\n com.google.firebase:firebase-messaging:10.0.1
-\n com.google.firebase:firebase-ads:10.0.1
-\n com.google.firebase:firebase-crash:10.0.1
-\n com.google.firebase:firebase-appindexing:10.0.1
+\n com.google.firebase:firebase-core:10.2.4
+\n com.google.firebase:firebase-messaging:10.2.4
+\n com.google.firebase:firebase-ads:10.2.4
+\n com.google.firebase:firebase-crash:10.2.4
+\n com.google.firebase:firebase-appindexing:10.2.4
 \n
 \n- DateTimePicker
 \n com.github.flavienlaurent.datetimepicker:library:0.0.2
@@ -130,7 +133,7 @@
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
 \n
 \n- com.squareup.okhttp
-\n com.squareup.okhttp3:okhttp:3.6.0
+\n com.squareup.okhttp3:okhttp:3.7.0
 \n
 \n- Icons
 \n calendar.png : http://www.tutsmag.com/wp-content/uploads/2013/06/final-result-calendar.png
@@ -235,7 +238,9 @@
     <string name="changelog_msg_lite">
         \n3.2a
         \n- 라이브러리 업데이트
+        \n- 행사 확인 기능 추가
         \n- 시간표 툴바 보기 개선
+        \n- 탭바 분류를 2개에서 3개로 추가 (UX 향상)
         \n- 업데이트 확인 창 숨김 (실행 속도 개선)
         \n- 서버에서 시간표 업데이트 유무를 확인하도록 변경
         \n- 서버에서 일정 업데이트 유무를 확인하도록 변경
@@ -252,6 +257,7 @@
         \n3.2a
         \n- 라이브러리 업데이트
         \n- 시간표 툴바 보기 개선
+        \n- 탭바 분류를 2개에서 3개로 추가 (UX 향상)
         \n- 업데이트 확인 창 숨김 (실행 속도 개선)
         \n- 서버에서 시간표 업데이트 유무를 확인하도록 변경
         \n- 서버에서 일정 업데이트 유무를 확인하도록 변경
