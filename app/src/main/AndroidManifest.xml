@@ -75,6 +75,10 @@
             android:label="@string/title_activity_schedule"
             android:theme="@style/AppTheme" />
         <activity
+            android:name="nori.m1nthing2322.joongang.activity.festival.FestivalActivity"
+            android:label="@string/title_activity_festival"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name="nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity"
             android:label="@string/title_activity_exam_range"
             android:theme="@style/AppTheme" />
