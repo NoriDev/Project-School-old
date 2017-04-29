@@ -3,6 +3,7 @@ package nori.m1nthing2322.joongang.activity.timetable;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -42,8 +43,11 @@ public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
-    private int timetablever= 201701;
+    private int timetableVer= 201701;
     String xml;
+
+    private SharedPreferences pref;
+    private SharedPreferences.Editor edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,68 +119,77 @@ public class TimeTableActivity extends AppCompatActivity {
 
         timeTableUpdate();
     }
-// 다음 업데이트 시점까지 1회 활성화 (시간표가 업데이트 되면 1회 재활성화)
-private void timeTableUpdate() {
-    StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
-    StringBuilder sBuffer = new StringBuilder();
-    try{//Start Try
-        String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS_TimeTable.xml";
-        URL url = new URL(urlAddr);
-        HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-        if(conn != null){//Start if
-            conn.setConnectTimeout(20000);
-            //conn.setUseCaches(false);
-            if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
-                InputStreamReader isr = new InputStreamReader(conn.getInputStream());
-                BufferedReader br = new BufferedReader(isr);
-                while(true){//Start While
-                    String line = br.readLine();
-                    if(line==null){//Start if
-                        break;
-                    }//end if
-                    sBuffer.append(line);
-                }//end while
-                br.close();
-                conn.disconnect();
+
+    private void timeTableUpdate() {
+        pref = getSharedPreferences("pref", 0);  //변경하지 마시오
+        edit = pref.edit();   //변경하지 마시오
+
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
+        StringBuilder sBuffer = new StringBuilder();
+        try{//Start Try
+            String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS_TimeTable.xml";
+            URL url = new URL(urlAddr);
+            HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+            if(conn != null){//Start if
+                conn.setConnectTimeout(20000);
+                //conn.setUseCaches(false);
+                if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
+                    InputStreamReader isr = new InputStreamReader(conn.getInputStream());
+                    BufferedReader br = new BufferedReader(isr);
+                    while(true){//Start While
+                        String line = br.readLine();
+                        if(line==null){//Start if
+                            break;
+                        }//end if
+                        sBuffer.append(line);
+                    }//end while
+                    br.close();
+                    conn.disconnect();
+                }//end if
             }//end if
-        }//end if
-        xml = sBuffer.toString();
-        CountDownTimer _timer = new CountDownTimer(1000, 1000){
-            public void onTick(long millisUntilFinished)
-            {}
-            public void onFinish(){
-                if(Integer.parseInt(xml)==timetablever){//new version
+            xml = sBuffer.toString();
+            CountDownTimer _timer = new CountDownTimer(1000, 1000){
+                public void onTick(long millisUntilFinished)
+                {}
+                public void onFinish(){
+                    if(Integer.parseInt(xml)==timetableVer){//new version
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
-                }
-                else if(Integer.parseInt(xml)>timetablever){
-                    //현재 버전보다 서버 버전이 높을때
-                    AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
-                    builder.setTitle("시간표가 업데이트됨");
-                    builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.");
-                    builder.setCancelable(false);
-                    builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                        }});
-                    builder.setPositiveButton(R.string.update_now, new
-                            DialogInterface.OnClickListener() {
+                    } else if(Integer.parseInt(xml)>timetableVer){
+                        //현재 버전보다 서버 버전이 높을때
+                        if(pref.getInt("timetable_201701",0)==0) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
+                            builder.setTitle("시간표가 업데이트됨");
+                            builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.\n\n- 이 알림은 앱을 최신버전으로 업데이트 해야 사라집니다 -");
+                            builder.setCancelable(false);
+                            builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    downloadingDB();
-                                }});
-                    builder.setCancelable(false);
-                    builder.show();
-                }else {
-                    //현재 버전보다 서버 버전이 낮을때
+                                    finish();
+                                }
+                            });
+                            builder.setPositiveButton(R.string.update_now, new
+                                DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        downloadingDB();
+                                        edit.putInt("timetable_201701",1);
+                                        // edit.remove("timetable_201701");  // 이전 변수를 지울 때 주석 제거
+                                        edit.apply();
+                                    }
+                                });
+                            builder.show();
+                        }
+                    } else {
+                        //현재 버전보다 서버 버전이 낮을때
+                    }
                 }
-            }
-        };
-        _timer.start();
-    }//end try
-    catch (Exception e) {
-        //네트워크가 올바르지 않을때
+            };
+            _timer.start();
+        }//end try
+        catch (Exception e) {
+            //네트워크가 올바르지 않을때
+        }
     }
-}
 
     private void setCurrentItem() {
         Calendar calendar = Calendar.getInstance();

@@ -34,7 +34,7 @@ import nori.m1nthing2322.joongang.R;
 public class ScheduleActivity extends AppCompatActivity {
     ViewPager viewPager;
 
-    private int schedulever= 201701; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
+    private int scheduleVer= 201701; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
     String xml;
 
     @Override
@@ -69,7 +69,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
         setCurrentItem();
 
-//        showScheduleNotification();
+        examTimeTableUpdate();
     }
 
     private void examTimeTableUpdate() {
@@ -101,9 +101,9 @@ public class ScheduleActivity extends AppCompatActivity {
                 public void onTick(long millisUntilFinished)
                 {}
                 public void onFinish(){
-                    if(Integer.parseInt(xml)==schedulever){//new version
+                    if(Integer.parseInt(xml)==scheduleVer){//new version
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
-                    } else if(Integer.parseInt(xml)>schedulever){
+                    } else if(Integer.parseInt(xml)>scheduleVer){
                         //현재 버전보다 서버 버전이 높을때
                         AlertDialog.Builder builder = new AlertDialog.Builder(ScheduleActivity.this);
                         builder.setTitle("학사일정이 업데이트됨");
@@ -112,6 +112,7 @@ public class ScheduleActivity extends AppCompatActivity {
                         builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
+                                finish();
                             }});
                         builder.setPositiveButton(R.string.update_now, new
                                 DialogInterface.OnClickListener() {
@@ -122,9 +123,8 @@ public class ScheduleActivity extends AppCompatActivity {
                                                         ("https://play.google.com/store/apps/details?id=nori.m1nthing2322.joongang"));
                                         startActivity(myIntent);
                                     }});
-                        builder.setCancelable(false);
                         builder.show();
-                    }else {
+                    } else {
                         //현재 버전보다 서버 버전이 낮을때
                     }
                 }
