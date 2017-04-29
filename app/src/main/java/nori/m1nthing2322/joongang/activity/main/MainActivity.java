@@ -1,6 +1,5 @@
 package nori.m1nthing2322.joongang.activity.main;
 
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -41,7 +40,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 public class MainActivity extends AppCompatActivity {
 
     private int ver= 32110;
-    private ProgressDialog dialog;
+//    private ProgressDialog dialog;
     String xml;
 
     private final long FINISH_INTERVAL_TIME = 2000;
@@ -100,8 +99,8 @@ public class MainActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-
-/*        dialog = new ProgressDialog(this);
+/*
+        dialog = new ProgressDialog(this);
         dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         dialog.setCancelable(false);
         dialog.setMessage(getString((R.string.check_version)));
@@ -157,7 +156,6 @@ public class MainActivity extends AppCompatActivity {
                                                         ("https://play.google.com/store/apps/details?id=nori.m1nthing2322.joongang"));
                                         startActivity(myIntent);
                                     }});
-                        builder.setCancelable(false);
                         builder.show();
                     } else {
                         //현재 버전보다 서버 버전이 낮을때
@@ -177,8 +175,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         Adapter mAdapter = new Adapter(getSupportFragmentManager());
         mAdapter.addFragment(getString(R.string.activity_main_fragment_simpleview), MainFragment.getInstance(1));
-//        mAdapter.addFragment(getString(R.string.activity_main_fragment_notice), MainFragment.getInstance(2));
-        mAdapter.addFragment(getString(R.string.activity_main_fragment_schoolinfo), MainFragment.getInstance(2));
+        mAdapter.addFragment(getString(R.string.activity_main_fragment_notice), MainFragment.getInstance(2));
+        mAdapter.addFragment(getString(R.string.activity_main_fragment_schoolinfo), MainFragment.getInstance(3));
         viewPager.setAdapter(mAdapter);
     }
 
