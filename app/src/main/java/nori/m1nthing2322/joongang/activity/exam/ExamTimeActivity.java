@@ -3,6 +3,7 @@ package nori.m1nthing2322.joongang.activity.exam;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -45,6 +46,9 @@ public class ExamTimeActivity extends AppCompatActivity {
 
     private int examver= 20170101;
     String xml;
+
+    private SharedPreferences pref;
+    private SharedPreferences.Editor edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +137,9 @@ public class ExamTimeActivity extends AppCompatActivity {
     }
 
     private void examTimeTableUpdate() {
+        pref = getSharedPreferences("pref", 0);  //변경하지 마시오
+        edit = pref.edit();   //변경하지 마시오
+
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
@@ -163,24 +170,31 @@ public class ExamTimeActivity extends AppCompatActivity {
                 public void onFinish(){
                     if(Integer.parseInt(xml)==examver){//new version
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
-                    } else if(Integer.parseInt(xml)>examver){
+                    } else if(Integer.parseInt(xml)>examver) {
                         //현재 버전보다 서버 버전이 높을때
-                        AlertDialog.Builder builder = new AlertDialog.Builder(ExamTimeActivity.this);
-                        builder.setTitle("시험 시간표가 업데이트됨");
-                        builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시험 시간표를 업데이트 하셔야 합니다.\n시험 시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.");
-                        builder.setCancelable(false);
-                        builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                            }});
-                        builder.setPositiveButton(R.string.update_now, new
-                                DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        downloadingDB();
-                                    }});
-                        builder.setCancelable(false);
-                        builder.show();
+                        if (pref.getInt("exam_20170101", 0) == 0) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(ExamTimeActivity.this);
+                            builder.setTitle("시험 시간표가 업데이트됨");
+                            builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시험 시간표를 업데이트 하셔야 합니다.\n시험 시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.");
+                            builder.setCancelable(false);
+                            builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                }
+                            });
+                            builder.setPositiveButton(R.string.update_now, new
+                                    DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            downloadingDB();
+                                            edit.putInt("exam_20170101", 1);
+                                            // edit.remove("exam_20170101");  // 이전 변수를 지울 때 주석 제거
+                                            edit.apply();
+                                        }
+                                    });
+                            builder.show();
+                        }
                     }else {
                         //현재 버전보다 서버 버전이 낮을때
                     }

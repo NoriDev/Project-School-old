@@ -13,6 +13,7 @@ import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
 import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
 import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
+import nori.m1nthing2322.joongang.activity.festival.FestivalActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
 import nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
@@ -49,9 +50,10 @@ public class MainFragment extends Fragment {
         recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View mView, int position) {
-                boolean isSimple = mAdapter.getItemData(position).isSimple;
+                Bundle args = getArguments();
+                int code = args.getInt("code");
 
-                if (isSimple) {
+                if (code == 1) {
                     switch (position) {
                         case 0:
                             startActivity(new Intent(getActivity(), BapActivity.class));
@@ -60,7 +62,8 @@ public class MainFragment extends Fragment {
                             startActivity(new Intent(getActivity(), TimeTableActivity.class));
                             break;
                     }
-                } else {
+                }
+                if (code == 2) {
                     switch (position) {
 /*
 *                        case 0:
@@ -69,31 +72,35 @@ public class MainFragment extends Fragment {
 *                           break;
 */
                         case 0:
-                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
-                            break;
-                        case 1:
                             startActivity(new Intent(getActivity(), NoticeActivity.class));
                             break;
-                        case 2:
-                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
-                            break;
-						case 3:
+                        case 1:
                             startActivity(new Intent(getActivity(), ChangelogActivity.class));
 //                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
                             break;
-                        case 4:
+                    }
+                }
+                if (code == 3) {
+                    switch (position) {
+                        case 0:
+                            startActivity(new Intent(getActivity(), ExamTimeActivity.class));
+                            break;
+                        case 1:
+                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
+                            break;
+                        case 2:
+                            startActivity(new Intent(getActivity(), FestivalActivity.class));
                             break;
                     }
                 }
-            }
-        }));
+
+        }}));
 
         Bundle args = getArguments();
         int code = args.getInt("code");
         Preference mPref = new Preference(getActivity());
 
         if (code == 1) {
-            // SimpleView
             if (mPref.getBoolean("simpleShowBap", true)) {
                 BapTool.todayBapData mBapData = BapTool.getTodayBap(getActivity());
                 mAdapter.addItem(R.drawable.rice,
@@ -106,7 +113,6 @@ public class MainFragment extends Fragment {
                         getString(R.string.title_activity_bap),
                         getString(R.string.message_activity_bap), true);
             }
-
             if (mPref.getBoolean("simpleShowTimeTable", true)) {
                 TimeTableTool.todayTimeTableData mTimeTableData = TimeTableTool.getTodayTimeTable(getActivity());
                 mAdapter.addItem(R.drawable.timetable,
@@ -118,25 +124,30 @@ public class MainFragment extends Fragment {
                 mAdapter.addItem(R.drawable.timetable,
                         getString(R.string.title_activity_time_table),
                         getString(R.string.message_activity_time_table), true);
-            }
-        } else {
-            // DetailedView
+            }}
+        if (code == 2) {
 /*			mAdapter.addItem(R.drawable.notice,
-*					getString(R.string.title_activity_scnoti),
-*					getString(R.string.message_activity_scnoti));
-*/			mAdapter.addItem(R.drawable.ic_launcher_big_new,
+			    	getString(R.string.title_activity_scnoti),
+				    getString(R.string.message_activity_scnoti));
+*/
+            mAdapter.addItem(R.drawable.notice,
+                    getString(R.string.title_activity_notice),
+                    getString(R.string.message_activity_notice));
+            mAdapter.addItem(R.drawable.notice,
+                    getString(R.string.title_activity_changelog),
+                    getString(R.string.message_activity_changelog));
+            }
+        if (code == 3) {
+            mAdapter.addItem(R.drawable.ic_launcher_big_new,
                     getString(R.string.title_activity_exam_range),
                     getString(R.string.message_activity_exam_range));
-            mAdapter.addItem(R.drawable.notice,
-					getString(R.string.title_activity_notice),
-					getString(R.string.message_activity_notice));
             mAdapter.addItem(R.drawable.calendar,
                     getString(R.string.title_activity_schedule),
                     getString(R.string.message_activity_schedule));
-			mAdapter.addItem(R.drawable.notice,
-                    getString(R.string.title_activity_changelog),
-					getString(R.string.message_activity_changelog));
-        }
+            mAdapter.addItem(R.drawable.calendar,
+                    getString(R.string.title_activity_festival),
+                    getString(R.string.message_activity_festival));
+            }
         return recyclerView;
     }
 }
