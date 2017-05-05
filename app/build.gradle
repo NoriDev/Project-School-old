@@ -21,8 +21,8 @@ android {
         prod {
             minSdkVersion 16
             // >=1(major) >=0(minor) 1(0: beta, >=1: prod) 0(0: beta, 1: prod) 1(>=1: beta, 0: prod)
-            versionCode 33110
-            versionName "3.3a"
+            versionCode 33210
+            versionName "3.3b"
         }
     }
     buildTypes {
