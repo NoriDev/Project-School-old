@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 //    private ProgressDialog dialog;
     String xml;
 
-    private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;
 
     @Override
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
-            String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS.xml";
+            String urlAddr = "https://raw.githubusercontent.com/NoriDev/Project-School/master/version/Project_School.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
@@ -263,6 +262,7 @@ public class MainActivity extends AppCompatActivity {
         long tempTime = System.currentTimeMillis();
         long intervalTime = tempTime - backPressedTime;
 
+        long FINISH_INTERVAL_TIME = 2000;
         if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
         {
             super.onBackPressed();

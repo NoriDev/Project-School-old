@@ -34,7 +34,7 @@ import nori.m1nthing2322.joongang.R;
 public class ScheduleActivity extends AppCompatActivity {
     ViewPager viewPager;
 
-    private int scheduleVer= 201701; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
+    private int scheduleVer= 201700; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
     String xml;
 
     @Override
@@ -76,7 +76,7 @@ public class ScheduleActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
-            String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS_Schedule.xml";
+            String urlAddr = "https://raw.githubusercontent.com/NoriDev/Project-School/master/version/Project_School_Schedule.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if

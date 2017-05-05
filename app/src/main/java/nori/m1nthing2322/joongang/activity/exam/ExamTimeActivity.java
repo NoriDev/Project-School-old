@@ -44,7 +44,7 @@ public class ExamTimeActivity extends AppCompatActivity {
     Preference mPref;
     int mGrade, mType;
 
-    private int examver= 20170101;
+    private int examVer= 20170100;
     String xml;
 
     private SharedPreferences pref;
@@ -143,7 +143,7 @@ public class ExamTimeActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         StringBuilder sBuffer = new StringBuilder();
         try{//Start Try
-            String urlAddr = "http://noridev.iptime.org/Project%20School/Jinhae%20Joongang%20High%20School/Project_School_JoongangHS_Exam.xml";
+            String urlAddr = "https://raw.githubusercontent.com/NoriDev/Project-School/master/version/Project_School_Exam.xml";
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
@@ -168,9 +168,9 @@ public class ExamTimeActivity extends AppCompatActivity {
                 public void onTick(long millisUntilFinished)
                 {}
                 public void onFinish(){
-                    if(Integer.parseInt(xml)==examver){//new version
+                    if(Integer.parseInt(xml)==examVer){//new version
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
-                    } else if(Integer.parseInt(xml)>examver) {
+                    } else if(Integer.parseInt(xml)>examVer) {
                         //현재 버전보다 서버 버전이 높을때
                         if (pref.getInt("exam_20170101", 0) == 0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(ExamTimeActivity.this);
