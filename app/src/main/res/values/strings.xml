@@ -244,13 +244,14 @@
     <string name="last_update">최근 업데이트</string>
     <string name="changelog_title">변경사항</string>
     <string name="changelog_msg_lite">
-        \n3.3a
+        \n3.3b
         \n- 갤럭시 S8 / S8+ 대응 (18.5:9 비율)
         \n- 학교 연락처 확인 기능 추가
         \n- 일부 화면에서 스크롤이 안되던 문제 수정
         \n- 소프트키 색상을 흰색으로 변경
         \n- 새 아이콘 추가 및 변경
-        \n- 스낵바를 토스트로 변경
+        \n- ShortCut 항목 추가
+        \n- 종료 알림을 스낵바에서 토스트로 변경
         \n- 카드뷰 디자인 오류 수정
         \n- 라이브러리 업데이트
         \n- FireBase 및 FCM 재구성
@@ -258,13 +259,14 @@
         \n- 버그 수정 및 안정화
     </string>
 	<string name="changelog_msg">
-        \n3.3a
+        \n3.3b
         \n- 갤럭시 S8 / S8+ 대응 (18.5:9 비율)
         \n- 학교 연락처 확인 기능 추가
         \n- 일부 화면에서 스크롤이 안되던 문제 수정
         \n- 소프트키 색상을 흰색으로 변경
         \n- 새 아이콘 추가 및 변경
-        \n- 스낵바를 토스트로 변경
+        \n- ShortCut 항목 추가
+        \n- 종료 알림을 스낵바에서 토스트로 변경
         \n- 카드뷰 디자인 오류 수정
         \n- 라이브러리 업데이트
         \n- FireBase 및 FCM 재구성

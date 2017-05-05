@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
+        android:shortcutId="rice"
+        android:enabled="true"
+        android:icon="@drawable/rice"
+        android:shortcutShortLabel="@string/rice_shortcut_short_label"
+        android:shortcutLongLabel="@string/rice_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/rice_disabled_message">
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:targetPackage="nori.m1nthing2322.joongang"
+        android:targetClass="nori.m1nthing2322.joongang.activity.bap.BapActivity" />
+    </shortcut>
+    <shortcut
         android:shortcutId="timetable"
         android:enabled="true"
         android:icon="@drawable/timetable"
@@ -13,18 +25,6 @@
             android:targetClass="nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity" />
     </shortcut>
     <shortcut
-        android:shortcutId="rice"
-        android:enabled="true"
-        android:icon="@drawable/rice"
-        android:shortcutShortLabel="@string/rice_shortcut_short_label"
-        android:shortcutLongLabel="@string/rice_shortcut_long_label"
-        android:shortcutDisabledMessage="@string/rice_disabled_message">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="nori.m1nthing2322.joongang"
-            android:targetClass="nori.m1nthing2322.joongang.activity.bap.BapActivity" />
-    </shortcut>
-    <shortcut
         android:shortcutId="schedule"
         android:enabled="true"
         android:icon="@drawable/calendar"
@@ -37,15 +37,15 @@
             android:targetClass="nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity" />
     </shortcut>
     <shortcut
-        android:shortcutId="schedule"
+        android:shortcutId="festival"
         android:enabled="true"
-        android:icon="@drawable/calendar"
-        android:shortcutShortLabel="@string/schedule_shortcut_short_label"
-        android:shortcutLongLabel="@string/schedule_shortcut_long_label"
-        android:shortcutDisabledMessage="@string/schedule_disabled_message">
+        android:icon="@drawable/events"
+        android:shortcutShortLabel="@string/festival_shortcut_short_label"
+        android:shortcutLongLabel="@string/festival_shortcut_long_label"
+        android:shortcutDisabledMessage="@string/festival_disabled_message">
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="nori.m1nthing2322.joongang"
-            android:targetClass="nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity" />
+            android:targetClass="nori.m1nthing2322.joongang.activity.schedule.festivalActivity" />
     </shortcut>
 </shortcuts>
