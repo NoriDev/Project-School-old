@@ -135,7 +135,7 @@
 \n org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2
 \n
 \n- com.squareup.okhttp
-\n com.squareup.okhttp3:okhttp:3.7.0
+\n com.squareup.okhttp3:okhttp:3.8.0
 \n
 \n- Icons
 \n calendar.png : http://www.tutsmag.com/wp-content/uploads/2013/06/final-result-calendar.png
