@@ -16,6 +16,7 @@ import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.festival.FestivalActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
 import nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity;
+import nori.m1nthing2322.joongang.activity.tel.TelActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Preference;
@@ -91,6 +92,9 @@ public class MainFragment extends Fragment {
                         case 2:
                             startActivity(new Intent(getActivity(), FestivalActivity.class));
                             break;
+                        case 3:
+                            startActivity(new Intent(getActivity(), TelActivity.class));
+                            break;
                     }
                 }
 
@@ -147,6 +151,9 @@ public class MainFragment extends Fragment {
             mAdapter.addItem(R.drawable.calendar,
                     getString(R.string.title_activity_festival),
                     getString(R.string.message_activity_festival));
+            mAdapter.addItem(R.drawable.calendar,
+                    getString(R.string.title_activity_tel),
+                    getString(R.string.message_activity_tel));
             }
         return recyclerView;
     }
