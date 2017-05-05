@@ -19,7 +19,8 @@
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/mSwipeRefreshLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
 
             <ListView
                 android:id="@+id/mListView"
