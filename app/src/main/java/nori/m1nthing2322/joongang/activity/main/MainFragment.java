@@ -142,16 +142,16 @@ public class MainFragment extends Fragment {
                     getString(R.string.message_activity_changelog));
             }
         if (code == 3) {
-            mAdapter.addItem(R.drawable.ic_launcher_big_new,
+            mAdapter.addItem(R.drawable.exam,
                     getString(R.string.title_activity_exam_range),
                     getString(R.string.message_activity_exam_range));
             mAdapter.addItem(R.drawable.calendar,
                     getString(R.string.title_activity_schedule),
                     getString(R.string.message_activity_schedule));
-            mAdapter.addItem(R.drawable.calendar,
+            mAdapter.addItem(R.drawable.events,
                     getString(R.string.title_activity_festival),
                     getString(R.string.message_activity_festival));
-            mAdapter.addItem(R.drawable.calendar,
+            mAdapter.addItem(R.drawable.phone,
                     getString(R.string.title_activity_tel),
                     getString(R.string.message_activity_tel));
             }

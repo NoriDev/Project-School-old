@@ -145,7 +145,7 @@
 \n other image : https://www.google.com/design/icons/
 \n
 \nApp-based sources
-\n Mir : https://bitbucket.org/whdghks913/wondanghighschool</string>
+\nMir : https://bitbucket.org/whdghks913/wondanghighschool</string>
     <!-- 프로젝트 안내 -->
     <string name="project_title">Project School이 무엇인가요?</string>
     <string name="project_msg">
@@ -249,6 +249,7 @@
         \n- 학교 연락처 확인 기능 추가
         \n- 일부 화면에서 스크롤이 안되던 문제 수정
         \n- 소프트키 색상을 흰색으로 변경
+        \n- 새 아이콘 추가 및 변경
         \n- 스낵바를 토스트로 변경
         \n- 카드뷰 디자인 오류 수정
         \n- 라이브러리 업데이트
@@ -262,6 +263,7 @@
         \n- 학교 연락처 확인 기능 추가
         \n- 일부 화면에서 스크롤이 안되던 문제 수정
         \n- 소프트키 색상을 흰색으로 변경
+        \n- 새 아이콘 추가 및 변경
         \n- 스낵바를 토스트로 변경
         \n- 카드뷰 디자인 오류 수정
         \n- 라이브러리 업데이트
