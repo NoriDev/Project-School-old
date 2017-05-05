@@ -43,7 +43,7 @@ public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
-    private int timetableVer= 201700;
+    private int timetableVer= 201701;
     String xml;
 
     private SharedPreferences pref;

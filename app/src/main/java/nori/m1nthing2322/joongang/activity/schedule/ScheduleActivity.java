@@ -34,7 +34,7 @@ import nori.m1nthing2322.joongang.R;
 public class ScheduleActivity extends AppCompatActivity {
     ViewPager viewPager;
 
-    private int scheduleVer= 201700; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
+    private int scheduleVer= 201701; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
     String xml;
 
     @Override
