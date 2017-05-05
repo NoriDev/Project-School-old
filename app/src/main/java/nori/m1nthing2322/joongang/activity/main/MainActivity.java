@@ -1,5 +1,6 @@
 package nori.m1nthing2322.joongang.activity.main;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -10,7 +11,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.StrictMode;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -39,7 +39,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 32110;
+    private int ver= 33110;
 //    private ProgressDialog dialog;
     String xml;
 
@@ -158,7 +158,12 @@ public class MainActivity extends AppCompatActivity {
                         builder.show();
                     } else {
                         //현재 버전보다 서버 버전이 낮을때
-                        Toast.makeText(getApplicationContext(), R.string.crack_contents, Toast.LENGTH_SHORT).show();
+                        Context context = getApplicationContext();
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, R.string.crack_contents, duration);
+                        toast.show();
+//                        Toast.makeText(getApplicationContext(), R.string.crack_contents, Toast.LENGTH_SHORT).show();
                     }
                 }
             };
@@ -166,7 +171,12 @@ public class MainActivity extends AppCompatActivity {
         }//end try
         catch (Exception e) {
             //네트워크가 올바르지 않을때
-            Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
+            Context context = getApplicationContext();
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, R.string.offline, duration);
+            toast.show();
+//            Toast.makeText(getApplicationContext(), R.string.offline, Toast.LENGTH_LONG).show();
 //            dialog.cancel();
         }
     }
@@ -261,14 +271,20 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         long tempTime = System.currentTimeMillis();
         long intervalTime = tempTime - backPressedTime;
-
         long FINISH_INTERVAL_TIME = 2000;
+
         if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime)
         {
             super.onBackPressed();
         } else {
             backPressedTime = tempTime;
-            Snackbar.make(getWindow().getDecorView().getRootView(), "\'뒤로\'버튼을 한번 더 누르시면 종료됩니다.", Snackbar.LENGTH_SHORT).show();
+            Context context = getApplicationContext();
+            CharSequence text = "\'뒤로가기\' 버튼을 한번 더 누르시면 종료됩니다.";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+//            Snackbar.make(getWindow().getDecorView().getRootView(), "\'뒤로가기\' 버튼을 한번 더 누르시면 종료됩니다.", Snackbar.LENGTH_SHORT).show();
         }
     }
 }

@@ -6,23 +6,23 @@ android {
 
     defaultConfig {
         applicationId "nori.m1nthing2322.joongang"
-        // multidex 기능을 건너뛰어 컴파일 속도를 향상시킴
+        // multiDex 기능을 건너뛰어 컴파일 속도를 향상시킴
         minSdkVersion 21
         targetSdkVersion 25
-        // Enabling multidex support.
+        // Enabling multiDex support.
         multiDexEnabled true
     }
     productFlavors {
         beta {
-            // 1(major) 0(minor) 1(0: beta, =<1: prod) 0(0: beta, 1: prod) 1(=<1: beta, 0: prod)
+            // >=1(major) >=0(minor) 1(0: beta, >=1: prod) 0(0: beta, 1: prod) 1(>=1: beta, 0: prod)
             versionCode 30002
             versionName "3.0-beta2"
         }
         prod {
             minSdkVersion 16
-            // 1(major) 0(minor) 1(0: beta, =<1: prod) 0(0: beta, 1: prod) 1(=<1: beta, 0: prod)
-            versionCode 32110
-            versionName "3.2a"
+            // >=1(major) >=0(minor) 1(0: beta, >=1: prod) 0(0: beta, 1: prod) 1(>=1: beta, 0: prod)
+            versionCode 33110
+            versionName "3.3a"
         }
     }
     buildTypes {
@@ -36,7 +36,7 @@ android {
                     output ->
                         def file = output.outputFile
                         output.outputFile = new File(file.parent,
-                                file.name.replace("app", "Joongang HS" + "_" + productFlavors.versionCode))
+                                file.name.replace("app", "Project School - Joongang HS" + "_" + productFlavors.versionCode))
                 }
             }
         }
@@ -50,7 +50,7 @@ android {
                     output ->
                         def file = output.outputFile
                         output.outputFile = new File(file.parent,
-                                file.name.replace("app", "Joongang HS" + "_" + productFlavors.versionCode))
+                                file.name.replace("app", "Project School - Joongang HS" + "_" + productFlavors.versionCode))
                 }
             }
         }
@@ -82,7 +82,7 @@ dependencies {
 // DateTimePicker
     compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
 // Glide
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
 // CircleImageView
     compile 'de.hdodenhof:circleimageview:2.1.0'
 // org.apache.http
