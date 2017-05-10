@@ -84,7 +84,7 @@ public class ScheduleFragment extends Fragment {
         switch (month) {
             case 3:
                 mAdapter.addItem("3.1절", "2017.03.01 (수)", true);
-                mAdapter.addItem("입학식 및 시업식", "2017.03.02 (목)");
+                mAdapter.addItem("입학식 및 시업식, 청렴의 날", "2017.03.02 (목)");
                 mAdapter.addItem("신입생 오리엔테이션 (부서별)", "2017.03.06 (월)");
                 mAdapter.addItem("신입생 오리엔테이션 (교과별)", "2017.03.07 (화)");
                 mAdapter.addItem("지진, 화재, 교통안전교육", "2017.03.08 (수)");
@@ -99,6 +99,7 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("가정의 날", "2017.03.29 (수)");
                 break;
             case 4:
+                mAdapter.addItem("청렴의 날", "2017.04.03 (월)");
                 mAdapter.addItem("식목일, 장애인 인권 교육", "2017.04.05 (수)");
                 mAdapter.addItem("전국 연합 학력 평가 (3학년)", "2017.04.12 (수)");
                 mAdapter.addItem("진로 적성 검사 (1학년)", "2017.04.13 (목)");
@@ -113,7 +114,7 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("1학기 1차 지필평가", "2017.04.28 (금)");
                 break;
             case 5:
-                mAdapter.addItem("체육대회", "2017.05.01 (월)");
+                mAdapter.addItem("체육대회, 청렴의 날", "2017.05.01 (월)");
                 mAdapter.addItem("춘계 교외 체험학습", "2017.05.02 (화)");
                 mAdapter.addItem("석가탄신일", "2017.05.03 (수)", true);
                 mAdapter.addItem("재량 휴업일 (개교기념일)", "2017.05.04 (목)");
@@ -129,7 +130,7 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("가정의 날", "2017.05.31 (수)");
                 break;
             case 6:
-                mAdapter.addItem("전국 연합 학력평가 (1, 2학년), 대수능 모의평가 (3학년)", "2017.06.01 (목)");
+                mAdapter.addItem("전국 연합 학력평가 (1, 2학년), 대수능 모의평가 (3학년), 청렴의 날", "2017.06.01 (목)");
                 mAdapter.addItem("현충일", "2017.06.06 (화)", true);
                 mAdapter.addItem("나라 사랑의 날 행사", "2017.06.07 (수)");
                 mAdapter.addItem("영어 경시 대회", "2017.06.09 (금)");
@@ -139,11 +140,12 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("1학기 2차 지필평가", "2017.06.30 (금)");
                 break;
             case 7:
-                mAdapter.addItem("1학기 2차 지필평가", "2017.07.03 (월)");
+                mAdapter.addItem("1학기 2차 지필평가, 청렴의 날", "2017.07.03 (월)");
                 mAdapter.addItem("1학기 2차 지필평가", "2017.07.04 (화)");
                 mAdapter.addItem("친구 사랑 편지 쓰기", "2017.07.05 (수)");
                 mAdapter.addItem("미술 실기 대회", "2017.07.07 (금)");
                 mAdapter.addItem("진로캠프", "2017.07.08 (토)");
+                mAdapter.addItem("독서대회", "2017.07.11 (화)");
                 mAdapter.addItem("전국 연합 학력 평가 (3학년)", "2017.07.12 (수)");
                 mAdapter.addItem("수학 페스티벌", "2017.07.14 (금)");
                 mAdapter.addItem("제헌절", "2017.07.17 (월)");
@@ -151,9 +153,10 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("여름 방학식", "2017.07.19 (수)");
                 break;
             case 8:
-                mAdapter.addItem("여름 방학, 3학년 개학", "2017.08.01 (화)");
-                mAdapter.addItem("여름 방학, 광복절", "2017.08.15 (화)", true);
-                mAdapter.addItem("1, 2학년 개학", "2017.08.16 (수)");
+                mAdapter.addItem("여름 방학, 청렴의 날", "2017.08.01 (화)");
+                mAdapter.addItem("여름 방학, 3학년 개학", "2017.08.09 (수)");
+                mAdapter.addItem("1, 2학년 개학", "2017.08.14 (월)");
+                mAdapter.addItem("광복절", "2017.08.15 (화)", true);
                 mAdapter.addItem("가정폭력, 아동학대 예방 교육", "2017.08.23 (수)");
                 mAdapter.addItem("2학기 1차 지필평가 (3학년)", "2017.08.28 (월)");
                 mAdapter.addItem("2학기 1차 지필평가 (3학년)", "2017.08.29 (화)");
@@ -161,6 +164,7 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("2학기 1차 지필평가 (3학년)", "2017.08.31 (목)");
                 break;
             case 9:
+                mAdapter.addItem("청렴의 날", "2017.09.01 (금)");
                 mAdapter.addItem("전국 연합 학력평가 (1, 2학년), 대수능 모의평가 (3학년)", "2017.09.06 (수)");
                 mAdapter.addItem("지진, 화재, 교통안전교육", "2017.09.13 (수)");
                 mAdapter.addItem("추계 교외 체험활동 (1, 3학년), 진로 체험활동 (2학년)", "2017.09.15 (금)");
@@ -172,12 +176,12 @@ public class ScheduleFragment extends Fragment {
                 break;
             case 10:
                 mAdapter.addItem("재량 휴업일", "2017.10.02 (월)");
-                mAdapter.addItem("개천절, 추석 연휴", "2017.10.03 (화)", true);
+                mAdapter.addItem("개천절", "2017.10.03 (화)", true);
                 mAdapter.addItem("추석", "2017.10.04 (수)", true);
                 mAdapter.addItem("추석 연휴", "2017.10.05 (목)", true);
-                mAdapter.addItem("추석 연휴 (대체공휴일)", "2017.10.06 (금)", true);
+                mAdapter.addItem("대체공휴일", "2017.10.06 (금)", true);
                 mAdapter.addItem("한글날", "2017.10.09 (월)", true);
-                mAdapter.addItem("2학기 1차 지필평가 (1, 2학년), 2학기 2차 지필평가 (3학년)", "2017.10.10 (화)");
+                mAdapter.addItem("2학기 1차 지필평가 (1, 2학년), 2학기 2차 지필평가 (3학년), 청렴의 날", "2017.10.10 (화)");
                 mAdapter.addItem("2학기 1차 지필평가 (1, 2학년), 2학기 2차 지필평가 (3학년)", "2017.10.11 (수)");
                 mAdapter.addItem("2학기 1차 지필평가 (1, 2학년), 2학기 2차 지필평가 (3학년)", "2017.10.12 (목)");
                 mAdapter.addItem("2학기 1차 지필평가 (1, 2학년), 2학기 2차 지필평가 (3학년)", "2017.10.13 (금)");
@@ -185,17 +189,18 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("과학 경시 대회", "2017.10.19 (목)");
                 mAdapter.addItem("수학여행 (2학년)", "2017.10.24 (화)");
                 mAdapter.addItem("수학여행 (2학년), 가정의 날", "2017.10.25 (수)");
-                mAdapter.addItem("수학여행 (2학년)", "2017.10.25 (목)");
+                mAdapter.addItem("수학여행 (2학년)", "2017.10.26 (목)");
                 mAdapter.addItem("수학여행 (2학년)", "2017.10.27 (금)");
                 break;
             case 11:
-                mAdapter.addItem("생명존중, 양성평등교육", "2017.11.01 (수)");
+                mAdapter.addItem("생명존중, 양성평등교육, 청렴의 날", "2017.11.01 (수)");
                 mAdapter.addItem("장애인 인권 교육", "2017.11.08 (수)");
                 mAdapter.addItem("대학수학능력시험", "2017.11.16 (목)", true);
                 mAdapter.addItem("전국 연합 학력평가 (1, 2학년)", "2017.11.22 (수)");
                 mAdapter.addItem("가정의 날", "2017.11.29 (수)");
                 break;
             case 12:
+                mAdapter.addItem("청렴의 날", "2017.12.01 (금)");
                 mAdapter.addItem("2학기 2차 지필평가 (1, 2학년)", "2017.12.12 (화)");
                 mAdapter.addItem("2학기 2차 지필평가 (1, 2학년)", "2017.12.13 (수)");
                 mAdapter.addItem("2학기 2차 지필평가 (1, 2학년)", "2017.12.14 (목)");
@@ -203,17 +208,18 @@ public class ScheduleFragment extends Fragment {
                 mAdapter.addItem("장복제", "2017.12.22 (금)");
                 mAdapter.addItem("성탄절", "2017.12.25 (월)", true);
                 mAdapter.addItem("가정의 날", "2017.12.27 (수)");
+                mAdapter.addItem("겨울 방학식", "2017.12.29 (금)");
                 break;
             case 1:
                 mAdapter.addItem("신정", "2018.01.01 (월)", true);
-                mAdapter.addItem("겨울 방학식", "2018.01.03 (수)");
                 break;
             case 2:
+                mAdapter.addItem("청렴의 날", "2018.02.01 (목)");
                 mAdapter.addItem("개학", "2018.02.05 (월)");
                 mAdapter.addItem("졸업식, 종업식", "2018.02.09 (금)");
                 mAdapter.addItem("봄 방학, 설 연휴", "2018.02.15 (목)", true);
                 mAdapter.addItem("봄 방학, 설날", "2018.02.16 (금)", true);
-                mAdapter.addItem("봄 방학, 설 연휴 (대체공휴일)", "2018.02.19 (월)", true);
+                mAdapter.addItem("봄 방학, 대체공휴일", "2018.02.19 (월)", true);
                 break;
         }
         return recyclerView;
