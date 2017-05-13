@@ -92,7 +92,7 @@
             android:title="앱 버전" />
         <Preference
             android:key="appVersionCode"
-            android:summary="33310"
+            android:summary="33410"
             android:title="앱 코드" />
     </PreferenceCategory>
 
