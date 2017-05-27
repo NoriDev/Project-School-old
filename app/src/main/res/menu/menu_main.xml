@@ -5,7 +5,7 @@
 <!--    <item
         android:id="@+id/action_chat_beta"
         android:orderInCategory="1"
-        android:title="베타테스터"
+        android:title="베타 테스터"
         app:showAsAction="always" />
 -->
 <!--    <item
