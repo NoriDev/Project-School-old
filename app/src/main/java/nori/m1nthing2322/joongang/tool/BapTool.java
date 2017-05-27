@@ -35,7 +35,7 @@ public class BapTool {
         int month = mCalendar.get(Calendar.MONTH);
         int day = mCalendar.get(Calendar.DAY_OF_MONTH);
 
-        Preference mPref = new Preference(mContext, "RateStarInfo");
+        Preference mPref = new Preference(mContext, "BapRateStarInfo");
         String lunchKey = "LunchStar_" + year + month + day;
         String dinnerKey = "DinnerStar_" + year + month + day;
 
