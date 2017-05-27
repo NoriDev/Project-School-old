@@ -21,6 +21,7 @@ import com.fourmob.datetimepicker.date.DatePickerDialog;
 import java.util.Calendar;
 
 import nori.m1nthing2322.joongang.R;
+import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.ProcessTask;
@@ -136,10 +137,9 @@ public class BapActivity extends AppCompatActivity {
             if (mData.isBlankDay) {
                 if (isUpdate && isNetwork) {
                     mDialog = new ProgressDialog(this);
-                    mDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                    mDialog.setMax(100);
-                    mDialog.setTitle(R.string.loading_title);
-                    mDialog.setCancelable(false);
+                    mDialog.setIndeterminate(true);
+                    mDialog.setMessage(getString(R.string.loading_title));
+                    mDialog.setCanceledOnTouchOutside(false);
                     mDialog.show();
 
                     mProcessTask = new BapDownloadTask(this);
@@ -190,7 +190,6 @@ public class BapActivity extends AppCompatActivity {
             public void onDateSet(DatePickerDialog datePickerDialog, int year, int month, int day) {
                 mCalendar.set(year, month, day);
                 getCalendarInstance(false);
-
                 getBapList(true);
             }
         }, year, month, day, false);
@@ -216,7 +215,6 @@ public class BapActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_calender) {
             setCalenderBap();
-
             return true;
 
         } else if (id == R.id.action_refresh) {
@@ -243,18 +241,14 @@ public class BapActivity extends AppCompatActivity {
                 builder.setCancelable(false);
                 builder.show();
             }
-
             return true;
         } else if (id == R.id.action_today) {
             getCalendarInstance(true);
             getBapList(true);
-
             return true;
-        }
-/*        else if (id == R.id.action_show_star) {
+        } else if (id == R.id.action_show_star) {
             startActivity(new Intent(this, BapStarActivity.class).putExtra("starType", 2));
         }
-*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -276,7 +270,6 @@ public class BapActivity extends AppCompatActivity {
         public void onFinish(long result) {
             if (mDialog != null)
                 mDialog.dismiss();
-
             if (result == -1) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(BapActivity.this, R.style.AppCompatErrorAlertDialogStyle);
                 builder.setTitle(R.string.I_do_not_know_the_error_title);
@@ -284,7 +277,6 @@ public class BapActivity extends AppCompatActivity {
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
                 builder.show();
-
                 return;
             }
 
