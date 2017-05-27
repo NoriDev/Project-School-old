@@ -91,7 +91,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
         Glide.with(holder.mCircleImageView.getContext())
                 .load(mInfo.imageId)
-                .fitCenter()
+                //.fitCenter()
                 .into(holder.mCircleImageView);
 
 //        holder.mView.setOnClickListener(new View.OnClickListener() {
