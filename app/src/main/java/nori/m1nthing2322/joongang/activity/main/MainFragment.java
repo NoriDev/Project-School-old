@@ -11,10 +11,11 @@ import android.view.ViewGroup;
 
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
-import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
+import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
 import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.festival.FestivalActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
+import nori.m1nthing2322.joongang.activity.notice.SCNoticeActivity;
 import nori.m1nthing2322.joongang.activity.schedule.ScheduleActivity;
 import nori.m1nthing2322.joongang.activity.tel.TelActivity;
 import nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity;
@@ -66,18 +67,15 @@ public class MainFragment extends Fragment {
                 }
                 if (code == 2) {
                     switch (position) {
-/*
-*                        case 0:
-*                            Toast.makeText(getActivity(), "학교 공지 기능 개발중입니다 :)", Toast.LENGTH_SHORT).show();
-*                            startActivity(new Intent(getActivity(), ScheduleActivity.class));
-*                           break;
-*/
                         case 0:
-                            startActivity(new Intent(getActivity(), NoticeActivity.class));
+                            startActivity(new Intent(getActivity(), SCNoticeActivity.class));
                             break;
                         case 1:
-                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
-//                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
+                            startActivity(new Intent(getActivity(), NoticeActivity.class));
+                            break;
+                        case 2:
+//                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
+                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
                             break;
                     }
                 }
@@ -128,17 +126,17 @@ public class MainFragment extends Fragment {
                 mAdapter.addItem(R.drawable.timetable,
                         getString(R.string.title_activity_time_table),
                         getString(R.string.message_activity_time_table), true);
-            }}
+            }
+        }
         if (code == 2) {
-/*			mAdapter.addItem(R.drawable.notice,
-			    	getString(R.string.title_activity_scnoti),
-				    getString(R.string.message_activity_scnoti));
-*/
+			mAdapter.addItem(R.drawable.notice,
+			    	getString(R.string.title_activity_scnotice),
+				    getString(R.string.message_activity_scnotice));
             mAdapter.addItem(R.drawable.notice,
                     getString(R.string.title_activity_notice),
                     getString(R.string.message_activity_notice));
             mAdapter.addItem(R.drawable.notice,
-                    getString(R.string.title_activity_changelog),
+                    getString(R.string.title_activity_changelog_beta),
                     getString(R.string.message_activity_changelog));
             }
         if (code == 3) {
