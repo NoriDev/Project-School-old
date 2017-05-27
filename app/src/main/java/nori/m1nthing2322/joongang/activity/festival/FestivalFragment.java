@@ -67,6 +67,7 @@ public class FestivalFragment extends Fragment {
                 mAdapter.addItem("한자 경시대회 - 1, 2학년", "12월");
                 mAdapter.addItem("진로 포트폴리오 대회 - 1, 2학년", "12월");
                 break;
+/*
             case 2:
                 mAdapter.addItem("개회식", "오전 9시");
                 mAdapter.addItem("준비 체조", "오전 9시 20분");
@@ -85,6 +86,7 @@ public class FestivalFragment extends Fragment {
                 mAdapter.addItem("400mR - 1, 2, 3학년", "오후 2시 ~ 2시 30분");
                 mAdapter.addItem("시상식", "오후 2시 30분");
                 break;
+*/
         }
         return recyclerView;
     }

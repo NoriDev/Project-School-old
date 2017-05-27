@@ -137,7 +137,7 @@ public class FestivalActivity extends AppCompatActivity {
         Adapter mAdapter = new Adapter(getSupportFragmentManager());
 
         mAdapter.addFragment("교내대회", FestivalFragment.getInstance(1));
-        mAdapter.addFragment("체육대회", FestivalFragment.getInstance(2));
+//        mAdapter.addFragment("체육대회", FestivalFragment.getInstance(2));
 
         viewPager.setAdapter(mAdapter);
     }
