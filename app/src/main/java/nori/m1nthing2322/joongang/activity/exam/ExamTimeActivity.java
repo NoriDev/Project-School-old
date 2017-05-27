@@ -209,22 +209,7 @@ public class ExamTimeActivity extends AppCompatActivity {
 
     public void downloadingDB() {
         if (Tools.isOnline(getApplicationContext())) {
-            if (Tools.isWifi(getApplicationContext())) {
-                downloadStart();
-            } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.no_wifi_title);
-                builder.setMessage(R.string.no_wifi_msg);
-                builder.setNegativeButton(android.R.string.cancel, null);
-                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        downloadStart();
-                    }
-                });
-                builder.setCancelable(false);
-                builder.show();
-            }
+            downloadStart();
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatErrorAlertDialogStyle);
             builder.setTitle(R.string.no_network_title);
@@ -294,7 +279,6 @@ public class ExamTimeActivity extends AppCompatActivity {
                 if (mType == -1) {
                     resetType();
                 } else {
-                    Toast.makeText(getApplicationContext(), "다시 로딩됩니다", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), ExamTimeActivity.class));
                     finish();
                 }
@@ -312,7 +296,7 @@ public class ExamTimeActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mPref.putInt("myType", which);
-                Toast.makeText(getApplicationContext(), "다시 로딩됩니다", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "계열 변경 완료", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), ExamTimeActivity.class));
                 finish();
             }

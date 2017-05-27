@@ -43,7 +43,7 @@ public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
-    private int timetableVer= 201701;
+    private int timetableVer= 20170102;
     String xml;
 
     private SharedPreferences pref;
@@ -226,8 +226,8 @@ public class TimeTableActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mPref.putInt("myClass", which + 1);
-                Toast.makeText(getApplicationContext(), "다시 로딩됩니다", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), TimeTableActivity.class));
+                Toast.makeText(getApplicationContext(), "학급 변경 완료", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -236,22 +236,7 @@ public class TimeTableActivity extends AppCompatActivity {
 
     public void downloadingDB() {
         if (Tools.isOnline(getApplicationContext())) {
-            if (Tools.isWifi(getApplicationContext())) {
-                downloadStart();
-            } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.no_wifi_title);
-                builder.setMessage(R.string.no_wifi_msg);
-                builder.setNegativeButton(android.R.string.cancel, null);
-                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        downloadStart();
-                    }
-                });
-                builder.setCancelable(false);
-                builder.show();
-            }
+            downloadStart();
         } else {
             AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatErrorAlertDialogStyle);
             builder.setTitle(R.string.no_network_title);
@@ -409,10 +394,9 @@ public class TimeTableActivity extends AppCompatActivity {
             TimeTableTool.timeTableData mData = TimeTableTool.getTimeTableData(mGrade, mClass, position + 2);
 
             String[] subject = mData.subject;
-            String[] room = mData.room;
 
             for (int period = 0; period < 7; period++) {
-                mText += "\n" + (period + 1) + "교시 : " + subject[period] + "(" + room[period] + ")";
+                mText += "\n" + (period + 1) + "교시 : " + subject[period];
             }
 
             String title = getString(R.string.action_share_timetable);

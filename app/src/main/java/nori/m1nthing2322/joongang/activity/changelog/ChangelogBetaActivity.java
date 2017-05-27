@@ -1,7 +1,6 @@
 package nori.m1nthing2322.joongang.activity.changelog;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -67,7 +66,7 @@ public class ChangelogBetaActivity extends AppCompatActivity {
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                showNoticeData(true);
+                showNoticeData();
             }
         });
 
@@ -86,37 +85,16 @@ public class ChangelogBetaActivity extends AppCompatActivity {
             }
         });
 
-        showNoticeData(false);
+        showNoticeData();
     }
 
-    private void showNoticeData(boolean forceUpdate) {
+    private void showNoticeData() {
         mAdapter.clearData();
         mAdapter.notifyDataSetChanged();
 
         if (Tools.isOnline(getApplicationContext())) {
-            if (Tools.isWifi(getApplicationContext()) || forceUpdate) {
-                getNoticeDownloadTask mTask = new getNoticeDownloadTask();
-                mTask.execute("https://docs.google.com/spreadsheets/d/1hTI5-CFLTV_2yUO6shkFv1quoHJFTlBx7WxjS9KOwGg/pubhtml?gid=1446242351&single=true");
-            } else {
-                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.no_wifi_title);
-                builder.setMessage(R.string.no_wifi_msg);
-                builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        offlineData();
-                    }
-                });
-                builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        getNoticeDownloadTask mTask = new getNoticeDownloadTask();
-                        mTask.execute("https://docs.google.com/spreadsheets/d/1hTI5-CFLTV_2yUO6shkFv1quoHJFTlBx7WxjS9KOwGg/pubhtml?gid=1446242351&single=true");
-                    }
-                });
-                builder.setCancelable(false);
-                builder.show();
-            }
+            getNoticeDownloadTask mTask = new getNoticeDownloadTask();
+            mTask.execute("https://docs.google.com/spreadsheets/d/1hTI5-CFLTV_2yUO6shkFv1quoHJFTlBx7WxjS9KOwGg/pubhtml?gid=1473912750&single=true");
         } else {
             offlineData();
         }

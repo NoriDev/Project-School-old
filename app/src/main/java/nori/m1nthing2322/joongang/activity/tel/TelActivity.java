@@ -1,7 +1,6 @@
 package nori.m1nthing2322.joongang.activity.tel;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -88,37 +87,13 @@ public class TelActivity extends AppCompatActivity {
         pref = getSharedPreferences("pref", 0);  //변경하지 마시오
         edit = pref.edit();   //변경하지 마시오
 
-        if (pref.getInt("tel_1", 0) == 0) {
+        if (pref.getInt("tel_2", 0) == 0) {
             if (Tools.isOnline(getApplicationContext())) {
-                if (Tools.isWifi(getApplicationContext())) {
-                    getNoticeDownloadTask mTask = new getNoticeDownloadTask();
-                    mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1943305429&single=true");
-                    edit.putInt("tel_1", 1);
-                    // edit.remove("tel_1");  // 이전 변수를 지울 때 주석 제거
-                    edit.apply();
-                } else {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                    builder.setTitle(R.string.no_wifi_title);
-                    builder.setMessage(R.string.no_wifi_msg);
-                    builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            offlineData();
-                        }
-                    });
-                    builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            getNoticeDownloadTask mTask = new getNoticeDownloadTask();
-                            mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1943305429&single=true");
-                            edit.putInt("tel_1", 1);
-                            // edit.remove("tel_1");  // 이전 변수를 지울 때 주석 제거
-                            edit.apply();
-                        }
-                    });
-                    builder.setCancelable(false);
-                    builder.show();
-                }
+                getNoticeDownloadTask mTask = new getNoticeDownloadTask();
+                mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=1943305429&single=true");
+                edit.putInt("tel_2", 1);
+                edit.remove("tel_1");  // 이전 변수를 지울 때 주석 제거
+                edit.apply();
             }
         } else {
             offlineData();
