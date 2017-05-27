@@ -110,11 +110,11 @@ public class SettingsActivity extends AppCompatActivity {
                 } else if ("Changelog".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
 // Stable Version
-                    builder.setTitle(R.string.changelog_title);
-                    builder.setMessage(R.string.changelog_msg);
+//                    builder.setTitle(R.string.changelog_title);
+//                    builder.setMessage(R.string.changelog_msg);
 // Beta Version
-//                    builder.setTitle(R.string.changelog_title_beta);
-//                    builder.setMessage(R.string.changelog_msg_beta);
+                    builder.setTitle(R.string.changelog_title_beta);
+                    builder.setMessage(R.string.changelog_msg_beta);
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.setCancelable(false);
                     builder.show();
@@ -197,7 +197,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                     if (mPref.getBoolean("firstOfAutoUpdate", true)) {
                         mPref.putBoolean("firstOfAutoUpdate", false);
-                        showNotification();
+//                        showNotification();
                     }
 
                     if (!mPref.getBoolean("autoBapUpdate", false) && preference.isEnabled()) {

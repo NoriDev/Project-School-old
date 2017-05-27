@@ -25,6 +25,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -39,7 +40,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 33410;
+    private int ver= 40001;
 //    private ProgressDialog dialog;
     String xml;
 
@@ -51,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // beta 테스트 앱일 경우에만 활성화
-//        FirebaseMessaging.getInstance().subscribeToTopic("beta");
-
+        FirebaseMessaging.getInstance().subscribeToTopic("beta");
         FirebaseInstanceId.getInstance().getToken();
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
-//           mActionBar.setSubtitle(R.string.beta);
+           mActionBar.setSubtitle(R.string.beta);
         }
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.mViewpager);
@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-                builder.setTitle(R.string.changelog_title);
-//                builder.setTitle(R.string.changelog_title_beta);
-                builder.setMessage(R.string.changelog_msg_lite);
-//                builder.setMessage(R.string.changelog_msg_beta_lite);
+//                builder.setTitle(R.string.changelog_title);
+                builder.setTitle(R.string.changelog_title_beta);
+//                builder.setMessage(R.string.changelog_msg_lite);
+                builder.setMessage(R.string.changelog_msg_beta_lite);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
                 builder.show();
@@ -252,14 +252,6 @@ public class MainActivity extends AppCompatActivity {
 /*
         if (id == R.id.action_chat) {
             Uri uri = Uri.parse("https://open.kakao.com/o/g6KQyFq");
-            Intent it = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(it);
-            return true;
-        }
-*/
-// beta 테스트 앱일 경우에만 활성화
-/*        if (id == R.id.action_chat_beta) {
-            Uri uri = Uri.parse("https://open.kakao.com/o/gahCyFq");
             Intent it = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(it);
             return true;
