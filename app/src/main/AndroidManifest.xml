@@ -47,6 +47,10 @@
             </intent-filter>
         </service>
 
+<!-- 18:9, 18.5:9 기기 화면비 지원 (S8, G6) -->
+        <meta-data android:name="android.max_aspect"
+            android:value="2.1"/>
+
         <activity
             android:name="nori.m1nthing2322.joongang.activity.bap.BapActivity"
             android:label="@string/title_activity_bap"
@@ -88,11 +92,15 @@
 			android:theme="@style/AppTheme" />
 		<activity
 			android:name="nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity"
-            android:label="@string/title_activity_changelog"
+            android:label="@string/title_activity_changelog_beta"
 			android:theme="@style/AppTheme" />
         <activity
             android:name="nori.m1nthing2322.joongang.activity.tel.TelActivity"
             android:label="@string/title_activity_tel"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="nori.m1nthing2322.joongang.activity.notice.SCNoticeActivity"
+            android:label="@string/title_activity_scnotice"
             android:theme="@style/AppTheme" />
         <!-- AutoUpdate -->
         <receiver
