@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:orientation="vertical"
-        android:paddingBottom="5sp"
-        android:paddingTop="5sp">
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
 
         <TextView
             android:id="@+id/mCalender"
@@ -22,7 +22,7 @@
             android:gravity="center"
             android:text="2000년 00월 00일"
             android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/mDayOfTheWeek"
@@ -31,7 +31,7 @@
             android:gravity="center"
             android:text="월요일"
             android:textColor="@android:color/white"
-            android:textSize="15sp" />
+            android:textSize="15dp" />
 
     </LinearLayout>
 
@@ -40,8 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingLeft="5sp"
-        android:paddingRight="5sp">
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                 android:text="@string/today_lunch"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -65,11 +65,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5sp"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="@string/widget_no_data"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -87,19 +87,19 @@
                 android:text="@string/today_dinner"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/mDinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="@string/widget_no_data"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="20dp" />
 
         </LinearLayout>
 
