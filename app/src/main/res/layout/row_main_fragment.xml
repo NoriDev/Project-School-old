@@ -18,8 +18,8 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/mCircleImageView"
+            <ImageView
+                android:id="@+id/mImageView"
                 android:layout_width="70dp"
                 android:layout_height="70dp"/>
 

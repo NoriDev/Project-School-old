@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -12,7 +13,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import nori.m1nthing2322.joongang.R;
 
 /**
@@ -89,10 +89,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
             holder.mSimpleLayout.setVisibility(View.GONE);
         }
 
-        Glide.with(holder.mCircleImageView.getContext())
+        Glide.with(holder.mImageView.getContext())
                 .load(mInfo.imageId)
                 //.fitCenter()
-                .into(holder.mCircleImageView);
+                .into(holder.mImageView);
 
 //        holder.mView.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -113,7 +113,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
 
     public class MainViewHolder extends RecyclerView.ViewHolder {
 //        public final View mView;
-        public final CircleImageView mCircleImageView;
+        public final ImageView mImageView;
         public final LinearLayout mSimpleLayout;
         public final TextView mTitle, mText, mSimpleTitle, mSimpleText;
 
@@ -121,7 +121,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
             super(mView);
 //            this.mView = mView;
 
-            mCircleImageView = (CircleImageView) mView.findViewById(R.id.mCircleImageView);
+            mImageView = (ImageView) mView.findViewById(R.id.mImageView);
             mTitle = (TextView) mView.findViewById(R.id.mTitle);
             mText = (TextView) mView.findViewById(R.id.mText);
             mSimpleLayout = (LinearLayout) mView.findViewById(R.id.mSimpleLayout);
