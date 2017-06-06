@@ -129,13 +129,13 @@ public class MainFragment extends Fragment {
             }
         }
         if (code == 2) {
-			mAdapter.addItem(R.drawable.notice,
+			mAdapter.addItem(R.drawable.logo,
 			    	getString(R.string.title_activity_scnotice),
 				    getString(R.string.message_activity_scnotice));
             mAdapter.addItem(R.drawable.notice,
                     getString(R.string.title_activity_notice),
                     getString(R.string.message_activity_notice));
-            mAdapter.addItem(R.drawable.notice,
+            mAdapter.addItem(R.drawable.changelog,
                     getString(R.string.title_activity_changelog_beta),
                     getString(R.string.message_activity_changelog));
             }
@@ -143,10 +143,10 @@ public class MainFragment extends Fragment {
             mAdapter.addItem(R.drawable.exam,
                     getString(R.string.title_activity_exam_range),
                     getString(R.string.message_activity_exam_range));
-            mAdapter.addItem(R.drawable.calendar,
+            mAdapter.addItem(R.drawable.schedule,
                     getString(R.string.title_activity_schedule),
                     getString(R.string.message_activity_schedule));
-            mAdapter.addItem(R.drawable.events,
+            mAdapter.addItem(R.drawable.festival,
                     getString(R.string.title_activity_festival),
                     getString(R.string.message_activity_festival));
             mAdapter.addItem(R.drawable.phone,

@@ -27,7 +27,7 @@
     <shortcut
         android:shortcutId="schedule"
         android:enabled="true"
-        android:icon="@drawable/calendar"
+        android:icon="@drawable/schedule"
         android:shortcutShortLabel="@string/schedule_shortcut_short_label"
         android:shortcutLongLabel="@string/schedule_shortcut_long_label"
         android:shortcutDisabledMessage="@string/schedule_disabled_message">
@@ -39,7 +39,7 @@
     <shortcut
         android:shortcutId="festival"
         android:enabled="true"
-        android:icon="@drawable/events"
+        android:icon="@drawable/festival"
         android:shortcutShortLabel="@string/festival_shortcut_short_label"
         android:shortcutLongLabel="@string/festival_shortcut_long_label"
         android:shortcutDisabledMessage="@string/festival_disabled_message">
