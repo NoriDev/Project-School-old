@@ -9,7 +9,7 @@ Project School은 초/중/고등학교를 대상으로 한 프로젝트입니다
 
 전체 소스는 상단의 'releases'에서 다운로드 하실 수 있습니다.
 
-[ 경고 ] 4.0 버전부터는 Android Studio Canary 1를 사용하시는것을 권장합니다.
+[ 경고 ] 4.0 버전부터는 "Android Studio Canary 1" 을 사용하시는것을 권장합니다.
 
 
 - LICENSE -
