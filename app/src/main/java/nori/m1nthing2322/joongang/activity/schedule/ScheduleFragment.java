@@ -132,7 +132,7 @@ public class ScheduleFragment extends Fragment {
             case 6:
                 mAdapter.addItem("전국 연합 학력평가 (1, 2학년), 대수능 모의평가 (3학년), 청렴의 날", "2017.06.01 (목)");
                 mAdapter.addItem("현충일", "2017.06.06 (화)", true);
-                mAdapter.addItem("나라 사랑의 날 행사", "2017.06.07 (수)");
+                mAdapter.addItem("나라 사랑의 날 행사", "2017.06.08 (목)");
                 mAdapter.addItem("영어 경시 대회", "2017.06.09 (금)");
                 mAdapter.addItem("학업 성취도 평가", "2017.06.20 (화)");
                 mAdapter.addItem("가정의 날", "2017.06.28 (수)");
