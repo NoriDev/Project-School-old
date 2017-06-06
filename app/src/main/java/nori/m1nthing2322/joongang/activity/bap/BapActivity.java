@@ -21,7 +21,6 @@ import com.fourmob.datetimepicker.date.DatePickerDialog;
 import java.util.Calendar;
 
 import nori.m1nthing2322.joongang.R;
-import nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity;
 import nori.m1nthing2322.joongang.tool.BapTool;
 import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.ProcessTask;
@@ -246,9 +245,11 @@ public class BapActivity extends AppCompatActivity {
             getCalendarInstance(true);
             getBapList(true);
             return true;
-        } else if (id == R.id.action_show_star) {
+        }
+/*        else if (id == R.id.action_show_star) {
             startActivity(new Intent(this, BapStarActivity.class).putExtra("starType", 2));
         }
+*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -272,8 +273,8 @@ public class BapActivity extends AppCompatActivity {
                 mDialog.dismiss();
             if (result == -1) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(BapActivity.this, R.style.AppCompatErrorAlertDialogStyle);
-                builder.setTitle(R.string.I_do_not_know_the_error_title);
-                builder.setMessage(R.string.I_do_not_know_the_error_message);
+                builder.setTitle(R.string.Unknown_error_title);
+                builder.setMessage(R.string.Unknown_error_message);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
                 builder.show();
