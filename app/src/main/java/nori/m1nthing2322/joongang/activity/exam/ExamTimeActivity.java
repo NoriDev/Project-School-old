@@ -234,7 +234,6 @@ public class ExamTimeActivity extends AppCompatActivity {
         for (int day = 1; day <= days; day++) {
             mAdapter.addFragment(day + "일째", ExamTimeFragment.getInstance(mGrade, mType, day));
         }
-
         viewPager.setAdapter(mAdapter);
     }
 
@@ -379,7 +378,6 @@ public class ExamTimeActivity extends AppCompatActivity {
             mType = -1;
             resetGrade();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
