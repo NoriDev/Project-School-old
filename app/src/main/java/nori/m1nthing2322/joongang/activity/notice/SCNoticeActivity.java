@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -101,6 +102,7 @@ public class SCNoticeActivity extends AppCompatActivity {
             mTask.execute("https://docs.google.com/spreadsheets/d/1Cny4MK3_Y2m90QKUjLV0o_T1JhB0c1P37cAnD6giBj4/pubhtml?gid=784369662&single=true");
         } else {
             offlineData();
+            Toast.makeText(getApplicationContext(), "네트워크에 연결되어 있지않아,\n오프라인 모드로만 볼 수 있습니다.", Toast.LENGTH_SHORT).show();
         }
     }
 
