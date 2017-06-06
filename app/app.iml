@@ -49,6 +49,13 @@
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/beta/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/beta/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/beta/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestBetaDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBetaDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBetaDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testBetaDebug/assets" type="java-test-resource" />

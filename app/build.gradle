@@ -17,8 +17,8 @@ android {
     productFlavors {
         beta {
             // >=1(major) >=0(minor) 1(0: beta, >=1: prod) 0(0: beta, 1: prod) 1(>=1: beta, 0: prod)
-            versionCode 40001
-            versionName "4.0-beta1"
+            versionCode 40002
+            versionName "4.0-beta2"
             dimension "mode"
         }
         prod {
@@ -68,6 +68,10 @@ android {
     }
 }
 
+repositories {
+    mavenCentral() // jcenter() works as well because it pulls from Maven Central
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 // Jericho HTML Parser
@@ -90,6 +94,7 @@ dependencies {
     compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
 // Glide
     compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
 // CircleImageView
     compile 'de.hdodenhof:circleimageview:2.1.0'
 // org.apache.http
