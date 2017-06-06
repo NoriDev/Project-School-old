@@ -156,7 +156,7 @@ public class TimeTableActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>timetableVer){
                         //현재 버전보다 서버 버전이 높을때
-                        if(pref.getInt("timetable_201701",0)==0) {
+                        if(pref.getInt("timetable_20170102",0)==0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
                             builder.setTitle("시간표가 업데이트됨");
                             builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.\n\n- 이 알림은 앱을 최신버전으로 업데이트 해야 사라집니다 -");
@@ -172,8 +172,8 @@ public class TimeTableActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         downloadingDB();
-                                        edit.putInt("timetable_201701",1);
-                                        // edit.remove("timetable_201701");  // 이전 변수를 지울 때 주석 제거
+                                        edit.putInt("timetable_20170102",1);
+                                        edit.remove("timetable_201701");  // 이전 변수를 지울 때 주석 제거
                                         edit.apply();
                                     }
                                 });
@@ -413,8 +413,8 @@ public class TimeTableActivity extends AppCompatActivity {
             ex.printStackTrace();
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatErrorAlertDialogStyle);
-            builder.setTitle(R.string.I_do_not_know_the_error_title);
-            builder.setMessage(R.string.I_do_not_know_the_error_message);
+            builder.setTitle(R.string.Unknown_error_title);
+            builder.setMessage(R.string.Unknown_error_message);
             builder.setPositiveButton(android.R.string.ok, null);
             builder.setCancelable(false);
             builder.show();
