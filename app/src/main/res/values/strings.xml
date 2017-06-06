@@ -10,8 +10,10 @@
     <string name="activity_main_fragment_schoolinfo">교내 정보</string>
     <!-- 기본 -->
     <string name="loading_title">불러오는 중\n잠시 기다려주세요.</string>
-    <string name="I_do_not_know_the_error_title">알 수 없는 오류 발생</string>
-    <string name="I_do_not_know_the_error_message">오류가 발생하였습니다.</string>
+    <string name="Unknown_error_title">알 수 없는 오류 발생</string>
+    <string name="Unknown_error_message">오류가 발생하였습니다.</string>
+    <string name="meal_error_title">점검 중</string>
+    <string name="meal_error_message">현재 "나이스 서비스"가 점검중입니다.\n나중에 다시 시도해 주십시오.</string>
     <string name="title_activity_exit">종료</string>
     <!-- 메뉴 -->
     <string name="action_settings">설정</string>
@@ -126,6 +128,7 @@
 \n
 \n- Glide
 \n com.github.bumptech.glide:glide:4.0.0-RC0
+\n com.github.bumptech.glide:compiler:4.0.0-RC0
 \n
 \n- CircleImageView
 \n de.hdodenhof:circleimageview:2.1.0
@@ -380,36 +383,31 @@
     </string>
     <string name="changelog_title_beta">[베타] 변경사항</string>
     <string name="changelog_msg_beta_lite">[현재 개발중인 기능]
-        \n- 새로운 아이콘
-        \n\n[4.0-beta1]
+        \n\n[4.0-beta2]
         \n- 라이브러리 / SDK / 플러그인 업데이트
-        \n- 데이터로 열람시 데이터를 사용할지 묻는 창 제거
-        \n- [급식 자동 업데이트] 초기 체크 해제시 나오는 알림창 제거
-        \n- [급식 평점] 기능 활성화 (테스트)
-        \n- 급식 위젯 내려쓰기 지원
-        \n- 4:3, 16:9 화면비가 아닌 디스플레이 대응 (S8, G6)
-        \n- [학생회] 공지 추가
-        \n- [학생회] 페이스북 페이지 추가
-        \n- 체육대회 일정표 제거
-        \n- 급식 업데이트시 나오는 로딩화면 변경
-        \n- 급식 확인 부분 일부 텍스트 오류 수정
-        \n- 시간표 위젯에 "오늘의 시간표" 문구 추가
-        \n- 학교 주소 및 우편번호 추가
-        \n- 영문 앱 이름 추가
-        \n- 원형 아이콘 틀 제거
-        \n- 새로운 아이콘 테스트
-        \n- 안드로이드 O 대응 마이그레이션
-        \n- 일부 텍스트 누락 수정
-        \n- 기타 버그 수정 및 안정성 개선
+        \n- 시간표 업데이트
+        \n- 새로운 아이콘 추가
+        \n- 급식 불러오기 실패시 나타나는 문구 수정
+        \n- 나라사랑의 날 행사를 7일에서 8일로 변경
+        \n- 오프라인으로 열람시 "오프라인 모드로만 볼 수 있습니다." 알림 문구 추가
+        \n- 급식 위젯 폰트 크기 수정
+        \n- [급식 평점] 기능 비활성화
     </string>
     <string name="changelog_msg_beta">[현재 개발중인 기능]
-        \n- 새로운 아이콘
+        \n\n[4.0-beta2]
+        \n- 라이브러리 / SDK / 플러그인 업데이트
+        \n- 시간표 업데이트
+        \n- 새로운 아이콘 추가
+        \n- 급식 불러오기 실패시 나타나는 문구 수정
+        \n- 나라사랑의 날 행사를 7일에서 8일로 변경
+        \n- 오프라인으로 열람시 "오프라인 모드로만 볼 수 있습니다." 알림 문구 추가
+        \n- 급식 위젯 폰트 크기 수정
+        \n- [급식 평점] 기능 비활성화
         \n\n[4.0-beta1]
         \n- 라이브러리 / SDK / 플러그인 업데이트
         \n- 데이터로 열람시 데이터를 사용할지 묻는 창 제거
         \n- [급식 자동 업데이트] 초기 체크 해제시 나오는 알림창 제거
         \n- [급식 평점] 기능 활성화 (테스트)
-        \n- 급식 위젯 내려쓰기 지원
         \n- 4:3, 16:9 화면비가 아닌 디스플레이 대응 (S8, G6)
         \n- [학생회] 공지 추가
         \n- [학생회] 페이스북 페이지 추가
