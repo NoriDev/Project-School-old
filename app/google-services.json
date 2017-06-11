@@ -39,6 +39,40 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545862591347:android:20dfb5eaa63b9ffa",
+        "android_client_info": {
+          "package_name": "wshs.gaon.first"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545862591347-v5bgm83ub5gtclf1l2b9dhqthlpeb775.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDggEzXc_0ugThfomkv5oW4MudiBIlF6NQ"
+        },
+        {
+          "current_key": "AIzaSyA9XDVKih7nYWFWh7ozeSFin7McS2-l-Kg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

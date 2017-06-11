@@ -39,11 +39,19 @@ import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.TimeTableTool;
 import nori.m1nthing2322.joongang.tool.Tools;
 
+/**
+ * 이 소스는 원작자: Mir(whdghks913)에 의해 생성되었으며,
+ * 2차 수정자: NoriDev(noridevdroid@gmail.com)에 의해 수정되었습니다.
+ *
+ * 본 소스를 사용하고자 한다면, 이 주석을 삭제 또는 수정해서는 안됩니다.
+ * 또한 앱 내부 및 스토어 등록 정보에서 다른 사람이 볼 수 있는 곳에 적어도 하나 이상의 위치에 위 저작자가 표시되어야 합니다.
+ */
+
 public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
-    private int timetableVer= 20170102;
+    private int timetableVer= 20170103;
     String xml;
 
     private SharedPreferences pref;
@@ -156,7 +164,7 @@ public class TimeTableActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>timetableVer){
                         //현재 버전보다 서버 버전이 높을때
-                        if(pref.getInt("timetable_20170102",0)==0) {
+                        if(pref.getInt("timetable_20170103",0)==0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
                             builder.setTitle("시간표가 업데이트됨");
                             builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.\n\n- 이 알림은 앱을 최신버전으로 업데이트 해야 사라집니다 -");
@@ -172,8 +180,8 @@ public class TimeTableActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         downloadingDB();
-                                        edit.putInt("timetable_20170102",1);
-                                        edit.remove("timetable_201701");  // 이전 변수를 지울 때 주석 제거
+                                        edit.putInt("timetable_20170103",1);
+                                        edit.remove("timetable_20170102");  // 이전 변수를 지울 때 주석 제거
                                         edit.apply();
                                     }
                                 });
@@ -333,7 +341,6 @@ public class TimeTableActivity extends AppCompatActivity {
                     Column.append(column);
                     Column.append(" text, ");
                 }
-
                 mDatabase.openOrCreateDatabase(TimeTableTool.mFilePath, TimeTableTool.TimeTableDBName, TimeTableTool.tableName, Column.substring(0, Column.length() - 2));
             } else {
                 int length = row.length;
@@ -363,14 +370,12 @@ public class TimeTableActivity extends AppCompatActivity {
         if (id == R.id.action_reset_mygrade) {
             resetGrade();
             return true;
-
         } else if (id == R.id.action_share_timetable) {
             shareTimeTable();
             return true;
         } else if (id == R.id.action_download_db) {
             downloadingDB();
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -390,9 +395,7 @@ public class TimeTableActivity extends AppCompatActivity {
     private void shareTimeTable(int position, int mGrade, int mClass) {
         try {
             String mText = "";
-
             TimeTableTool.timeTableData mData = TimeTableTool.getTimeTableData(mGrade, mClass, position + 2);
-
             String[] subject = mData.subject;
 
             for (int period = 0; period < 7; period++) {
