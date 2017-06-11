@@ -38,9 +38,17 @@ import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.settings.SettingsActivity;
 import nori.m1nthing2322.joongang.tool.Preference;
 
+/**
+ * 이 소스는 원작자: Mir(whdghks913)에 의해 생성되었으며,
+ * 2차 수정자: NoriDev(noridevdroid@gmail.com)에 의해 수정되었습니다.
+ *
+ * 본 소스를 사용하고자 한다면, 이 주석을 삭제 또는 수정해서는 안됩니다.
+ * 또한 앱 내부 및 스토어 등록 정보에서 다른 사람이 볼 수 있는 곳에 적어도 하나 이상의 위치에 위 저작자가 표시되어야 합니다.
+ */
+
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 40001;
+    private int ver= 40003;
 //    private ProgressDialog dialog;
     String xml;
 
@@ -51,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        FirebaseMessaging.getInstance().subscribeToTopic("4.0-beta3");
         // beta 테스트 앱일 경우에만 활성화
         FirebaseMessaging.getInstance().subscribeToTopic("beta");
         FirebaseInstanceId.getInstance().getToken();
@@ -60,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
+           // beta 테스트 앱일 경우에만 활성화
            mActionBar.setSubtitle(R.string.beta);
         }
 
@@ -87,8 +97,10 @@ public class MainActivity extends AppCompatActivity {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
 //                builder.setTitle(R.string.changelog_title);
+                // beta 테스트 앱일 경우에만 활성화
                 builder.setTitle(R.string.changelog_title_beta);
 //                builder.setMessage(R.string.changelog_msg_lite);
+                // beta 테스트 앱일 경우에만 활성화
                 builder.setMessage(R.string.changelog_msg_beta_lite);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
