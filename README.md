@@ -7,9 +7,9 @@ Project School은 초/중/고등학교를 대상으로 한 프로젝트입니다
 급식 및 시간표, 학사일정 열람기능을 지원하며, 이 저장소 내의 모든 파일은 Project School의 일부입니다.
 
 
-전체 소스는 상단의 'releases'에서 다운로드 하실 수 있습니다.
+전체 소스 및 애플리케이션 파일은 상단의 'releases'에서 다운로드 하실 수 있습니다.
 
-[ 경고 ] 4.0 버전부터는 Android Studio Canary 1를 사용하시는것을 권장합니다.
+[ 경고 ] 4.0 버전부터는 "Android Studio 3.0 Canary 1" 이후 버전을 사용하시는것을 권장합니다.
 
 
 - LICENSE -
