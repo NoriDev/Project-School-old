@@ -39,6 +39,14 @@ import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.TimeTableTool;
 import nori.m1nthing2322.joongang.tool.Tools;
 
+/**
+ * 이 소스는 원작자: Mir(whdghks913)에 의해 생성되었으며,
+ * 2차 수정자: NoriDev(noridevdroid@gmail.com)에 의해 수정되었습니다.
+ *
+ * 본 소스를 사용하고자 한다면, 이 주석을 삭제 또는 수정해서는 안됩니다.
+ * 또한 앱 내부 및 스토어 등록 정보에서 다른 사람이 볼 수 있는 곳에 적어도 하나 이상의 위치에 위 저작자가 표시되어야 합니다.
+ */
+
 public class ExamTimeActivity extends AppCompatActivity {
     ViewPager viewPager;
     Preference mPref;
@@ -55,10 +63,16 @@ public class ExamTimeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_time);
 
+// 시험기간 약 4주 전부터 활성화
+        AlertDialog.Builder exam_Pause = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
+        exam_Pause.setMessage("곧 시험기간이 다가옵니다.\n시험에 미리 대비하는 습관을 가집시다.ツ\n\n시험 시간표가 조만간 업데이트 될 예정입니다.");
+        exam_Pause.setPositiveButton(android.R.string.ok, null);
+        exam_Pause.show();
+
 // 2학기 2차 고사가 끝난 경우 활성화
 /*
         AlertDialog.Builder end_Exam = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-        end_Exam.setMessage("드디어 마지막 시험이 끝났습니다! (짝짝짝)\n시험 치시느라 고생많으셨고, 이제 얼마 남지 않은 담임선생님과의 시간을 소중히 간직하는 시간을 가져봅시다 :)");
+        end_Exam.setMessage("드디어 마지막 시험이 끝났습니다! (짝짝짝)\n시험 치시느라 고생많으셨고, 이제 얼마 남지 않은 담임선생님과의 시간을 소중히 간직하는 시간을 가져봅시다.ツ");
         end_Exam.setPositiveButton(android.R.string.ok, null);
         end_Exam.show();
 */
@@ -172,7 +186,7 @@ public class ExamTimeActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>examVer) {
                         //현재 버전보다 서버 버전이 높을때
-                        if (pref.getInt("exam_20170101", 0) == 0) {
+                        if (pref.getInt("exam_20170102", 0) == 0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(ExamTimeActivity.this);
                             builder.setTitle("시험 시간표가 업데이트됨");
                             builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시험 시간표를 업데이트 하셔야 합니다.\n시험 시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.");
@@ -188,14 +202,14 @@ public class ExamTimeActivity extends AppCompatActivity {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             downloadingDB();
-                                            edit.putInt("exam_20170101", 1);
-                                            // edit.remove("exam_20170101");  // 이전 변수를 지울 때 주석 제거
+                                            edit.putInt("exam_20170102", 1);
+                                            edit.remove("exam_20170101");  // 이전 변수를 지울 때 주석 제거
                                             edit.apply();
                                         }
                                     });
                             builder.show();
                         }
-                    }else {
+                    } else {
                         //현재 버전보다 서버 버전이 낮을때
                     }
                 }
