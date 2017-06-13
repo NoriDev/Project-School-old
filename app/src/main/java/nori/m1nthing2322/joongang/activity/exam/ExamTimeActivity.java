@@ -52,7 +52,7 @@ public class ExamTimeActivity extends AppCompatActivity {
     Preference mPref;
     int mGrade, mType;
 
-    private int examVer= 20170101;
+    private int examVer= 20170102;
     String xml;
 
     private SharedPreferences pref;
@@ -64,11 +64,12 @@ public class ExamTimeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exam_time);
 
 // 시험기간 약 4주 전부터 활성화
+/*
         AlertDialog.Builder exam_Pause = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
         exam_Pause.setMessage("곧 시험기간이 다가옵니다.\n시험에 미리 대비하는 습관을 가집시다.ツ\n\n시험 시간표가 조만간 업데이트 될 예정입니다.");
         exam_Pause.setPositiveButton(android.R.string.ok, null);
         exam_Pause.show();
-
+*/		
 // 2학기 2차 고사가 끝난 경우 활성화
 /*
         AlertDialog.Builder end_Exam = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
