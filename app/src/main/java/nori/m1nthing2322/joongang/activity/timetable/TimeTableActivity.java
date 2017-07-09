@@ -68,7 +68,7 @@ public class TimeTableActivity extends AppCompatActivity {
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
         if ((mGrade != -1) && (mClass != -1)) {
-            mToolbar.setTitle(String.format(getString(R.string.title_activity_time_table), mGrade, mClass));
+            mToolbar.setTitle(getString(R.string.title_activity_time_table));
             mToolbar.setSubtitle(String.format(getString(R.string.timetable_subtitle), mGrade, mClass));
         }
         setSupportActionBar(mToolbar);
@@ -124,7 +124,6 @@ public class TimeTableActivity extends AppCompatActivity {
         });
 
         setCurrentItem();
-
         timeTableUpdate();
     }
 
@@ -267,7 +266,6 @@ public class TimeTableActivity extends AppCompatActivity {
         for (int dayOfWeek = 0; dayOfWeek < 5; dayOfWeek++) {
             mAdapter.addFragment(TimeTableTool.mDisplayName[dayOfWeek], TimeTableFragment.getInstance(mPref.getInt("myGrade", -1), mPref.getInt("myClass", -1), dayOfWeek));
         }
-
         viewPager.setAdapter(mAdapter);
     }
 
@@ -325,7 +323,6 @@ public class TimeTableActivity extends AppCompatActivity {
                 mDialog.dismiss();
                 mDialog = null;
             }
-
             if (mDatabase != null)
                 mDatabase.release();
         }
