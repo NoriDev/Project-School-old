@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.2.aar\c478e8497ba4cd37268721729b9947d5\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="86baa7d1051901fc1b8e7f596732f71f32175bde">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\25\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\c2b789472520ca3d2bb834b437a80c06\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\a558717ab927b5a235c3a6ccc475cec3\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\29\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-safetynet-11.0.2.aar\21a6b1957c5f8d90ca594ae95a65f8e1\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="587840a157b50a6380d814a7a5a87b76118405e2">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\23\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\7c75da05ab2fecd1a5305660a1289948\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\disklrucache\4.0.0-RC1\1b4bba8f8d3df8db064c875c043c01e9ca3cdee9\disklrucache-4.0.0-RC1.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="1b4bba8f8d3df8db064c875c043c01e9ca3cdee9">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\43\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\3f1937b3a2a55da5d8238c5d4d2b62bd\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.8.1\4d060ca3190df0eda4dc13415532a12e15ca5f11\okhttp-3.8.1.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4d060ca3190df0eda4dc13415532a12e15ca5f11">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-perf-11.0.2.aar\497eb7199962111cde010b21d74ff8d8\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c2df1036e05f46ea94a43dd5de0190f703ded136">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\14\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\64838940433ff28665310dbbff8d5ff9\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\34\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.2.aar\de9674013a5e4abc5b490b846e35fb08\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f260cdc1a267b17b911022919f19d568e6624229">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\11\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-11.0.2.aar\58ae4e0a7bca59745339940f36c3746e\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="acd4f9fad8500386084346a88ca47e2b66e84ffd">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\22\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\493d669bd014650d0879bdb74cf0ab67\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.2.aar\a4b6b1807a2f2ba206cc988b7a1d6138\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9a6350134db98fb39e212ddca5f0bad9280e8f3f">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\17\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\37\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.2.aar\7842c10f215798277bba000b90d64a22\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2737331564e0084fc0eb30ba500564a6dbe5e98f">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\19\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.2.aar\67a6501cd06b5fc9095bebf1099fc391\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="ba90907329e4ed429307d39490927b456838bf08">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\ca95b8e3c848beb1e23cd588ec316421\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\30\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\de3d7e4171c3cc74ad0357464aa18bf5\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\9999bf6ff5e70ac7b79acb52b4effa09\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.0.2.aar\2de12be186edbb7c2ac5ed5ff3192401\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="5493a7c08b74d424d08a23c68334893cfd2d5ee3">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\21\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\annotations\4.0.0-RC1\84c524dcd1a3088edd5560a8ac176eae1317f770\annotations-4.0.0-RC1.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="84c524dcd1a3088edd5560a8ac176eae1317f770">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\44\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\org.jbundle.util.osgi.wrapped\org.jbundle.util.osgi.wrapped.org.apache.http.client\4.1.2\98c86e42679fe7ac066f6c242e0d14f0bce0bb7c\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="98c86e42679fe7ac066f6c242e0d14f0bce0bb7c">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1b4d3061450bfd7bb5a2949cdc8f7bb4\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\b90a6e034ce09be2e2dd475124a627a2\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\c4dfe2c4e4670e17ffd414d287228445\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\32\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.2.aar\73c6fd1c0aea7648fd81d1224aaca224\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2a2d9cd43adbe7599a78f2293273a77881c1909a">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.0.2.aar\3100b8b57b34a14bf800c4e17ef96d2f\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="314299924c4866a8fea850a6ab10a7751fbce79d">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.2.aar\037ca7a10053d9bf2870595543f4df38\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fc5624185d414a0f572bfb3df7d841ceb335aef9">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\20\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\gifdecoder\4.0.0-RC1\c425e31eda1069f978a0e823ad50e567ab422656\gifdecoder-4.0.0-RC1.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="c425e31eda1069f978a0e823ad50e567ab422656">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\36\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\42\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.2.aar\35c04ac83ce16ec824a4f3d6d13f5ab8\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a71be5f29a1c1e3fd3e84472742668f101a5b936">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\28\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\libs\jericho-html-3.4.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0799191f451f5a6910ce37b0147771489ab46fed">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.0.2.aar\46bdbf7eac50b87f972eff70d3ca7a61\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="4737d9835cf3ea9751f7d6647be60900062d1062">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\27\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-v13-25.3.1.aar\bc8755e1edf0c5c11272a7002f614ca7\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8531f2d46b35de75e6130f25830e0c2c0d6bb98c">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\9f847d45955700074cba1e10edfd190c\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\library-0.0.2.aar\61e29fad4ef4bccd844fe7700df5de80\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2fc859b7abb78d29169f6a582b45cbe1f3f1a4cc">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\10\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.2.aar\4300e8dd337fd0a54c32577708c21a8d\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="f909161e9bac1dd36538a275f06cae462082316a">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\097bff2225ea549eaeb63d08bb0b6bdc\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\39\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\4.0.0-RC1\7baec7d5132e7343100a99630a56a6584a33addc\glide-4.0.0-RC1.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="7baec7d5132e7343100a99630a56a6584a33addc">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\35\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\f211045edb599d6e538ce6f9a9df5f87\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\m1nth\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.2.aar\74f49127bce53b0475174a51ef78b36e\jars\classes.jar"
+        jumboMode="true"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2c1d9fbe7d2f686b3dcdbc3f63a983a211401ca3">
+        <dex dex="D:\App Build\Android\Project School\Jinhae Joongang HS\Joongang HS\app\build\intermediates\transforms\preDex\beta\release\18\classes.dex" />
+    </item>
+
+</items>
