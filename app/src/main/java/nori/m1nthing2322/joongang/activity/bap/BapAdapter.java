@@ -40,21 +40,6 @@ public class BapAdapter extends BaseAdapter {
     private Context mContext = null;
     private ArrayList<BapListData> mListData = new ArrayList<BapListData>();
 
-/*    final View.OnClickListener mStarListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent mIntent = new Intent(mContext, BapStarActivity.class);
-
-            if (v.getId() == R.id.giveStar) {
-                mIntent.putExtra("starType", 1);
-            } else {
-                mIntent.putExtra("starType", 2);
-            }
-            mContext.startActivity(mIntent);
-        }
-    };
-*/
-
     public BapAdapter(Context mContext) {
         super();
         this.mContext = mContext;

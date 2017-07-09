@@ -254,10 +254,6 @@ public class BapActivity extends AppCompatActivity {
             getBapList(true);
             return true;
         }
-/*        else if (id == R.id.action_show_star) {
-            startActivity(new Intent(this, BapStarActivity.class).putExtra("starType", 2));
-        }
-*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -281,14 +277,13 @@ public class BapActivity extends AppCompatActivity {
                 mDialog.dismiss();
             if (result == -1) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(BapActivity.this, R.style.AppCompatErrorAlertDialogStyle);
-                builder.setTitle(R.string.Unknown_error_title);
-                builder.setMessage(R.string.Unknown_error_message);
+                builder.setTitle(R.string.meal_error_title);
+                builder.setMessage(R.string.meal_error_message);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
                 builder.show();
                 return;
             }
-
             getBapList(false);
 
             if (mSwipeRefreshLayout.isRefreshing())

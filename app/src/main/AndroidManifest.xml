@@ -56,10 +56,6 @@
             android:label="@string/title_activity_bap"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="nori.m1nthing2322.joongang.activity.bap.star.BapStarActivity"
-            android:label="@string/title_activity_bap_star"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name="nori.m1nthing2322.joongang.activity.timetable.TimeTableActivity"
             android:label="@string/title_activity_time_table"
             android:theme="@style/AppTheme" />
