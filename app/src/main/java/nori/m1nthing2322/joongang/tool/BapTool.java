@@ -34,6 +34,7 @@ public class BapTool {
         return year + "-" + month + "-" + day + "-" + type;
     }
 
+/*
     public static boolean canPostStar(Context mContext, int type) {
         Calendar mCalendar = Calendar.getInstance();
         int year = mCalendar.get(Calendar.YEAR);
@@ -63,6 +64,7 @@ public class BapTool {
             mPref.putBoolean(dinnerKey, false);
         }
     }
+*/
 
     /**
      * Pref Name Format : 2015-02-17-TYPE_index
