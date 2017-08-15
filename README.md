@@ -1,4 +1,4 @@
-Project School
+Project School // Android
 =====================================
 Copyright (C) 2013~2017 Seongmin Ji <noridevdroid@gmail.com>
 ----------------------------------------------------------------------------------------------
