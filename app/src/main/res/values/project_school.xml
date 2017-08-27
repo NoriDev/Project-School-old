@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="project_title">Project School이 무엇인가요?</string>
+    <string name="project_msg">
+\nProject School은 내 주변의 학교부터 시작해서 대부분의 학교를 자발적으로 학교앱을 제작/제공하겠다는 아이디어로 시작된 프로젝트입니다.
+\n
+\n
+\n만약 이 프로젝트를 지원하시려면, 다음의 정보를 제공해주셔야 합니다.
+\n
+\n
+\n- 자신이 재학중인 학교의 이름과 시간표
+\n
+\n- 지속적인 정보 제공을 위한 연락수단(예: 카카오톡, 페이스북 메신저 등) *선택사항
+\n
+\n제공해주신 모든 정보는 개인정보보호법에 의해 철저히 보호받으며, 연락수단 역시 시험 시간표와 변경된 시간표 제공 및 기타 변동사항을 제공받기 위한 것임을 밝힙니다.
+\n
+\n제공에 동의하신다면, https://goo.gl/hVEzp3 또는 noridevdroid@gmail.com 으로 위 사항을 기재하여 보내주십시오.
+\n
+\n2일 이내로 개발자가 답변할 것입니다.</string>
+</resources>
