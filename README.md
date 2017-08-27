@@ -1,6 +1,6 @@
 Project School // Android
 =====================================
-Copyright (C) 2013~2017 Seongmin Ji <noridevdroid@gmail.com>
+Copyleft 2013~2017 Seongmin Ji <noridevdroid@gmail.com>
 ----------------------------------------------------------------------------------------------
 
 Project School은 초/중/고등학교를 대상으로 한 프로젝트입니다.
