@@ -88,7 +88,7 @@
 			android:theme="@style/AppTheme" />
 		<activity
 			android:name="nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity"
-            android:label="@string/title_activity_changelog_beta"
+            android:label="@string/title_activity_changelog"
 			android:theme="@style/AppTheme" />
         <activity
             android:name="nori.m1nthing2322.joongang.activity.tel.TelActivity"
