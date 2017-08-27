@@ -51,7 +51,7 @@ public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
-    private int timetableVer= 20170103;
+    private int timetableVer= 20170201;
     String xml;
 
     private SharedPreferences pref;
@@ -163,10 +163,10 @@ public class TimeTableActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>timetableVer){
                         //현재 버전보다 서버 버전이 높을때
-                        if(pref.getInt("timetable_20170103",0)==0) {
+                        if(pref.getInt("timetable_20170201",0)==0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
                             builder.setTitle("시간표가 업데이트됨");
-                            builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.\n\n- 이 알림은 앱을 최신버전으로 업데이트 해야 사라집니다 -");
+                            builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.\n\n- 이 알림은 시간표를 최신버전으로 업데이트 해야 사라집니다 -");
                             builder.setCancelable(false);
                             builder.setNegativeButton(R.string.later, new DialogInterface.OnClickListener() {
                                 @Override
@@ -179,8 +179,8 @@ public class TimeTableActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         downloadingDB();
-                                        edit.putInt("timetable_20170103",1);
-                                        edit.remove("timetable_20170102");  // 이전 변수를 지울 때 주석 제거
+                                        edit.putInt("timetable_20170201",1);
+                                        edit.remove("timetable_20170103");  // 이전 변수를 지울 때 주석 제거
                                         edit.apply();
                                     }
                                 });

@@ -52,7 +52,7 @@ public class ExamTimeActivity extends AppCompatActivity {
     Preference mPref;
     int mGrade, mType;
 
-    private int examVer= 20170102;
+    private int examVer= 20170103;
     String xml;
 
     private SharedPreferences pref;
