@@ -85,20 +85,23 @@
             android:title="개발자" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="앱 버전">
+    <PreferenceCategory android:title="버전">
         <Preference
-            android:key="appVersionName"
+            android:key="appBuildName"
             android:summary="v0.0"
-            android:title="앱 버전" />
+            android:title="빌드 버전" />
         <Preference
-            android:key="appVersionCode"
+            android:key="appBuildCode"
             android:summary="40003"
-            android:title="앱 코드" />
+            android:title="빌드 코드" />
+        <Preference
+            android:key="appBuildDate"
+            android:summary="2017년 8월 28일"
+            android:title="빌드 날짜" />
     </PreferenceCategory>
 
-        <Preference
-            android:enabled="false"
-            android:key="myDeviceId"
-            android:title="기기 코드" />
+    <Preference
+        android:summary=""
+        android:title="" />
 
 </PreferenceScreen>

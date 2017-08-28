@@ -1,6 +1,5 @@
 package nori.m1nthing2322.joongang.activity.settings;
 
-import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -9,15 +8,12 @@ import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.provider.Settings;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.EditText;
 
-import itmir.tistory.com.xor.SecurityXor;
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.autoupdate.updateAlarm;
 
@@ -50,7 +46,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
         }
-
         // Display the fragment as the main content.
         getFragmentManager().beginTransaction().replace(R.id.container, new PrefsFragment()).commit();
     }
@@ -63,15 +58,12 @@ public class SettingsActivity extends AppCompatActivity {
             // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.pref_settings);
 
-            boolean isAdmin = getPreferenceManager().getSharedPreferences().getBoolean("userAdmin_1", false);
+/*            boolean isAdmin = getPreferenceManager().getSharedPreferences().getBoolean("userAdmin_1", false);
             if (isAdmin) {
                 Preference proUpgrade = findPreference("proUpgrade");
                 proUpgrade.setSummary(R.string.user_info_licensed);
                 proUpgrade.setEnabled(false);
-            }
-
-            findPreference("myDeviceId")
-                    .setSummary(Settings.Secure.getString(getActivity().getContentResolver(), Settings.Secure.ANDROID_ID));
+            } */
 
             setOnPreferenceClick(findPreference("infoAutoUpdate"));
             setOnPreferenceClick(findPreference("openSource"));
@@ -85,7 +77,7 @@ public class SettingsActivity extends AppCompatActivity {
             try {
                 PackageManager packageManager = getActivity().getPackageManager();
                 PackageInfo info = packageManager.getPackageInfo(getActivity().getPackageName(), PackageManager.GET_META_DATA);
-                findPreference("appVersionName").setSummary(info.versionName);
+                findPreference("appBuildName").setSummary(info.versionName);
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
@@ -135,7 +127,7 @@ public class SettingsActivity extends AppCompatActivity {
                     builder.show();
                 } else if ("infoAutoUpdate".equals(getKey)) {
                     showNotification();
-                } else if ("proUpgrade".equals(getKey)) {
+/*                } else if ("proUpgrade".equals(getKey)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppCompatAlertDialogStyle);
                     builder.setTitle(R.string.user_info_class_up_title);
 //                    builder.setMessage(R.string.no_network_msg);
@@ -154,6 +146,7 @@ public class SettingsActivity extends AppCompatActivity {
                     });
                     builder.setNegativeButton(android.R.string.cancel, null);
                     builder.show();
+                } */
                 }
                 return true;
             }
@@ -183,7 +176,6 @@ public class SettingsActivity extends AppCompatActivity {
                     preference.setSummary(stringValue);
 
                 } else if (preference instanceof ListPreference) {
-
                     /*
                      * ListPreference의 경우 stringValue가 entryValues이기 때문에 바로 Summary를
                      * 적용하지 못한다 따라서 설정한 entries에서 String을 로딩하여 적용한다
