@@ -89,8 +89,8 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.Schedu
             super(mView);
 //            this.mView = mView;
 
-            mSchedule = (TextView) mView.findViewById(R.id.list_item_entry_title);
-            mDate = (TextView) mView.findViewById(R.id.list_item_entry_summary);
+            mSchedule = mView.findViewById(R.id.list_item_entry_title);
+            mDate = mView.findViewById(R.id.list_item_entry_summary);
         }
     }
 

@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "nori.m1nthing2322.joongang"
         // multiDex 기능을 건너뛰어 컴파일 속도를 향상시킴
         minSdkVersion 21
-        targetSdkVersion 26
+        targetSdkVersion 27
         // Enabling multiDex support.
         multiDexEnabled true
         resConfigs "ko"
@@ -17,8 +17,8 @@ android {
     flavorDimensions "mode"
     productFlavors {
         beta {
-            versionCode 40003 // >=1(major) >=0(minor) 1(0: beta, >=1: prod) 0(0: beta, 1: prod) 1(>=1: beta, 0: prod)
-            versionName "4.0-beta3"
+            versionCode 40004 // >=1(major) >=0(minor) 1(0: beta, >=1: prod) 0(0: beta, 1: prod) 1(>=1: beta, 0: prod)
+            versionName "4.0-beta4"
             dimension "mode"
         }
         prod {
@@ -76,30 +76,31 @@ dependencies {
     // Jericho HTML Parser
     compile files('libs/jericho-html-3.4.jar')
     // Android Support Library
-    compile 'com.android.support:appcompat-v7:26.0.1'
-    compile 'com.android.support:design:26.0.1'
-    compile 'com.android.support:cardview-v7:26.0.1'
-    compile 'com.android.support:recyclerview-v7:26.0.1'
-    compile 'com.android.support:support-v13:26.0.1'
-    compile 'com.android.support:support-annotations:26.0.1'
-    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.android.support:appcompat-v7:27.1.0'
+    compile 'com.android.support:design:27.1.0'
+    compile 'com.android.support:cardview-v7:27.1.0'
+    compile 'com.android.support:recyclerview-v7:27.1.0'
+    compile 'com.android.support:support-v13:27.1.0'
+    compile 'com.android.support:support-annotations:27.1.0'
+    compile 'com.android.support:multidex:1.0.3'
     // Google Firebase
-    compile 'com.google.firebase:firebase-core:11.2.0'
-    compile 'com.google.firebase:firebase-messaging:11.2.0'
-    compile 'com.google.firebase:firebase-ads:11.2.0'
-    compile 'com.google.firebase:firebase-crash:11.2.0'
-    compile 'com.google.firebase:firebase-appindexing:11.2.0'
-    compile 'com.google.firebase:firebase-perf:11.2.0'
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile 'com.google.firebase:firebase-messaging:11.8.0'
+    compile 'com.google.firebase:firebase-ads:11.8.0'
+    compile 'com.google.firebase:firebase-crash:11.8.0'
+    compile 'com.google.firebase:firebase-appindexing:11.8.0'
+    compile 'com.google.firebase:firebase-perf:11.8.0'
     // DateTimePicker
     compile 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
     // Glide
-    compile 'com.github.bumptech.glide:glide:4.0.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+    compile 'com.github.bumptech.glide:glide:4.6.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     // CircleImageView
-    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
     // org.apache.http
     compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     // com.squareup.okhttp
-    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
+    compile 'com.squareup.okhttp3:mockwebserver:3.10.0'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -39,14 +39,14 @@ import nori.m1nthing2322.joongang.R;
 public class ScheduleActivity extends AppCompatActivity {
     ViewPager viewPager;
 
-    private int scheduleVer= 201702; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
+    private int scheduleVer= 201801; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
     String xml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
@@ -63,12 +63,12 @@ public class ScheduleActivity extends AppCompatActivity {
             });
         }
 
-        viewPager = (ViewPager) findViewById(R.id.mViewpager);
+        viewPager = findViewById(R.id.mViewpager);
         if (viewPager != null) {
             setupViewPager(viewPager);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
+        TabLayout tabLayout = findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
 
@@ -85,7 +85,7 @@ public class ScheduleActivity extends AppCompatActivity {
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
-                conn.setConnectTimeout(20000);
+                conn.setConnectTimeout(1000);
                 //conn.setUseCaches(false);
                 if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
                     InputStreamReader isr = new InputStreamReader(conn.getInputStream());
@@ -127,6 +127,7 @@ public class ScheduleActivity extends AppCompatActivity {
                                                 (Intent.ACTION_VIEW, Uri.parse
                                                         ("https://play.google.com/store/apps/details?id=nori.m1nthing2322.joongang"));
                                         startActivity(myIntent);
+										finish();
                                     }});
                         builder.show();
                     } else {
@@ -154,8 +155,8 @@ public class ScheduleActivity extends AppCompatActivity {
         mAdapter.addFragment("10월", ScheduleFragment.getInstance(10));
         mAdapter.addFragment("11월", ScheduleFragment.getInstance(11));
         mAdapter.addFragment("12월", ScheduleFragment.getInstance(12));
-        mAdapter.addFragment("2018년 1월", ScheduleFragment.getInstance(1));
-        mAdapter.addFragment("2018년 2월", ScheduleFragment.getInstance(2));
+        mAdapter.addFragment("2019년 1월", ScheduleFragment.getInstance(1));
+        mAdapter.addFragment("2019년 2월", ScheduleFragment.getInstance(2));
 
         viewPager.setAdapter(mAdapter);
     }

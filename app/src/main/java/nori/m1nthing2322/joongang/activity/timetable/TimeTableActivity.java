@@ -51,7 +51,7 @@ public class TimeTableActivity extends AppCompatActivity {
     Preference mPref;
     ViewPager viewPager;
 
-    private int timetableVer= 20170201;
+    private int timetableVer= 20180101;
     String xml;
 
     private SharedPreferences pref;
@@ -66,7 +66,7 @@ public class TimeTableActivity extends AppCompatActivity {
         int mGrade = mPref.getInt("myGrade", -1);
         int mClass = mPref.getInt("myClass", -1);
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         if ((mGrade != -1) && (mClass != -1)) {
             mToolbar.setTitle(getString(R.string.title_activity_time_table));
             mToolbar.setSubtitle(String.format(getString(R.string.timetable_subtitle), mGrade, mClass));
@@ -106,16 +106,16 @@ public class TimeTableActivity extends AppCompatActivity {
             return;
         }
 
-        viewPager = (ViewPager) findViewById(R.id.mViewpager);
+        viewPager = findViewById(R.id.mViewpager);
         if (viewPager != null) {
             setupViewPager(viewPager);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
+        TabLayout tabLayout = findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
 
-        FloatingActionButton mFab = (FloatingActionButton) findViewById(R.id.mFab);
+        FloatingActionButton mFab = findViewById(R.id.mFab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,7 +138,7 @@ public class TimeTableActivity extends AppCompatActivity {
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
-                conn.setConnectTimeout(20000);
+                conn.setConnectTimeout(1000);
                 //conn.setUseCaches(false);
                 if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
                     InputStreamReader isr = new InputStreamReader(conn.getInputStream());
@@ -163,7 +163,7 @@ public class TimeTableActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>timetableVer){
                         //현재 버전보다 서버 버전이 높을때
-                        if(pref.getInt("timetable_20170201",0)==0) {
+                        if(pref.getInt("timetable_20180101",0)==0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(TimeTableActivity.this);
                             builder.setTitle("시간표가 업데이트됨");
                             builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시간표를 업데이트 하셔야 합니다.\n시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.\n\n- 이 알림은 시간표를 최신버전으로 업데이트 해야 사라집니다 -");
@@ -179,8 +179,8 @@ public class TimeTableActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         downloadingDB();
-                                        edit.putInt("timetable_20170201",1);
-                                        edit.remove("timetable_20170103");  // 이전 변수를 지울 때 주석 제거
+                                        edit.putInt("timetable_20180101",1);
+                                        edit.remove("timetable_20170201");  // 이전 변수를 지울 때 주석 제거
                                         edit.apply();
                                     }
                                 });

@@ -2,9 +2,8 @@
     <!-- 메인 -->
     <string name="app_name">중앙고</string>
     <string name="beta">베타</string>
+    <string name="blank"></string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-9306456092791599/1952536661</string>
-	
     <string name="activity_main_fragment_simpleview">모아 보기</string>
     <string name="activity_main_fragment_notice">알림</string>
     <string name="activity_main_fragment_schoolinfo">교내 정보</string>
@@ -14,14 +13,12 @@
     <string name="Unknown_error_message">오류가 발생하였습니다.</string>
     <string name="meal_error_title">점검 중</string>
     <string name="meal_error_message">현재 "급식 조회 서비스"가 점검중입니다.\n나중에 다시 시도해 주십시오.</string>
-    <string name="title_activity_exit">종료</string>
     <!-- 메뉴 -->
     <string name="action_settings">설정</string>
     <string name="action_feedback">피드백 / 의견</string>
     <string name="action_refresh">새로고침</string>
     <string name="action_calender">날짜 설정</string>
     <string name="action_today">오늘 날짜</string>
-    <string name="action_show_star">별점 확인</string>
     <string name="action_reset_mygrade">학급 정보 재설정</string>
     <string name="action_share_timetable">시간표 공유하기</string>
     <string name="action_share_timetable_msg">%1$s 시간표
@@ -42,8 +39,6 @@
     <string name="no_data_message">정보가 없습니다.</string>
     <string name="no_network_title">네트워크 연결 안됨</string>
     <string name="no_network_msg">네트워크에 연결되어있지 않기 때문에 데이터를 다운로드 할 수 없습니다.</string>
-    <string name="no_wifi_title">데이터 네트워크 사용 안내</string>
-    <string name="no_wifi_msg">데이터 네트워크를 사용 하시겠습니까?</string>
     <string name="shareBap_title">급식 공유하기</string>
     <string name="shareBap_message_msg">%1$s의 급식 목록
 \n\n중식 : %2$s
@@ -56,7 +51,6 @@
     <string name="not_go_to_school_title">시간표 없음</string>
     <string name="not_go_to_school_message">오늘은 시간표가 없습니다.</string>
     <string name="not_exists_data">데이터가 없습니다.</string>
-    <string name="timetable_title">%1$d학년 %2$d반 시간표</string>
     <string name="timetable_subtitle">%1$d학년 %2$d반</string>
     <string name="no_time_table_db_title">시간표 DB 없음</string>
     <string name="no_time_table_db_message">시간표 DB가 없습니다. 다운로드 하시겠습니까?</string>
@@ -104,8 +98,6 @@
 \n지성민
 \nThanks to Mir</string>
     <!-- 업데이트 -->
-    <string name="check_version">버전을 확인하고 있습니다.</string>
-    <string name="latest_version">최신버전을 사용하고 있습니다.</string>
     <string name="offline">네트워크가 연결되지 않았습니다.
         \n업데이트 확인을 위해 네트워크를 연결하여 주십시오.</string>
     <string name="low_version">새 업데이트가 있습니다</string>
@@ -115,24 +107,17 @@
 \n앱이 정상적으로 구동되지 않을 수 있습니다.
 \n
 \n[ Tip ] 업데이트를 요구하는 창이 뜨나, 최신버전으로 나오는 경우, 나중에 다시시도해 주십시오.</string>
-    <string name="access">작업을 승인합니다.</string>
-    <string name="crack">정식버전이 아닙니다 :(</string>
     <string name="crack_contents">테스트 빌드이므로\n여러 버그가 있을 수 있습니다.ツ</string>
     <string name="later">나중에</string>
     <string name="update_now">지금 업데이트</string>
-    <string name="update_notification_title">앱이 업데이트됨</string>
-    <string name="update_notification_message">앱이 새로운 버전으로 업데이트 되었습니다.
-        \n변경사항은 설정에서 확인할 수 있습니다.</string>
-	<string name="title_activity_notice">공지사항</string>
+    <string name="title_activity_notice">공지사항</string>
     <string name="message_activity_notice">앱 개발자의 공지사항을 확인합니다.</string>
     <string name="title_notice">공지사항</string>
     <string name="title_activity_changelog">변경사항</string>
     <string name="message_activity_changelog">앱 변경사항을 확인합니다.</string>
 	<string name="title_activity_changelog_beta">[베타] 변경사항</string>
     <!-- 관리자 (미사용) -->
-    <string name="user_info_licensed">관리자 등급이 활성화되었습니다.</string>
     <string name="user_info_require_message">게시글 작성을 위해서 관리자 권한이 필요합니다.</string>
-    <string name="user_info_class_up_title">관리자 인증 암호를 입력하세요.</string>
     <!-- 공지사항 -->
 	<string name="title_activity_scnotice">학생회 공지사항</string>
     <string name="message_activity_scnotice">학생회 공지사항을 확인합니다.</string>
@@ -145,15 +130,6 @@
     <string name="post_notice_success">공지사항 전송을 성공했습니다!</string>
     <string name="post_notice_failed">공지사항 전송에 실패했습니다!</string>
     <!-- 급식 평점 -->
-    <string name="title_activity_bap_star">급식 별점</string>
-    <string name="bap_star_people_count">%1$d명 참여</string>
-    <string name="bap_star_once_title">별점 전송 제한</string>
-    <string name="bap_star_once_message">급식당 하루에 한번만 별점을 등록할 수 있습니다.</string>
-    <string name="post_bap_star_title">급식 별점 전송</string>
-    <string name="post_bap_star_posting">급식 별점 전송 중</string>
-    <string name="post_bap_star_success">급식 별점 전송을 성공했습니다!
-\n반영까지 약 5분정도 소요될 수 있습니다.</string>
-    <string name="post_bap_star_failed">급식 별점 전송에 실패했습니다!</string>
     <!-- 시험 시간표 -->
     <string name="title_activity_exam_range">시험 시간표</string>
     <string name="message_activity_exam_range">시험 시간표를 확인합니다.</string>
@@ -175,5 +151,4 @@
     <string name="festival_shortcut_short_label">행사일정</string>
     <string name="festival_disabled_message">행사일정 비활성화</string>
     <!-- 변경사항 -->
-    <string name="last_update">최근 업데이트</string>
 </resources>

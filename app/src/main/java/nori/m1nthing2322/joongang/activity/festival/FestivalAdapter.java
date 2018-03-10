@@ -89,8 +89,8 @@ public class FestivalAdapter extends RecyclerView.Adapter<FestivalAdapter.Festiv
             super(mView);
 //            this.mView = mView;
 
-            mSchedule = (TextView) mView.findViewById(R.id.list_item_entry_title);
-            mDate = (TextView) mView.findViewById(R.id.list_item_entry_summary);
+            mSchedule = mView.findViewById(R.id.list_item_entry_title);
+            mDate = mView.findViewById(R.id.list_item_entry_summary);
         }
     }
 

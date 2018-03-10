@@ -52,7 +52,7 @@ public class ExamTimeActivity extends AppCompatActivity {
     Preference mPref;
     int mGrade, mType;
 
-    private int examVer= 20170103;
+    private int examVer= 20180100;
     String xml;
 
     private SharedPreferences pref;
@@ -82,7 +82,7 @@ public class ExamTimeActivity extends AppCompatActivity {
         mType = mPref.getInt("myType", -1);
         boolean fileExists = ExamTimeTool.fileExists();
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         if ((mGrade != -1) && (mType != -1)) {
             if (fileExists) {
                 ExamTimeTool.examData mData = ExamTimeTool.getExamInfoData();
@@ -131,16 +131,16 @@ public class ExamTimeActivity extends AppCompatActivity {
             return;
         }
 
-        viewPager = (ViewPager) findViewById(R.id.mViewpager);
+        viewPager = findViewById(R.id.mViewpager);
         if (viewPager != null) {
             setupViewPager(viewPager);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
+        TabLayout tabLayout = findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
 
-        FloatingActionButton mFab = (FloatingActionButton) findViewById(R.id.mFab);
+        FloatingActionButton mFab = findViewById(R.id.mFab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -162,7 +162,7 @@ public class ExamTimeActivity extends AppCompatActivity {
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
-                conn.setConnectTimeout(20000);
+                conn.setConnectTimeout(1000);
                 //conn.setUseCaches(false);
                 if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
                     InputStreamReader isr = new InputStreamReader(conn.getInputStream());
@@ -187,7 +187,7 @@ public class ExamTimeActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), R.string.latest_version, Toast.LENGTH_SHORT).show();
                     } else if(Integer.parseInt(xml)>examVer) {
                         //현재 버전보다 서버 버전이 높을때
-                        if (pref.getInt("exam_20170102", 0) == 0) {
+                        if (pref.getInt("exam_20180100", 0) == 0) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(ExamTimeActivity.this);
                             builder.setTitle("시험 시간표가 업데이트됨");
                             builder.setMessage("시간표가 업데이트 됨에 따라, 기존 시험 시간표를 업데이트 하셔야 합니다.\n시험 시간표를 업데이트 하시려면 \'확인\'을 눌러주십시오.");
@@ -203,8 +203,8 @@ public class ExamTimeActivity extends AppCompatActivity {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             downloadingDB();
-                                            edit.putInt("exam_20170102", 1);
-                                            edit.remove("exam_20170101");  // 이전 변수를 지울 때 주석 제거
+                                            edit.putInt("exam_20180100", 1);
+                                            edit.remove("exam_20170102");  // 이전 변수를 지울 때 주석 제거
                                             edit.apply();
                                         }
                                     });

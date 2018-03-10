@@ -34,14 +34,14 @@ public class BapTool {
         return year + "-" + month + "-" + day + "-" + type;
     }
 
-/*
+	/*
     public static boolean canPostStar(Context mContext, int type) {
         Calendar mCalendar = Calendar.getInstance();
         int year = mCalendar.get(Calendar.YEAR);
         int month = mCalendar.get(Calendar.MONTH);
         int day = mCalendar.get(Calendar.DAY_OF_MONTH);
 
-        Preference mPref = new Preference(mContext, "BapRateStarInfo");
+        Preference mPref = new Preference(mContext, "RateStarInfo");
         String lunchKey = "LunchStar_" + year + month + day;
         String dinnerKey = "DinnerStar_" + year + month + day;
 
@@ -64,7 +64,7 @@ public class BapTool {
             mPref.putBoolean(dinnerKey, false);
         }
     }
-*/
+	*/
 
     /**
      * Pref Name Format : 2015-02-17-TYPE_index
@@ -194,7 +194,8 @@ public class BapTool {
     }
 
     public static String replaceString(String mString) {
-        String[] mTrash = {"①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨", "⑩", "⑪", "⑫", "⑬"};
+        String[] mTrash = {"1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.",
+							"11.", "12.", "13.", "14.", "15.", "16.", "17.", "18."};
         for (String e : mTrash) {
             mString = mString.replace(e, "");
         }

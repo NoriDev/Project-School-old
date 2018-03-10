@@ -52,7 +52,7 @@ public class BapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bap);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
@@ -69,7 +69,7 @@ public class BapActivity extends AppCompatActivity {
         }
 
         getCalendarInstance(true);
-        mListView = (ListView) findViewById(R.id.mListView);
+        mListView = findViewById(R.id.mListView);
         mAdapter = new BapAdapter(this);
         mListView.setAdapter(mAdapter);
 
@@ -85,7 +85,7 @@ public class BapActivity extends AppCompatActivity {
             }
         });
 
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.mSwipeRefreshLayout);
+        mSwipeRefreshLayout = findViewById(R.id.mSwipeRefreshLayout);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -97,7 +97,7 @@ public class BapActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton mFab = (FloatingActionButton) findViewById(R.id.mFab);
+        FloatingActionButton mFab = findViewById(R.id.mFab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

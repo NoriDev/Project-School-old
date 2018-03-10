@@ -8,7 +8,7 @@
     card_view:cardElevation="0dp" >
 
     <LinearLayout
-        style="@style/Widget.CardContent"
+        style="@style/Widget.CardContentMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -18,30 +18,42 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
+<!--            <ImageView
                 android:id="@+id/mImageView"
-                android:layout_width="70dp"
-                android:layout_height="70dp"/>
+                android:layout_width="100dp"
+                android:layout_height="100dp"/> -->
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="10dp">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/mTitle"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimary">
 
-                <TextView
+                    <TextView
+                        android:id="@+id/mTitle"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                </LinearLayout>
+
+<!--                <TextView
                     android:id="@+id/mText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" /> -->
 
             </LinearLayout>
         </LinearLayout>
@@ -51,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="8sp"
+            android:paddingTop="24sp"
             android:visibility="gone">
 
             <TextView

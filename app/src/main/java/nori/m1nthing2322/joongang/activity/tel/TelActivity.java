@@ -47,7 +47,7 @@ public class TelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tel);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
@@ -66,11 +66,11 @@ public class TelActivity extends AppCompatActivity {
 
         isAdmin = new Preference(getApplicationContext()).getBoolean("userAdmin_1", false);
 
-        mListView = (ListView) findViewById(R.id.mListView);
+        mListView = findViewById(R.id.mListView);
         mAdapter = new TelAdapter(this);
         mListView.setAdapter(mAdapter);
 
-        FloatingActionButton mFab = (FloatingActionButton) findViewById(R.id.mFab);
+        FloatingActionButton mFab = findViewById(R.id.mFab);
         if (isAdmin) {
             mFab.setVisibility(View.VISIBLE);
         }

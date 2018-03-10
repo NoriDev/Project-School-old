@@ -74,8 +74,8 @@ public class TimeTableAdapter extends RecyclerView.Adapter<TimeTableAdapter.Time
             super(mView);
 //            this.mView = mView;
 
-            mTimeText = (TextView) mView.findViewById(R.id.mTimeText);
-            mTimeName = (TextView) mView.findViewById(R.id.mTimeName);
+            mTimeText = mView.findViewById(R.id.mTimeText);
+            mTimeName = mView.findViewById(R.id.mTimeName);
 //            mRoom = (TextView) mView.findViewById(R.id.mRoom);
         }
     }

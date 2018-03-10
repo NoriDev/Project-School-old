@@ -4,8 +4,24 @@ import net.htmlparser.jericho.Element;
 import net.htmlparser.jericho.Source;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLSession;
+
+/*
+ * VERSION 8
+ * UPDATE 20180212
+ * 
+ * @author Mir(whdghks913)
+ * 
+ * Use : getDateNew, getKcalNew, getMealNew, getPeopleNew
+ * Delete : getDate, getKcal, getMeal, getMonthMeal, getPeople
+ */
 
 /**
  * 이 소스는 원작자: Mir(whdghks913)에 의해 생성되었으며,
@@ -15,295 +31,362 @@ import java.util.List;
  * 또한 앱 내부 및 스토어 등록 정보에서 다른 사람이 볼 수 있는 곳에 적어도 하나 이상의 위치에 위 저작자가 표시되어야 합니다.
  */
 
-/**
- * VERSION 6
- * UPDATE 20150225
- * 
- * @author Mir(whdghks913)
- * 
- * Use : getDateNew, getKcalNew, getMealNew, getPeopleNew
- * Delete : getDate, getKcal, getMeal, getMonthMeal, getPeople
- */
-
 public class MealLibrary {
-    private static Source mSource;
 
-    /**
-     * getDateNew
-     */
-    public static String[] getDateNew(String CountryCode, String schulCode,
-                                      String schulCrseScCode, String schulKndScCode, String schMmealScCode) {
+	/**
+	 * Version 8 Update
+	 * 
+	 * 나이스 서버가 https로 바뀜에 따라 서버 보안서를 검증하는 코드가 필요해졌습니다.
+	 * 항상 true를 반환하는 verify()를 Override하는 HostnameVerifier를 만들었습니다.
+	 */
+	private static HostnameVerifier hostnameVerifier = new HostnameVerifier() {
+		@Override
+		public boolean verify(String hostname, SSLSession session) {
+			return true;
+		}
+	};
 
-        String[] date = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
+	/**
+	 * getDateNew
+	 */
+	public static String[] getDateNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode) {
 
-        return getDateNewSub(date, url);
-    }
+		String[] date = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
 
-    public static String[] getDateNew(String CountryCode, String schulCode,
-                                      String schulCrseScCode, String schulKndScCode,
-                                      String schMmealScCode, String year, String month, String day) {
+		return getDateNewSub(date, url);
+	}
 
-        String[] date = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode
-                + "&schYmd=" + year + "." + month + "." + day;
+	public static String[] getDateNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode, String year, String month, String day) {
 
-        return getDateNewSub(date, url);
-    }
+		String[] date = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode
+				+ "&schYmd=" + year + "." + month + "." + day;
 
-    private static String[] getDateNewSub(String[] date, String url) {
-        try {
-            mSource = new Source(new URL(url));
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		return getDateNewSub(date, url);
+	}
 
-        mSource.fullSequentialParse();
-        List<?> table = mSource.getAllElements("table");
+	private static String[] getDateNewSub(String[] date, String url) {
+		Source mSource = null;
 
-        for (int i = 0; i < table.size(); i++) {
-            if (((Element) table.get(i)).getAttributeValue("class").equals(
-                    "tbl_type3")) {
-                List<?> tr = ((Element) table.get(i)).getAllElements("tr");
-                List<?> th = ((Element) tr.get(0)).getAllElements("th");
+		try {
+			URL mUrl = new URL(url);
 
-                for (int j = 0; j < 7; j++) {
-                    date[j] = ((Element) th.get(j + 1)).getContent().toString();
-                }
+			InputStream mStream = null;
 
-                break;
-            }
-        }
+			/**
+			 * Version 8 Update
+			 * 
+			 * 나이스의 급식 파싱 url이 https로 바뀜에 따라 보안을 검증하는 추가 코드가 필요해졌습니다.
+			 * 인증서 정보를 검사하는 코드를 간단하게 추가하였습니다.
+			 * 
+			 * 코드를 수정함에 따라 Source의 생성자에 들어가야 하는 인수인 URL을 사용하지 못합니다.
+			 * 저는 jericho parser의 Source.java를 보면 생성자에 InputStream을 사용할 수 있다는 사실을 발견했습니다.
+			 */
+			try {
+				HttpsURLConnection urlConnection = (HttpsURLConnection) mUrl.openConnection();
+				urlConnection.setRequestProperty("Content-Type", "application/json");
+				urlConnection.setHostnameVerifier(hostnameVerifier);
+				mStream = urlConnection.getInputStream();
+				mSource = new Source(mStream);
 
-        return date;
-    }
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (mStream != null) {
+					mStream.close();
+				}
+			}
 
-    /**
-     * getKcalNew
-     */
-    public static String[] getKcalNew(String CountryCode, String schulCode,
-                                      String schulCrseScCode, String schulKndScCode, String schMmealScCode) {
-        String[] content = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-        return getKcalSubNew(content, url);
-    }
+		mSource.fullSequentialParse();
+		List<?> table = mSource.getAllElements("table");
 
-    public static String[] getKcalNew(String CountryCode, String schulCode,
-                                      String schulCrseScCode, String schulKndScCode,
-                                      String schMmealScCode, String year, String month, String day) {
-        String[] content = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode
-                + "&schYmd=" + year + "." + month + "." + day;
+		for (int i = 0; i < table.size(); i++) {
+			if (((Element) table.get(i)).getAttributeValue("class").equals("tbl_type3")) {
+				List<?> tr = ((Element) table.get(i)).getAllElements("tr");
+				List<?> th = ((Element) tr.get(0)).getAllElements("th");
 
-        return getKcalSubNew(content, url);
-    }
+				for (int j = 0; j < 7; j++) {
+					date[j] = ((Element) th.get(j + 1)).getContent().toString();
+				}
 
-    private static String[] getKcalSubNew(String[] content, String url) {
-        try {
-            mSource = new Source(new URL(url));
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+				break;
+			}
+		}
 
-        mSource.fullSequentialParse();
-        List<?> table = mSource.getAllElements("table");
+		return date;
+	}
 
-        for (int i = 0; i < table.size(); i++) {
-            if (((Element) table.get(i)).getAttributeValue("class").equals(
-                    "tbl_type3")) {
-                List<?> tbody = ((Element) table.get(i))
-                        .getAllElements("tbody");
-                List<?> __tr = ((Element) tbody.get(0)).getAllElements("tr");
-                List<?> __th = ((Element) __tr.get(16)).getAllElements("th");
+	/**
+	 * getKcalNew
+	 */
+	public static String[] getKcalNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode) {
+		String[] content = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
 
-                if (((Element) __th.get(0)).getContent().toString()
-                        .equals("에너지(kcal)")) {
-                    List<?> td = ((Element) __tr.get(16)).getAllElements("td");
+		return getKcalSubNew(content, url);
+	}
 
-                    for (int j = 0; j < 7; j++) {
-                        content[j] = ((Element) td.get(j)).getContent()
-                                .toString();
-                    }
+	public static String[] getKcalNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode, String year, String month, String day) {
+		String[] content = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode
+				+ "&schYmd=" + year + "." + month + "." + day;
 
-                    break;
-                }
+		return getKcalSubNew(content, url);
+	}
 
-                for (int index = 0; index < content.length; index++) {
-                    content[index] = null;
-                }
+	private static String[] getKcalSubNew(String[] content, String url) {
+		Source mSource = null;
 
-                break;
-            }
-        }
+		try {
+			URL mUrl = new URL(url);
 
-        return content;
-    }
+			InputStream mStream = null;
 
-    /**
-     * getMealNew
-     */
-    public static String[] getMealNew(String CountryCode, String schulCode,
-                                      String schulCrseScCode, String schulKndScCode, String schMmealScCode) {
+			try {
+				HttpsURLConnection urlConnection = (HttpsURLConnection) mUrl.openConnection();
+				urlConnection.setRequestProperty("Content-Type", "application/json");
+				urlConnection.setHostnameVerifier(hostnameVerifier);
+				mStream = urlConnection.getInputStream();
+				mSource = new Source(mStream);
 
-        String[] content = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (mStream != null) {
+					mStream.close();
+				}
+			}
 
-        return getMealNewSub(content, url);
-    }
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-    public static String[] getMealNew(String CountryCode, String schulCode,
-                                      String schulCrseScCode, String schulKndScCode,
-                                      String schMmealScCode, String year, String month, String day) {
+		mSource.fullSequentialParse();
+		List<?> table = mSource.getAllElements("table");
 
-        String[] content = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode
-                + "&schYmd=" + year + "." + month + "." + day;
+		work: for (int i = 0; i < table.size(); i++) {
+			if (((Element) table.get(i)).getAttributeValue("class").equals("tbl_type3")) {
+				List<?> tbody = ((Element) table.get(i)).getAllElements("tbody");
+				List<?> __tr = ((Element) tbody.get(0)).getAllElements("tr");
 
-        return getMealNewSub(content, url);
-    }
+				/**
+				 * Version 8 Update
+				 * 
+				 * 칼로리 정보를 담고있는 tr태그의 index가 43-44로 변하는 현상을 발견했습니다.
+				 * 이로인해 칼로리를 가져오지 못하는 오류가 발생했었습니다.
+				 * 그래서 넉넉하게 42부터 45까지 칼로리 정보의 index를 검사하도록 반복문을 구성했습니다.
+				 */
+				for (int index = 42; index < 46; index++) {
+					List<?> __th = ((Element) __tr.get(index)).getAllElements("th");
 
-    private static String[] getMealNewSub(String[] content, String url) {
-        try {
-            mSource = new Source(new URL(url));
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+					if (((Element) __th.get(0)).getContent().toString().equals("에너지(kcal)")) {
+						List<?> td = ((Element) __tr.get(index)).getAllElements("td");
 
-        mSource.fullSequentialParse();
-        List<?> table = mSource.getAllElements("table");
+						for (int j = 0; j < td.size(); j++) {
+							content[j] = ((Element) td.get(j)).getContent().toString();
+						}
 
-        for (int i = 0; i < table.size(); i++) {
-            if (((Element) table.get(i)).getAttributeValue("class").equals(
-                    "tbl_type3")) {
-                List<?> tbody = ((Element) table.get(i))
-                        .getAllElements("tbody");
-                List<?> tr = ((Element) tbody.get(0)).getAllElements("tr");
-                List<?> title = ((Element) tr.get(2)).getAllElements("th");
+						break work;
+					}
+				}
 
-                if (((Element) title.get(0)).getContent().toString()
-                        .equals("식재료")) {
-                    List<?> tdMeal = ((Element) tr.get(1)).getAllElements("td");
+				for (int index = 0; index < content.length; index++) {
+					content[index] = null;
+				}
 
-                    for (int j = 0; j < 7; j++) {
-                        content[j] = ((Element) tdMeal.get(j)).getContent()
-                                .toString();
-                        content[j] = content[j].replace("<br />", "\n");
-                    }
+				break;
+			}
+		}
 
-                    break;
-                }
+		return content;
+	}
 
-                for (int index = 0; index < content.length; index++) {
-                    content[index] = null;
-                }
+	/**
+	 * getMealNew
+	 */
+	public static String[] getMealNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode) {
 
-                break;
-            }
-        }
+		String[] content = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
 
-        return content;
-    }
+		return getMealNewSub(content, url);
+	}
 
-    /**
-     * getPeopleNew
-     */
-    public static String[] getPeopleNew(String CountryCode, String schulCode,
-                                        String schulCrseScCode, String schulKndScCode, String schMmealScCode) {
-        String[] content = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
+	public static String[] getMealNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode, String year, String month, String day) {
 
-        return getPeopleSubNew(content, url);
-    }
+		String[] content = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode
+				+ "&schYmd=" + year + "." + month + "." + day;
 
-    public static String[] getPeopleNew(String CountryCode, String schulCode,
-                                        String schulCrseScCode, String schulKndScCode,
-                                        String schMmealScCode, String year, String month, String day) {
-        String[] content = new String[7];
-        String url = "http://stu." + CountryCode
-                + "/sts_sci_md01_001.do?schulCode=" + schulCode
-                + "&schulCrseScCode=" + schulCrseScCode + "&schulKndScCode="
-                + schulKndScCode + "&schMmealScCode=" + schMmealScCode
-                + "&schYmd=" + year + "." + month + "." + day;
+		return getMealNewSub(content, url);
+	}
 
-        return getPeopleSubNew(content, url);
-    }
+	private static String[] getMealNewSub(String[] content, String url) {
+		Source mSource = null;
 
-    private static String[] getPeopleSubNew(String[] content, String url) {
-        try {
-            mSource = new Source(new URL(url));
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+		try {
+			URL mUrl = new URL(url);
 
-        mSource.fullSequentialParse();
-        List<?> table = mSource.getAllElements("table");
+			InputStream mStream = null;
 
-        for (int i = 0; i < table.size(); i++) {
-            if (((Element) table.get(i)).getAttributeValue("class").equals(
-                    "tbl_type3")) {
-                List<?> tbody = ((Element) table.get(i))
-                        .getAllElements("tbody");
-                List<?> __tr = ((Element) tbody.get(0)).getAllElements("tr");
-                List<?> __th = ((Element) __tr.get(0)).getAllElements("th");
+			try {
+				HttpsURLConnection urlConnection = (HttpsURLConnection) mUrl.openConnection();
+				urlConnection.setRequestProperty("Content-Type", "application/json");
+				urlConnection.setHostnameVerifier(hostnameVerifier);
+				mStream = urlConnection.getInputStream();
+				mSource = new Source(mStream);
 
-                if (((Element) __th.get(0)).getContent().toString()
-                        .equals("급식인원")) {
-                    List<?> td = ((Element) __tr.get(0)).getAllElements("td");
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (mStream != null) {
+					mStream.close();
+				}
+			}
 
-                    for (int j = 0; j < 7; j++) {
-                        content[j] = ((Element) td.get(j)).getContent()
-                                .toString();
-                    }
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-                    break;
-                }
+		mSource.fullSequentialParse();
+		List<?> table = mSource.getAllElements("table");
 
-                for (int index = 0; index < content.length; index++) {
-                    content[index] = null;
-                }
+		for (int i = 0; i < table.size(); i++) {
+			if (((Element) table.get(i)).getAttributeValue("class").equals("tbl_type3")) {
+				List<?> tbody = ((Element) table.get(i)).getAllElements("tbody");
+				List<?> tr = ((Element) tbody.get(0)).getAllElements("tr");
+				List<?> title = ((Element) tr.get(2)).getAllElements("th");
 
-                break;
-            }
-        }
+				if (((Element) title.get(0)).getContent().toString().equals("식재료")) {
+					List<?> tdMeal = ((Element) tr.get(1)).getAllElements("td");
 
-        return content;
-    }
+					for (int j = 0; j < 7; j++) {
+						content[j] = ((Element) tdMeal.get(j)).getContent().toString();
+						content[j] = content[j].replace("<br />", "\n");
+					}
 
-    /**
-     * isMealCheck
-     * meal이 "", " ", null이면 false, 아니면 true
-     */
-    public static boolean isMealCheck(String meal) {
-        return !("".equals(meal) || " ".equals(meal) || meal == null);
-    }
+					break;
+				}
+
+				for (int index = 0; index < content.length; index++) {
+					content[index] = null;
+				}
+
+				break;
+			}
+		}
+
+		return content;
+	}
+
+	/**
+	 * getPeopleNew
+	 */
+	public static String[] getPeopleNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode) {
+		String[] content = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
+
+		return getPeopleSubNew(content, url);
+	}
+
+	public static String[] getPeopleNew(String CountryCode, String schulCode, String schulCrseScCode,
+			String schulKndScCode, String schMmealScCode, String year, String month, String day) {
+		String[] content = new String[7];
+		String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
+				+ schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode
+				+ "&schYmd=" + year + "." + month + "." + day;
+
+		return getPeopleSubNew(content, url);
+	}
+
+	private static String[] getPeopleSubNew(String[] content, String url) {
+		Source mSource = null;
+
+		try {
+			URL mUrl = new URL(url);
+
+			InputStream mStream = null;
+
+			try {
+				HttpsURLConnection urlConnection = (HttpsURLConnection) mUrl.openConnection();
+				urlConnection.setRequestProperty("Content-Type", "application/json");
+				urlConnection.setHostnameVerifier(hostnameVerifier);
+				mStream = urlConnection.getInputStream();
+				mSource = new Source(mStream);
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (mStream != null) {
+					mStream.close();
+				}
+			}
+
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		mSource.fullSequentialParse();
+		List<?> table = mSource.getAllElements("table");
+
+		for (int i = 0; i < table.size(); i++) {
+			if (((Element) table.get(i)).getAttributeValue("class").equals("tbl_type3")) {
+				List<?> tbody = ((Element) table.get(i)).getAllElements("tbody");
+				List<?> __tr = ((Element) tbody.get(0)).getAllElements("tr");
+				List<?> __th = ((Element) __tr.get(0)).getAllElements("th");
+
+				if (((Element) __th.get(0)).getContent().toString().equals("급식인원")) {
+					List<?> td = ((Element) __tr.get(0)).getAllElements("td");
+
+					for (int j = 0; j < 7; j++) {
+						content[j] = ((Element) td.get(j)).getContent().toString();
+					}
+
+					break;
+				}
+
+				for (int index = 0; index < content.length; index++) {
+					content[index] = null;
+				}
+
+				break;
+			}
+		}
+
+		return content;
+	}
+
+	/**
+	 * isMealCheck meal이 "", " ", null이면 false, 아니면 true
+	 */
+	public static boolean isMealCheck(String meal) {
+		return !("".equals(meal) || " ".equals(meal) || meal == null);
+	}
 }

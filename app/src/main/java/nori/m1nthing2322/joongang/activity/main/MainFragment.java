@@ -24,8 +24,6 @@ import nori.m1nthing2322.joongang.tool.Preference;
 import nori.m1nthing2322.joongang.tool.RecyclerItemClickListener;
 import nori.m1nthing2322.joongang.tool.TimeTableTool;
 
-// import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
-
 /**
  * 이 소스는 원작자: Mir(whdghks913)에 의해 생성되었으며,
  * 2차 수정자: NoriDev(noridevdroid@gmail.com)에 의해 수정되었습니다.
@@ -65,12 +63,16 @@ public class MainFragment extends Fragment {
                         case 0:
                             startActivity(new Intent(getActivity(), BapActivity.class));
                             break;
-                        case 1:
+                    }
+                }
+                if(code == 2) {
+                    switch (position) {
+                        case 0:
                             startActivity(new Intent(getActivity(), TimeTableActivity.class));
                             break;
                     }
                 }
-                if (code == 2) {
+                if (code == 3) {
                     switch (position) {
                         case 0:
                             startActivity(new Intent(getActivity(), SCNoticeActivity.class));
@@ -84,7 +86,7 @@ public class MainFragment extends Fragment {
                             break;
                     }
                 }
-                if (code == 3) {
+                if (code == 4) {
                     switch (position) {
                         case 0:
                             startActivity(new Intent(getActivity(), ExamTimeActivity.class));
@@ -120,6 +122,8 @@ public class MainFragment extends Fragment {
                         getString(R.string.title_activity_bap),
                         getString(R.string.message_activity_bap), true);
             }
+        }
+        if (code == 2) {
             if (mPref.getBoolean("simpleShowTimeTable", true)) {
                 TimeTableTool.todayTimeTableData mTimeTableData = TimeTableTool.getTodayTimeTable(getActivity());
                 mAdapter.addItem(R.drawable.timetable,
@@ -133,7 +137,7 @@ public class MainFragment extends Fragment {
                         getString(R.string.message_activity_time_table), true);
             }
         }
-        if (code == 2) {
+        if (code == 3) {
 			mAdapter.addItem(R.drawable.logo,
 			    	getString(R.string.title_activity_scnotice),
 				    getString(R.string.message_activity_scnotice));
@@ -142,9 +146,9 @@ public class MainFragment extends Fragment {
                     getString(R.string.message_activity_notice));
             mAdapter.addItem(R.drawable.changelog,
                     getString(R.string.title_activity_changelog_beta),
-                    getString(R.string.message_activity_changelog));
+                    getString(R.string.title_activity_changelog_beta));
             }
-        if (code == 3) {
+        if (code == 4) {
             mAdapter.addItem(R.drawable.exam,
                     getString(R.string.title_activity_exam_range),
                     getString(R.string.message_activity_exam_range));

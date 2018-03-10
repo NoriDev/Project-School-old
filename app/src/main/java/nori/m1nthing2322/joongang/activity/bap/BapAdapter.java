@@ -85,10 +85,10 @@ public class BapAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.row_bap_item, null);
 
-            mHolder.mCalender = (TextView) convertView.findViewById(R.id.mCalender);
-            mHolder.mDayOfTheWeek = (TextView) convertView.findViewById(R.id.mDayOfTheWeek);
-            mHolder.mLunch = (TextView) convertView.findViewById(R.id.mLunch);
-            mHolder.mDinner = (TextView) convertView.findViewById(R.id.mDinner);
+            mHolder.mCalender = convertView.findViewById(R.id.mCalender);
+            mHolder.mDayOfTheWeek = convertView.findViewById(R.id.mDayOfTheWeek);
+            mHolder.mLunch = convertView.findViewById(R.id.mLunch);
+            mHolder.mDinner = convertView.findViewById(R.id.mDinner);
 //            mHolder.starLayout = (LinearLayout) convertView.findViewById(R.id.starLayout);
             convertView.setTag(mHolder);
         } else {

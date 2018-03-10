@@ -1,10 +1,11 @@
 #Android Meal Library with Mir(whdghks913)
-##VERSION 7 (UPDATE 20160727)
+##VERSION 8 (UPDATE 20180212)
 
 ***
 
 ###사용하는 라이브러리*
-* jericho-html-3.4.jar
+* jericho-html-3.3.jar
+
 
 
 
@@ -32,9 +33,16 @@ AsyncTask를 사용하여 라이브러리를 사용해 주세요, 어떻게 쓰�
 
 
 
+
+###VERSION 8 업데이트 안내
+- 나이스 급식 파싱 주소가 http에서 https로 바뀜에 따라 보안과 관련된 코드를 추가해서 파싱 오류를 수정했습니다.
+- 칼로리 정보를 담고있는 html 태그의 index 번호가 43에서 44로 유동적으로 바뀌는 현상을 발견했고, 이에 대처하기 위한 코드를 추가했습니다.
+- 오류를 분석할 수 있도록 팀뷰어를 비롯한 도움을 주신 분 : 그래픽카드(fkdldjs0101)
+
+
+
 ###VERSION 7 업데이트 안내
 - 나이스 홈페이지 주소 변경에 따라 http://hes를 http://stu로 변경
-
 
 
 
@@ -279,17 +287,19 @@ MealLibrary.getPeopleNew(CountryCode, schulCode, schulCrseScCode, schulKndScCode
 
 
 ####schYmd
+* 지원 중단
 * 원하는 날짜의 급식 정보를 얻기 위해 필요합니다
 * String 형식 : 년.월.일
 * EX) "2014.03.16"
-* 새로운 New메소드에서는 schYmd을 지원하지 않고 year, month, day만 지원합니다
+* 새로운 New메소드에서는 schYmd을 지원하지 않고, year, month, day만 지원합니다
 
 
 ####schYm
+* 지원 중단
 * 원하는 달의 급식 정보를 얻기 위해 필요합니다
 * String 형식 : 년.월
 * EX) "2014.03"
-* 새로운 New메소드에서는 schYm 지원하지 않고 year, month, day만 지원합니다
+* 새로운 New메소드에서는 schYm을 지원하지 않고, year, month, day만 지원합니다
 
 
 ####year, month, day

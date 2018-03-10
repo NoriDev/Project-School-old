@@ -79,9 +79,9 @@ public class NoticeAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.row_notice_item, null);
 
-            mHolder.mTitle = (TextView) convertView.findViewById(R.id.mTitle);
-            mHolder.mMessage = (TextView) convertView.findViewById(R.id.mMessage);
-            mHolder.mDate = (TextView) convertView.findViewById(R.id.mDate);
+            mHolder.mTitle = convertView.findViewById(R.id.mTitle);
+            mHolder.mMessage = convertView.findViewById(R.id.mMessage);
+            mHolder.mDate = convertView.findViewById(R.id.mDate);
 
             convertView.setTag(mHolder);
         } else {

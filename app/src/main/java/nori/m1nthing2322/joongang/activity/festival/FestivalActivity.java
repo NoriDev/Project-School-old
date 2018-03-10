@@ -38,21 +38,21 @@ import nori.m1nthing2322.joongang.R;
 public class FestivalActivity extends AppCompatActivity {
     ViewPager viewPager;
 
-    private int festivalVer= 201701; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
+    private int festivalVer= 201801; // yyyy년도 nn버전 (01 버전 - 일정표에 수정이 가해지지 않음, 02~ 버전 - 일정표가 일부 또는 전체 수정이 가해짐)
     String xml;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_festival);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
             mActionBar.setHomeButtonEnabled(true);
             mActionBar.setDisplayHomeAsUpEnabled(true);
-            mActionBar.setSubtitle("2017년 행사일정");
+            mActionBar.setSubtitle("2018년 행사일정");
 
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,12 +62,12 @@ public class FestivalActivity extends AppCompatActivity {
             });
         }
 
-        viewPager = (ViewPager) findViewById(R.id.mViewpager);
+        viewPager = findViewById(R.id.mViewpager);
         if (viewPager != null) {
             setupViewPager(viewPager);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
+        TabLayout tabLayout = findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
 
@@ -82,7 +82,7 @@ public class FestivalActivity extends AppCompatActivity {
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
-                conn.setConnectTimeout(20000);
+                conn.setConnectTimeout(1000);
                 //conn.setUseCaches(false);
                 if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
                     InputStreamReader isr = new InputStreamReader(conn.getInputStream());

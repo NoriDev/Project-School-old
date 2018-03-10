@@ -48,7 +48,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 40003;
+    private int ver= 40004;
 //    private ProgressDialog dialog;
     String xml;
 
@@ -59,12 +59,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirebaseMessaging.getInstance().subscribeToTopic("4.0-beta3");
+        FirebaseMessaging.getInstance().subscribeToTopic("4.0a");
         // beta 테스트 앱일 경우에만 활성화
         FirebaseMessaging.getInstance().subscribeToTopic("beta");
         FirebaseInstanceId.getInstance().getToken();
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
@@ -73,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
            mActionBar.setSubtitle(R.string.beta);
         }
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.mViewpager);
+        ViewPager viewPager = findViewById(R.id.mViewpager);
         if (viewPager != null) {
             setupViewPager(viewPager);
         }
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.mTabLayout);
+        TabLayout tabLayout = findViewById(R.id.mTabLayout);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setSelectedTabIndicatorColor(Color.WHITE);
 
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             URL url = new URL(urlAddr);
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             if(conn != null){//Start if
-                conn.setConnectTimeout(20000);
+                conn.setConnectTimeout(1000);
                 //conn.setUseCaches(false);
                 if(conn.getResponseCode()==HttpURLConnection.HTTP_OK){//Start if
                     InputStreamReader isr = new InputStreamReader(conn.getInputStream());
@@ -195,9 +195,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         Adapter mAdapter = new Adapter(getSupportFragmentManager());
-        mAdapter.addFragment(getString(R.string.activity_main_fragment_simpleview), MainFragment.getInstance(1));
-        mAdapter.addFragment(getString(R.string.activity_main_fragment_notice), MainFragment.getInstance(2));
-        mAdapter.addFragment(getString(R.string.activity_main_fragment_schoolinfo), MainFragment.getInstance(3));
+        mAdapter.addFragment(getString(R.string.title_activity_bap), MainFragment.getInstance(1));
+        mAdapter.addFragment(getString(R.string.title_activity_time_table), MainFragment.getInstance(2));
+        mAdapter.addFragment(getString(R.string.activity_main_fragment_notice), MainFragment.getInstance(3));
+        mAdapter.addFragment(getString(R.string.activity_main_fragment_schoolinfo), MainFragment.getInstance(4));
         viewPager.setAdapter(mAdapter);
     }
 

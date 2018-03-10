@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="간편 보기">
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="simpleShowBap"
-            android:summary="간편 보기의 급식을 활성화 합니다."
-            android:title="급식 간편 보기 활성화" />
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="simpleShowTimeTable"
-            android:summary="간편 보기의 시간표를 활성화 합니다."
-            android:title="시간표 간편 보기 활성화" />
-    </PreferenceCategory>
+    <!--    <PreferenceCategory android:title="간편 보기">
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="simpleShowBap"
+                android:summary="간편 보기의 급식을 활성화 합니다."
+                android:title="급식 간편 보기 활성화" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="simpleShowTimeTable"
+                android:summary="간편 보기의 시간표를 활성화 합니다."
+                android:title="시간표 간편 보기 활성화" />
+        </PreferenceCategory> -->
 
     <PreferenceCategory android:title="급식 업데이트">
         <CheckBoxPreference
@@ -92,16 +92,12 @@
             android:title="빌드 버전" />
         <Preference
             android:key="appBuildCode"
-            android:summary="40003"
+            android:summary="40004"
             android:title="빌드 코드" />
         <Preference
             android:key="appBuildDate"
-            android:summary="2017년 8월 28일"
+            android:summary="2018년 03월 11일"
             android:title="빌드 날짜" />
     </PreferenceCategory>
-
-    <Preference
-        android:summary=""
-        android:title="" />
 
 </PreferenceScreen>

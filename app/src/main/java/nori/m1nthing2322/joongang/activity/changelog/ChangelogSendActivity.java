@@ -41,7 +41,7 @@ public class ChangelogSendActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice_send);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
@@ -61,8 +61,8 @@ public class ChangelogSendActivity extends AppCompatActivity {
         if (!isAdmin)
             finish();
 
-        mTitle = (EditText) findViewById(R.id.mTitle);
-        mMessage = (EditText) findViewById(R.id.mMessage);
+        mTitle = findViewById(R.id.mTitle);
+        mMessage = findViewById(R.id.mMessage);
     }
 
     public void sendData(View v) {

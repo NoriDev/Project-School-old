@@ -2,9 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activity.notice.SCNoticeActivity">
+
     <item
         android:id="@+id/action_sc_facebook"
         android:orderInCategory="4"
         android:title="학생회 페이스북"
         app:showAsAction="always" />
+
 </menu>

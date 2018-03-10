@@ -63,8 +63,8 @@ public class ExamTimeAdapter extends RecyclerView.Adapter<ExamTimeAdapter.ExamTi
             super(mView);
 
             mContext = mView.getContext();
-            mTime = (TextView) mView.findViewById(R.id.list_item_entry_title);
-            mSubject = (TextView) mView.findViewById(R.id.list_item_entry_summary);
+            mTime = mView.findViewById(R.id.list_item_entry_title);
+            mSubject = mView.findViewById(R.id.list_item_entry_summary);
         }
     }
 

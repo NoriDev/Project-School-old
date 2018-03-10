@@ -48,7 +48,7 @@ public class ChangelogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_changelog);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.mToolbar);
+        Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
 
         ActionBar mActionBar = getSupportActionBar();
@@ -66,11 +66,11 @@ public class ChangelogActivity extends AppCompatActivity {
 
         isAdmin = new Preference(getApplicationContext()).getBoolean("userAdmin_1", false);
 
-        mListView = (ListView) findViewById(R.id.mListView);
+        mListView = findViewById(R.id.mListView);
         mAdapter = new ChangelogAdapter(this);
         mListView.setAdapter(mAdapter);
 
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.mSwipeRefreshLayout);
+        mSwipeRefreshLayout = findViewById(R.id.mSwipeRefreshLayout);
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -78,7 +78,7 @@ public class ChangelogActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton mFab = (FloatingActionButton) findViewById(R.id.mFab);
+        FloatingActionButton mFab = findViewById(R.id.mFab);
         if (isAdmin) {
             mFab.setVisibility(View.VISIBLE);
         }
