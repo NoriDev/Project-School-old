@@ -3,6 +3,7 @@
     <string name="app_name">중앙고</string>
     <string name="beta">베타</string>
     <string name="blank"></string>
+    <string name="com.crashlytics.useFirebaseAppId">true</string>
 
     <string name="activity_main_fragment_simpleview">모아 보기</string>
     <string name="activity_main_fragment_notice">알림</string>

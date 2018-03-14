@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:icon="@mipmap/logo_2"
@@ -33,15 +34,19 @@
                 android:resource="@xml/shortcuts" />
         </activity>
 
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false" />
+
         <service
-            android:name=".tool.FirebaseMessagingService">
+            android:name=".tool.FirebaseMessagingService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
         <service
-            android:name=".tool.FirebaseInstanceIDService">
+            android:name=".tool.FirebaseInstanceIDService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>

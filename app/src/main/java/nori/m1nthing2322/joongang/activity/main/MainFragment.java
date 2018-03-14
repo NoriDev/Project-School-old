@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.bap.BapActivity;
-import nori.m1nthing2322.joongang.activity.changelog.ChangelogBetaActivity;
+import nori.m1nthing2322.joongang.activity.changelog.ChangelogActivity;
 import nori.m1nthing2322.joongang.activity.exam.ExamTimeActivity;
 import nori.m1nthing2322.joongang.activity.festival.FestivalActivity;
 import nori.m1nthing2322.joongang.activity.notice.NoticeActivity;
@@ -81,8 +81,8 @@ public class MainFragment extends Fragment {
                             startActivity(new Intent(getActivity(), NoticeActivity.class));
                             break;
                         case 2:
-//                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
-                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
+                            startActivity(new Intent(getActivity(), ChangelogActivity.class));
+//                            startActivity(new Intent(getActivity(), ChangelogBetaActivity.class));
                             break;
                     }
                 }
@@ -145,8 +145,8 @@ public class MainFragment extends Fragment {
                     getString(R.string.title_activity_notice),
                     getString(R.string.message_activity_notice));
             mAdapter.addItem(R.drawable.changelog,
-                    getString(R.string.title_activity_changelog_beta),
-                    getString(R.string.title_activity_changelog_beta));
+                    getString(R.string.title_activity_changelog),
+                    getString(R.string.title_activity_changelog));
             }
         if (code == 4) {
             mAdapter.addItem(R.drawable.exam,

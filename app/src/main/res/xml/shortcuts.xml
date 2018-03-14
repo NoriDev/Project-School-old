@@ -42,6 +42,6 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="nori.m1nthing2322.joongang"
-            android:targetClass="nori.m1nthing2322.joongang.activity.schedule.festivalActivity" />
+            android:targetClass="nori.m1nthing2322.joongang.activity.festival.FestivalActivity" />
     </shortcut>
 </shortcuts>

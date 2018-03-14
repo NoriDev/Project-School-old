@@ -92,11 +92,11 @@
             android:title="빌드 버전" />
         <Preference
             android:key="appBuildCode"
-            android:summary="40004"
+            android:summary="40110"
             android:title="빌드 코드" />
         <Preference
             android:key="appBuildDate"
-            android:summary="2018년 03월 11일"
+            android:summary="2018년 03월 15일"
             android:title="빌드 날짜" />
     </PreferenceCategory>
 

@@ -24,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
@@ -34,6 +35,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.fabric.sdk.android.Fabric;
 import nori.m1nthing2322.joongang.R;
 import nori.m1nthing2322.joongang.activity.settings.SettingsActivity;
 import nori.m1nthing2322.joongang.tool.Preference;
@@ -48,7 +50,7 @@ import nori.m1nthing2322.joongang.tool.Preference;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int ver= 40004;
+    private int ver= 40110;
 //    private ProgressDialog dialog;
     String xml;
 
@@ -57,12 +59,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
+        Fabric.with(this, new Crashlytics());
+
+        FirebaseInstanceId.getInstance().getToken();
         FirebaseMessaging.getInstance().subscribeToTopic("4.0a");
         // beta 테스트 앱일 경우에만 활성화
-        FirebaseMessaging.getInstance().subscribeToTopic("beta");
-        FirebaseInstanceId.getInstance().getToken();
+//        FirebaseMessaging.getInstance().subscribeToTopic("beta");
+
+        setContentView(R.layout.activity_main);
 
         Toolbar mToolbar = findViewById(R.id.mToolbar);
         setSupportActionBar(mToolbar);
@@ -70,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar mActionBar = getSupportActionBar();
         if (mActionBar != null) {
            // beta 테스트 앱일 경우에만 활성화
-           mActionBar.setSubtitle(R.string.beta);
+//           mActionBar.setSubtitle(R.string.beta);
         }
 
         ViewPager viewPager = findViewById(R.id.mViewpager);
@@ -96,12 +101,12 @@ public class MainActivity extends AppCompatActivity {
             if (mPref.getInt("versionCode", 0) != versionCode) {
                 mPref.putInt("versionCode", versionCode);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.AppCompatAlertDialogStyle);
-//                builder.setTitle(R.string.changelog_title);
+                builder.setTitle(R.string.changelog_title);
                 // beta 테스트 앱일 경우에만 활성화
-                builder.setTitle(R.string.changelog_title_beta);
-//                builder.setMessage(R.string.changelog_msg_lite);
+//                builder.setTitle(R.string.changelog_title_beta);
+                builder.setMessage(R.string.changelog_msg_lite);
                 // beta 테스트 앱일 경우에만 활성화
-                builder.setMessage(R.string.changelog_msg_beta_lite);
+//                builder.setMessage(R.string.changelog_msg_beta_lite);
                 builder.setPositiveButton(android.R.string.ok, null);
                 builder.setCancelable(false);
                 builder.show();
