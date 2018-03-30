@@ -12,5 +12,11 @@ Project School은 초/중/고등학교를 대상으로 한 프로젝트입니다
 [ 경고 ] 4.0 빌드부터는 "Android Studio 3.0" 이후 버전을 사용 하시는것을 권장합니다.
 
 
+이 프로젝트는 4.0a 버전을 마지막으로 지원이 종료되었습니다.
+최신 빌드는 아래 주소를 참고해주십시오.
+
+https://github.com/NoriDev/Project-School
+
+
 - LICENSE -
 [오픈소스 주소](https://bitbucket.org/whdghks913/wondanghighschool)를 기반으로 진행되는 프로젝트입니다.
